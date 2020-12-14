@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Markup Reference · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Markup Syntax"/><meta name="docsearch:version" content="0.20"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Markup Reference · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="## Markup Syntax"/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.20</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/0.20/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Markup Reference</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="markup-syntax"></a><a href="#markup-syntax" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Markup Syntax</h2>
+<p>A template is UTF-8 text with markup to introduce named variables. Each variable starts with <code>[{</code> and ends with <code>}]</code>. There are three kinds of variables:</p>
+<ul>
+<li>Standard variables</li>
+<li>Formatted variables</li>
+<li>Boolean variables</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="standard-variables"></a><a href="#standard-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Standard Variables</h3>
+<p>Standard variables are written <code>[{variableName}]</code> where <code>variableName</code> is a variable declared in the model.</p>
+<p>The following example shows a template text with three variables (<code>buyer</code>, <code>amount</code>, and <code>seller</code>):</p>
+<pre><code class="hljs css language-md">Upon the signing of this Agreement, [{buyer}] shall pay [{amount}] to [{seller}].
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="formatted-variables"></a><a href="#formatted-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formatted Variables</h3>
+<p>Formatted variables are written <code>[{variableName as &quot;FORMAT&quot;}]</code> where <code>variableName</code> is a variable declared in the model and the <code>FORMAT</code> is a type-dependent description for the syntax of the variables in the contract.</p>
+<p>The following example shows a template text with one variable with a format <code>DD/MM/YYYY</code>.</p>
+<pre><code class="hljs css language-md">The contract was signed on [{contractDate as "DD/MM/YYYY"}].
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="boolean-variables"></a><a href="#boolean-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boolean Variables</h3>
+<p>Boolean variables are written <code>[{&quot;OPTIONALTEXT&quot;:? variableName}] where</code>variableName<code>is a variable declared in the model and</code>OPTIONALTEXT` is text that is optionally present in the contract.</p>
+<h2><a class="anchor" aria-hidden="true" id="instance-text"></a><a href="#instance-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instance Text</h2>
+<p>A template defines the set of clauses or contracts instances which are valid against that template. An instance is UTF-8 text without markup, where variables have been replaced by values.</p>
+<p>Except for variables, the instance text has to exactly match the text in the template. The syntax of a value in the instance text for each variable <code>variableName</code> depends on the type of that variable.</p>
+<h2><a class="anchor" aria-hidden="true" id="string-variable"></a><a href="#string-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String Variable</h2>
+<h3><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>If the variable <code>variableName</code> has type <code>String</code> in the model:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">String</span> variableName
+</code></pre>
+<p>The corresponding instance should contain text between quotes (<code>&quot;</code>).</p>
+<h3><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h3>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-md">asset Template extends AccordClause {
+  o String buyer
+  o String supplier
+}
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">This Supply Sales Agreement is made between "Steve Supplier" and "Betty Byer".
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-md">This Supply Sales Agreement is made between [{supplier}] and [{buyer}].
+</code></pre>
+<p>while the following instance texts do not match:</p>
+<pre><code class="hljs css language-md">This Supply Sales Agreement is made between 2019 and 2020.
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-md">This Supply Sales Agreement is made between Steve Supplier and Betty Byer.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="numeric-variable"></a><a href="#numeric-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Numeric Variable</h2>
+<h3><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>If the variable <code>variableName</code> has type <code>Double</code>, <code>Integer</code> or <code>Long</code> in the model:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">Double</span> variableName
+o <span class="hljs-type">Integer</span> variableName2
+o <span class="hljs-type">Long</span> variableName3
+</code></pre>
+<p>The corresponding instance should contain the corresponding number.</p>
+<h3><a class="anchor" aria-hidden="true" id="examples-1"></a><a href="#examples-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h3>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-md">asset Template extends AccordClause {
+  o Double penaltyPercentage
+}
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">The penalty amount is 10.5% of the total value of the Equipment whose delivery has been delayed.
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-md">The penalty amount is [{penaltyPercentage}]% of the total value of the Equipment whose delivery has been delayed.
+</code></pre>
+<p>while the following instance texts do not match:</p>
+<pre><code class="hljs css language-md">The penalty amount is ten% of the total value of the Equipment whose delivery has been delayed.
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-md">The penalty amount is "10.5"% of the total value of the Equipment whose delivery has been delayed.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="datetime-variables"></a><a href="#datetime-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateTime Variables</h2>
+<h3><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>If the variable <code>variableName</code> has type <code>DateTime</code>:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">DateTime</span> variableName
+</code></pre>
+<p>The corresponding instance should contain the corresponding date using the format <code>MM/DD/YYYY</code>, commonly used in the US.</p>
+<h3><a class="anchor" aria-hidden="true" id="datetime-formats"></a><a href="#datetime-formats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateTime Formats</h3>
+<p>DateTime format can be customized inline in a template grammar by including an optional format string using the <code>as</code> keyword. The following formatting tokens are supported:</p>
+<p>Tokens are case-sensitive.</p>
+<pre><code class="hljs css language-md">Input        Example.           Description
+
+YYYY         2014               4 or 2 digit year
+YY           14                 2 digit year
+M            12                 1 or 2 digit month number
+MM           04                 2 digit month number
+MMM          Feb.               Short month name
+MMMM         December           Long month name
+D            3                  1 or 2 digit day of month
+DD           04                 2 digit day of month
+H            3                  1 or 2 digit hours
+HH           04                 2 digit hours
+mm           59                 2 digit minutes
+ss           34                 2 digit seconds
+SSS          002                3 digit milliseconds
+Z            +01:00             UTC offset
+</code></pre>
+<blockquote>
+<p>Note that if <code>Z</code> is specified, it must occur as the last token in the format string.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="examples-2"></a><a href="#examples-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h3>
+<p>The format of the <code>contractDate</code> variable of type <code>DateTime</code> can be specified with the <code>DD/MM/YYYY</code> format, as is commonly used in Europe.</p>
+<pre><code class="hljs css language-md">The contract was signed on [{contractDate as "DD/MM/YYYY"}].
+The contract was signed on 26/04/2019.
+</code></pre>
+<p>Other examples:</p>
+<pre><code class="hljs css language-md">dateTimeProperty: [{dateTimeProperty as "D MMM YYYY HH:mm:ss.SSSZ"}]
+dateTimeProperty: 1 Jan 2018 05:15:20.123+01:02
+</code></pre>
+<pre><code class="hljs css language-md">dateTimeProperty: [{dateTimeProperty as "D MMMM YYYY HH:mm:ss.SSSZ"}]
+dateTimeProperty: 1 January 2018 05:15:20.123+01:02
+</code></pre>
+<pre><code class="hljs css language-md">dateTimeProperty: [{dateTimeProperty as "D-M-YYYY H mm:ss.SSSZ"}]
+dateTimeProperty: 31-12-2019 2 59:01.001+01:01
+</code></pre>
+<pre><code class="hljs css language-md">dateTimeProperty: [{dateTimeProperty as "DD/MM/YYYY"}]
+dateTimeProperty: 01/12/2018
+</code></pre>
+<pre><code class="hljs css language-md">dateTimeProperty: [{dateTimeProperty as "DD-MMM-YYYY H mm:ss.SSSZ"}]
+dateTimeProperty: 04-Jan-2019 2 59:01.001+01:01
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="duration-variables"></a><a href="#duration-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Duration Variables</h2>
+<h3><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>If the variable <code>variableName</code> has type <code>Duration</code>:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">import</span> org.accordproject.time.<span class="hljs-type">Duration</span>
+o <span class="hljs-type">Duration</span> variableName
+</code></pre>
+<p>The corresponding instance should contain the corresponding duration written with the amount as a number and the duration unit as literal text.</p>
+<h3><a class="anchor" aria-hidden="true" id="examples-3"></a><a href="#examples-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h3>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-md">asset Template extends AccordClause {
+  o Duration termination
+}
+</code></pre>
+<p>the following instance texts:</p>
+<pre><code class="hljs css language-md">If the delay is more than 15 days, the Buyer is entitled to terminate this Contract.
+</code></pre>
+<p>and</p>
+<pre><code class="hljs css language-md">If the delay is more than 1 week, the Buyer is entitled to terminate this Contract.
+</code></pre>
+<p>both match the template:</p>
+<pre><code class="hljs css language-md">If the delay is more than [{termination}], the Buyer is entitled to terminate this Contract.
+</code></pre>
+<p>while the following instance texts do not match:</p>
+<pre><code class="hljs css language-md">If the delay is more than a month, the Buyer is entitled to terminate this Contract.
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-md">If the delay is more than "two weeks", the Buyer is entitled to terminate this Contract.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="enumerated-variables"></a><a href="#enumerated-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enumerated Variables</h2>
+<h3><a class="anchor" aria-hidden="true" id="decription"></a><a href="#decription" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decription</h3>
+<p>If the variable <code>variableName</code> has an enumerated type:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">EnumType</span> variableName
+</code></pre>
+<p>The corresponding instance should contain a corresponding enumerated value without quotes.</p>
+<h3><a class="anchor" aria-hidden="true" id="examples-4"></a><a href="#examples-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h3>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> org.accordproject.money.CurrencyCode <span class="hljs-keyword">from</span> https://models.accordproject.org/<span class="hljs-type">money</span>.cto
+asset <span class="hljs-keyword">Template</span> extends AccordClause {
+  o CurrencyCode currency
+}
+
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">Monetary amounts in this contract are denominated in USD.
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-md">Monetary amounts in this contract are denominated in [{currency}].
+</code></pre>
+<p>while the following instance texts do not match:</p>
+<pre><code class="hljs css language-md">Monetary amounts in this contract are denominated in "USD".
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-md">Monetary amounts in this contract are denominated in $.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="complex-variables"></a><a href="#complex-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Complex Variables</h2>
+<h3><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h3>
+<p>If the variable <code>variableName</code> has a complex type <code>ComplextType</code> (such as an <code>asset</code>, a <code>concept</code>, etc.)</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">ComplextType</span> variableName
+</code></pre>
+<p>The corresponding instance should contain all fields in the corresponding complex type in the order they occur in the model, separated by a single white space character.</p>
+<h3><a class="anchor" aria-hidden="true" id="examples-5"></a><a href="#examples-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h3>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-md">import org.accordproject.address.PostalAddress from https://models.accordproject.org/address.cto
+asset Template extends AccordClause {
+  o PostalAddress address
+}
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">Address of the supplier: "555 main street" "10290" "" "NY" "New York" "10001".
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-md">Address of the supplier: [{address}].
+</code></pre>
+<p>Consider the following model:</p>
+<pre><code class="hljs css language-md">import org.accordproject.money.MonetaryAmount from https://models.accordproject.org/money.cto
+asset Template extends AccordClause {
+  o MonetaryAmount amount
+}
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">Total value of the goods: 50 USD.
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-md">Total value of the goods: [{amount}].
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#markup-syntax">Markup Syntax</a><ul class="toc-headings"><li><a href="#standard-variables">Standard Variables</a></li><li><a href="#formatted-variables">Formatted Variables</a></li><li><a href="#boolean-variables">Boolean Variables</a></li></ul></li><li><a href="#instance-text">Instance Text</a></li><li><a href="#string-variable">String Variable</a><ul class="toc-headings"><li><a href="#description">Description</a></li><li><a href="#examples">Examples</a></li></ul></li><li><a href="#numeric-variable">Numeric Variable</a><ul class="toc-headings"><li><a href="#description-1">Description</a></li><li><a href="#examples-1">Examples</a></li></ul></li><li><a href="#datetime-variables">DateTime Variables</a><ul class="toc-headings"><li><a href="#description-2">Description</a></li><li><a href="#datetime-formats">DateTime Formats</a></li><li><a href="#examples-2">Examples</a></li></ul></li><li><a href="#duration-variables">Duration Variables</a><ul class="toc-headings"><li><a href="#description-3">Description</a></li><li><a href="#examples-3">Examples</a></li></ul></li><li><a href="#enumerated-variables">Enumerated Variables</a><ul class="toc-headings"><li><a href="#decription">Decription</a></li><li><a href="#examples-4">Examples</a></li></ul></li><li><a href="#complex-variables">Complex Variables</a><ul class="toc-headings"><li><a href="#description-4">Description</a></li><li><a href="#examples-5">Examples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

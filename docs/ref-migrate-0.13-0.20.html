@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>0.13 to 0.20 · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Much has changed in the `0.20` release. This guide provides step-by-step instructions to port your Accord Project templates from version `0.13` or earlier to version `0.20`."/><meta name="docsearch:version" content="0.21"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="0.13 to 0.20 · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="Much has changed in the `0.20` release. This guide provides step-by-step instructions to port your Accord Project templates from version `0.13` or earlier to version `0.20`."/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.21</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Template Migration</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/accordproject.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-slc.html">Smart Legal Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-template.html">Accord Project Templates</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-tour.html">Online Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-faq.html">FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/started-installation.html">Install Cicero</a></li><li class="navListItem"><a class="navItem" href="/docs/started-hello.html">Hello World Template</a></li><li class="navListItem"><a class="navItem" href="/docs/started-resources.html">Resources</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Template Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Text</h4><ul><li class="navListItem"><a class="navItem" href="/docs/markup-preliminaries.html">Preliminaries</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-commonmark.html">CommonMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-ciceromark.html">CiceroMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-templatemark.html">TemplateMark</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Model</h4><ul><li class="navListItem"><a class="navItem" href="/docs/model-concerto.html">Concerto Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/model-namespaces.html">Namespaces</a></li><li class="navListItem"><a class="navItem" href="/docs/model-classes.html">Classes</a></li><li class="navListItem"><a class="navItem" href="/docs/model-enums.html">Enumerations</a></li><li class="navListItem"><a class="navItem" href="/docs/model-properties.html">Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/model-relationships.html">Relationships</a></li><li class="navListItem"><a class="navItem" href="/docs/model-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/model-api.html">Using the API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Logic</h4><ul><li class="navListItem"><a class="navItem" href="/docs/logic-ergo.html">Ergo Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-expr.html">Simple Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-type.html">Introducing Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-complex-type.html">Complex Values &amp; Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-advanced-expr.html">Advanced Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-stmt.html">Statements</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-decl.html">Declarations</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-module.html">Modules</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Using Cicero</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-templates.html">Templates Deep Dive</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-library.html">Template Library</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-create.html">Template Generator</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Authoring</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-studio.html">With Template Studio</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-vscode.html">With VS Code</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Execution</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-nodejs.html">Working with Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-hyperledger.html">With Hyperledger Fabric</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Reference Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">General</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-errors.html">Errors</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Migration</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ref-migrate-0.13-0.20.html">0.13 to 0.20</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.20-0.21.html">0.20 to 0.21</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Cicero Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-testing.html">Template Testing</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Transform Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-markus-cli.html">Command Line</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-api.html">Node.js API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-stdlib.html">Standard Library</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-repl.html">Read-Eval-Print Loop</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-spec.html">Specification</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Web Components Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-web-components-overview.html">Overview</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">0.13 to 0.20</h1></header><article><div><span><p>Much has changed in the <code>0.20</code> release. This guide provides step-by-step instructions to port your Accord Project templates from version <code>0.13</code> or earlier to version <code>0.20</code>.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Before following those migration instructions, make sure to first install version <code>0.20</code> of Cicero, as described in the <a href="started-installation">Install Cicero</a> Section of this documentation.</p>
+</div></div><h2><a class="anchor" aria-hidden="true" id="metadata-changes"></a><a href="#metadata-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Metadata Changes</h2>
+<p>You will first need to update the <code>package.json</code> in your template. Remove the Ergo version which is now unnecessary, and change the Cicero version to <code>^0.20.0</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>After those changes, the <code>accordproject</code> field in your <code>package.json</code> should look as follows (with the <code>template</code> field being either <code>clause</code> or <code>contract</code> depending on the template):</p>
+<pre><code class="hljs css language-js">...
+    <span class="hljs-string">"accordproject"</span>: {
+        <span class="hljs-string">"template"</span>: <span class="hljs-string">"clause"</span>,
+        <span class="hljs-string">"cicero"</span>: <span class="hljs-string">"^0.20.0"</span>
+    }
+...
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="template-directory-changes"></a><a href="#template-directory-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Template Directory Changes</h2>
+<p>The layout of templates has changed to reflect the conceptual notion of Accord Project templates (as a triangle composed of text, model and logic). To migrate a template directory from version <code>0.13</code> or earlier to the new <code>0.20</code> layout:</p>
+<ol>
+<li>Rename your <code>lib</code> directory to <code>logic</code></li>
+<li>Rename your <code>models</code> directory to <code>model</code></li>
+<li>Rename your <code>grammar</code> directory to <code>text</code></li>
+<li>Rename your template grammar from <code>text/template.tem</code> to <code>text/grammar.tem.md</code></li>
+<li>Rename your samples from <code>sample.txt</code> to <code>text/sample.md</code> (or generally any other <code>sample*.txt</code> files to <code>text/sample*.md</code>)</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Consider the <a href="https://templates.accordproject.org/latedeliveryandpenalty@0.14.1.html">late delivery and penalty</a> clause. After applying those changes, the template directory should look as follows:</p>
+<pre><code class="hljs"><span class="hljs-string">./.cucumber.js</span>
+<span class="hljs-string">./README.md</span>
+<span class="hljs-string">./package.json</span>
+<span class="hljs-string">./request-forcemajeure.json</span>
+<span class="hljs-string">./request.json</span>
+<span class="hljs-string">./state.json</span>
+
+<span class="hljs-string">./logic</span>:
+<span class="hljs-string">./logic/logic.ergo</span>
+
+<span class="hljs-string">./model</span>:
+<span class="hljs-string">./model/clause.cto</span>
+
+<span class="hljs-string">./test</span>:
+<span class="hljs-string">./test/logic.feature</span>
+<span class="hljs-string">./test/logic_default.feature</span>
+
+<span class="hljs-string">./text</span>:
+<span class="hljs-string">./text/grammar.tem.md</span>
+<span class="hljs-string">./text/sample-noforcemajeure.md</span>
+<span class="hljs-string">./text/sample.md</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="text-changes"></a><a href="#text-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Changes</h2>
+<p>Both grammar and sample text for the templates has changed to support rich text annotations through CommonMark and a new syntax for variables. You can find complete information about the new syntax in the <a href="markup-cicero">CiceroMark</a> Section of this documentation. For an existing template, you should apply the following changes.</p>
+<h3><a class="anchor" aria-hidden="true" id="text-grammar-changes"></a><a href="#text-grammar-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Grammar Changes</h3>
+<ol>
+<li>Variables should be changed from <code>[{variableName}]</code> to <code>{{variableName}}</code></li>
+<li>Formatted variables should be changed to from <code>[{variableName as &quot;FORMAT&quot;}]</code> to <code>{{variableName as &quot;FORMAT&quot;}}</code></li>
+<li>Boolean variables should be changed to use the new block syntax, from <code>[{&quot;This is a force majeure&quot;:?forceMajeure}]</code> to <code>{{#if forceMajeure}}This is a force majeure{{/if}}</code></li>
+<li>Nested clauses should be changed to use the new block syntax, from <code>[{#payment}]As consideration in full for the rights granted herein...[{/payment}]</code> to <code>{{#clause payment}}As consideration in full for the rights granted herein...{{/clause}}</code></li>
+</ol>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <ol>
+<li>Template text is now interpreted as CommonMark which may lead to unexpected results if your text includes CommonMark characters or structure (e.g., <code>#</code> or <code>##</code> now become headings; <code>1.</code> or <code>-</code> now become lists). You should review both the grammar and samples so they follow the proper <a href="https://commonmark.org">CommonMark</a> rules.</li>
+<li>The new lexer reserves <code>{{</code> instead of reserving <code>[{</code> which means you should avoid using <code>{{</code> in your text unless for Accord Project variables.</li>
+</ol>
+</div></div><h3><a class="anchor" aria-hidden="true" id="text-samples-changes"></a><a href="#text-samples-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Samples Changes</h3>
+<p>You should ensure that any changes to the grammar text is reflected in the samples. Any change in the grammar text outside of variables should be applied to the corresponding <code>sample.md</code> files as well.</p>
+
+    <div class="admonition admonition-tip">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></div> tip</h5>
+      </div>
+      <div class="admonition-content">
+    <p>You can check that the samples and grammar are in agreement by using the <code>cicero parse</code> command.</p>
+</div></div><h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Consider the text grammar for the <a href="https://templates.accordproject.org/latedeliveryandpenalty@0.14.1.html">late delivery and penalty</a> clause:</p>
+<pre><code class="hljs css language-md">Late Delivery and Penalty.
+In case of delayed delivery[{" except for Force Majeure cases,":? forceMajeure}]
+[{seller}] (the Seller) shall pay to [{buyer}] (the Buyer) for every [{penaltyDuration}]
+of delay penalty amounting to [{penaltyPercentage}]% of the total value of the Equipment
+whose delivery has been delayed. Any fractional part of a [{fractionalPart}] is to be
+considered a full [{fractionalPart}]. The total amount of penalty shall not however,
+exceed [{capPercentage}]% of the total value of the Equipment involved in late delivery.
+If the delay is more than [{termination}], the Buyer is entitled to terminate this Contract.
+</code></pre>
+<p>After applying the above rules to the code for the <code>0.13</code> version, and identifying the heading for the clause using the new markdown features, the grammar text becomes:</p>
+<pre><code class="hljs css language-tem"><span class="markdown"><span class="hljs-section">## Late Delivery and Penalty.</span>
+
+In case of delayed delivery</span><span class="hljs-template-variable">{{#<span class="hljs-template-tag"><span class="hljs-keyword">if</span></span> <span class="hljs-template-tag">forceMajeure</span>}}</span><span class="markdown"> except for Force Majeure cases,</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag"><span class="hljs-keyword">if</span></span>}}</span><span class="markdown">
+</span><span class="hljs-template-variable">{{<span class="hljs-template-tag">seller</span>}}</span><span class="markdown"> (the Seller) shall pay to </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">buyer</span>}}</span><span class="markdown"> (the Buyer) for every </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">penaltyDuration</span>}}</span><span class="markdown">
+of delay penalty amounting to </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">penaltyPercentage</span>}}</span><span class="markdown">% of the total value of the Equipment
+whose delivery has been delayed. Any fractional part of a </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">fractionalPart</span>}}</span><span class="markdown"> is to be
+considered a full </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">fractionalPart</span>}}</span><span class="markdown">. The total amount of penalty shall not however,
+exceed </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">capPercentage</span>}}</span><span class="markdown">% of the total value of the Equipment involved in late delivery.
+If the delay is more than </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">termination</span>}}</span><span class="markdown">, the Buyer is entitled to terminate this Contract.
+</span></code></pre>
+<p>To make sure the <code>sample.md</code> file parses as well, the heading needs to be similarly identified using markdown:</p>
+<pre><code class="hljs css language-md"><span class="hljs-section">## Late Delivery and Penalty.</span>
+
+In case of delayed delivery except for Force Majeure cases,
+"Dan" (the Seller) shall pay to "Steve" (the Buyer) for every 2 days
+of delay penalty amounting to 10.5% of the total value of the Equipment
+whose delivery has been delayed. Any fractional part of a days is to be
+considered a full days. The total amount of penalty shall not however,
+exceed 55% of the total value of the Equipment involved in late delivery.
+If the delay is more than 15 days, the Buyer is entitled to terminate this Contract.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="model-changes"></a><a href="#model-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Model Changes</h2>
+<p>There is no model changes required for this version.</p>
+<h2><a class="anchor" aria-hidden="true" id="logic-changes"></a><a href="#logic-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logic Changes</h2>
+<p>Version <code>0.20</code> of Ergo has a few new features that are non backward compatible with version <code>0.13</code>. Those may require you to change your template logic. The main non-backward compatible feature is the new support for enumerated values.</p>
+<h3><a class="anchor" aria-hidden="true" id="enumerated-values"></a><a href="#enumerated-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enumerated Values</h3>
+<p>Enumerated values are now proper values with a proper enum type, and not based on the type <code>String</code> anymore.</p>
+<p>For instance, consider the enum declaration:</p>
+<pre><code class="hljs css language-js">enum Cardsuit {
+  o CLUBS
+  o DIAMONDS
+  o HEARTS
+  o SPADES
+}
+</code></pre>
+<p>In version <code>0.13</code> or earlier the Ergo code would write <code>&quot;CLUBS&quot;</code> for an enum value and treat the type <code>Cardsuit</code> as if it was the type <code>String</code>.</p>
+<p>As of version <code>0.20</code> Ergo writes <code>CLUBS</code> for that same enum value and the type <code>Cardsuit</code> is now distinct from the type <code>String</code>.</p>
+<p>If you try to compile Ergo logic written for version <code>0.13</code> or earlier that features enumerated values, the compiler will likely throw type errors. You should apply the following changes:</p>
+<ol>
+<li>Remove the quotes (<code>&quot;</code>) around any enum values in your logic. E.g., <code>&quot;USD&quot;</code> should now be replaced by <code>USD</code> for monetary amounts;</li>
+<li>If enum values are bound to variables with a type annotation, you should change the type annotation from <code>String</code> to the correct enum type. E.g., <code>let x : String = &quot;DIAMONDS&quot;; ...</code> should become <code>let x : Cardsuit = DIAMONDS; ...</code>;</li>
+<li>If enum values are passed as parameters in clauses or functions, you should change the type annotation for that parameter from <code>String</code> to the correct enum type.</li>
+<li>In a few cases the same enumerated value may be used in different enum types (e.g., <code>days</code> and <code>weeks</code> are used in both <code>TemporalUnit</code> and <code>PeriodUnit</code>). Those two values will now have different types. If you need to distinguish, you can use the fully qualified name for the enum value (e.g., <code>~org.accordproject.time.TemporalUnit.days</code> or <code>~org.accordproject.time.PeriodUnit.days</code>).</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="other-changes"></a><a href="#other-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other Changes</h3>
+<ol>
+<li><code>now</code> used to return the current time but is treated in <code>0.20</code> like any other variables. If your logic used the variable <code>now</code> without declaring it, this will raise a <code>Variable now not found</code> error. You should change your logic to use the <code>now()</code> function instead.</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Consider the Ergo logic for the <a href="https://templates.accordproject.org/acceptance-of-delivery@0.12.1.html">acceptance of delivery</a> clause. Applying the above rules to the code for the <code>0.13</code> version:</p>
+<pre><code class="hljs css language-ergo">  <span class="hljs-keyword">clause</span> acceptanceofdelivery(request : <span class="hljs-type">InspectDeliverable</span>) : <span class="hljs-type">InspectionResponse</span> {
+
+    <span class="hljs-keyword">let</span> received = request.deliverableReceivedAt;
+    <span class="hljs-keyword">enforce</span> isBefore(received,<span class="hljs-built_in">now</span>) <span class="hljs-keyword">else</span>
+      <span class="hljs-keyword">throw</span> <span class="hljs-type">ErgoErrorResponse</span>{ message : <span class="hljs-string">"Transaction time is before the deliverable date."</span> }
+    ;
+
+    <span class="hljs-keyword">let</span> dur =
+      <span class="hljs-type">Duration</span>{
+        amount: <span class="hljs-keyword">contract</span>.businessDays,
+        <span class="hljs-literal">unit</span>: <span class="hljs-string">"days"</span>
+      };
+    <span class="hljs-keyword">let</span> status =
+      <span class="hljs-keyword">if</span> isAfter(<span class="hljs-built_in">now</span>(), addDuration(received, dur))
+      <span class="hljs-keyword">then</span> <span class="hljs-string">"OUTSIDE_INSPECTION_PERIOD"</span>
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> request.inspectionPassed
+      <span class="hljs-keyword">then</span> <span class="hljs-string">"PASSED_TESTING"</span>
+      <span class="hljs-keyword">else</span> <span class="hljs-string">"FAILED_TESTING"</span>
+    ;
+    <span class="hljs-keyword">return</span> <span class="hljs-type">InspectionResponse</span>{
+      status : status,
+      shipper : <span class="hljs-keyword">contract</span>.shipper,
+      receiver : <span class="hljs-keyword">contract</span>.receiver
+    }
+  }
+</code></pre>
+<p>results in the following new logic for the <code>0.20</code> version:</p>
+<pre><code class="hljs css language-ergo">  <span class="hljs-keyword">clause</span> acceptanceofdelivery(request : <span class="hljs-type">InspectDeliverable</span>) : <span class="hljs-type">InspectionResponse</span> {
+
+    <span class="hljs-keyword">let</span> received = request.deliverableReceivedAt;
+    <span class="hljs-keyword">enforce</span> isBefore(received,<span class="hljs-built_in">now</span>()) <span class="hljs-keyword">else</span>                <span class="hljs-comment">// changed to now()</span>
+      <span class="hljs-keyword">throw</span> <span class="hljs-type">ErgoErrorResponse</span>{ message : <span class="hljs-string">"Transaction time is before the deliverable date."</span> }
+    ;
+
+    <span class="hljs-keyword">let</span> dur =
+      <span class="hljs-type">Duration</span>{
+        amount: <span class="hljs-keyword">contract</span>.businessDays,
+        <span class="hljs-literal">unit</span>: ~org.accordproject.time.<span class="hljs-type">TemporalUnit</span>.days  <span class="hljs-comment">// enum value with fully qualified name</span>
+      };
+    <span class="hljs-keyword">let</span> status =
+      <span class="hljs-keyword">if</span> isAfter(<span class="hljs-built_in">now</span>(), addDuration(received, dur))      <span class="hljs-comment">// changed to now()</span>
+      <span class="hljs-keyword">then</span> <span class="hljs-type">OUTSIDE_INSPECTION_PERIOD</span>                     <span class="hljs-comment">// enum value has no quotes</span>
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> request.inspectionPassed
+      <span class="hljs-keyword">then</span> <span class="hljs-type">PASSED_TESTING</span>                                <span class="hljs-comment">// enum value has no quotes</span>
+      <span class="hljs-keyword">else</span> <span class="hljs-type">FAILED_TESTING</span>                                <span class="hljs-comment">// enum value has no quotes</span>
+    ;
+    <span class="hljs-keyword">return</span> <span class="hljs-type">InspectionResponse</span>{
+      status : status,
+      shipper : <span class="hljs-keyword">contract</span>.shipper,
+      receiver : <span class="hljs-keyword">contract</span>.receiver
+    }
+  }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="command-line-changes"></a><a href="#command-line-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Command Line Changes</h2>
+<p>The Command Line interface for Cicero and Ergo has been completely overhauled for consistency. Release <code>0.20</code> also features new command line interfaces for Concerto and for the new <code>markdown-transform</code> project.</p>
+<p>If you are familiar with the previous Accord Project command line interfaces (or if you have scripts relying on the previous version of the command line), here is a list of changes:</p>
+<ol>
+<li>Ergo: A single new <code>ergo</code> command replaces both <code>ergoc</code> and <code>ergorun</code>
+<ul>
+<li><code>ergoc</code> has been replaced by <code>ergo compile</code></li>
+<li><code>ergorun execute</code> has been replaced by <code>ergo trigger</code></li>
+<li><code>ergorun init</code> has been replaced by <code>ergo initialize</code></li>
+<li>All other <code>ergorun &lt;command&gt;</code> commands should use <code>ergo &lt;command&gt;</code> instead</li>
+</ul></li>
+<li>Cicero:
+<ul>
+<li>The <code>cicero execute</code> command has been replaced by <code>cicero trigger</code></li>
+<li>The <code>cicero init</code> command has been replaced by <code>cicero initialize</code></li>
+<li>The <code>cicero generateText</code> command has been replaced by <code>cicero draft</code></li>
+<li>the <code>cicero generate</code> command has been replaced by <code>cicero compile</code></li>
+</ul></li>
+</ol>
+<p>Note that several options have been renamed for consistency as well. Some of the main option changes are:</p>
+<ol>
+<li><code>--out</code> and <code>--outputDirectory</code> have both been replaced by <code>--output</code></li>
+<li><code>--format</code> has been replaced by <code>--target</code> in the new <code>cicero compile</code> command</li>
+<li><code>--contract</code> has been replaced by <code>--data</code> in all <code>ergo</code> commands</li>
+</ol>
+<p>For more details on the new command line interface, please consult the corresponding <a href="cicero-cli">Cicero CLI</a>, <a href="concerto-cli">Concerto CLI</a>, <a href="ergo-cli">Ergo CLI</a>, and <a href="markus-cli">Markus CLI</a> Sections in the reference manual.</p>
+<h2><a class="anchor" aria-hidden="true" id="api-changes"></a><a href="#api-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API Changes</h2>
+<p>A number of API changes may affect Node.js applications using Cicero or Ergo packages. The main API changes are:</p>
+<ol>
+<li>Ergo:
+<ol>
+<li><code>@accordproject/ergo-engine</code> package
+<ul>
+<li>the <code>Engine.execute()</code> call has been renamed <code>Engine.trigger()</code></li>
+</ul></li>
+</ol></li>
+<li>Cicero:
+<ol>
+<li><code>@accordproject/cicero-core</code> package
+<ul>
+<li>the <code>TemplateInstance.generateText()</code> call has been renamed <code>TemplateInstance.draft</code> <strong>and is now an <code>async</code> call</strong></li>
+<li>the <code>Metadata.getErgoVersion()</code> call has been removed</li>
+</ul></li>
+<li><code>@accordproject/cicero-engine</code> package
+<ul>
+<li>the <code>Engine.execute()</code> call has been renamed <code>Engine.trigger()</code></li>
+<li>the <code>Engine.generateText()</code> call has been renamed <code>Engine.draft()</code></li>
+</ul></li>
+</ol></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="cicero-server-changes"></a><a href="#cicero-server-changes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cicero Server Changes</h2>
+<p>Cicero server API has been changed to reflect the new underlying Cicero engine. Specifically:</p>
+<ol>
+<li>The <code>execute</code> endpoint has been renamed <code>trigger</code></li>
+<li>The path to the sample has to include the <code>text</code> directory, so instead of <code>execute/templateName/sample.txt</code> it should use <code>trigger/templateName/text%2Fsample.md</code></li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="example-4"></a><a href="#example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Following the <a href="https://github.com/accordproject/cicero/blob/master/packages/cicero-server/README.md">README.md</a> instructions, instead of calling:</p>
+<pre><code class="hljs">curl -X POST --header <span class="hljs-string">'Content-Type: application/json'</span> --header <span class="hljs-string">'Accept: application/json'</span> http://localhost:6001/execute/latedeliveryandpenalty/sample.txt -d '{ <span class="hljs-string">"request"</span>: { <span class="hljs-string">"$class"</span>: <span class="hljs-string">"org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest"</span>, <span class="hljs-string">"forceMajeure"</span>: <span class="hljs-keyword">false</span>,<span class="hljs-string">"agreedDelivery"</span>: <span class="hljs-string">"December 17, 2017 03:24:00"</span>, <span class="hljs-string">"deliveredAt"</span>: <span class="hljs-keyword">null</span>, <span class="hljs-string">"goodsValue"</span>: 200.00 }, <span class="hljs-string">"state"</span>: { <span class="hljs-string">"$class"</span>: <span class="hljs-string">"org.accordproject.cicero.contract.AccordContractState"</span>, <span class="hljs-string">"stateId"</span> : <span class="hljs-string">"org.accordproject.cicero.contract.AccordContractState#1"</span>}}'
+</code></pre>
+<p>You should call:</p>
+<pre><code class="hljs">curl -X POST --header <span class="hljs-string">'Content-Type: application/json'</span> --header <span class="hljs-string">'Accept: application/json'</span> http://localhost:6001/trigger/latedeliveryandpenalty/sample.md -d '{ <span class="hljs-string">"request"</span>: { <span class="hljs-string">"$class"</span>: <span class="hljs-string">"org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest"</span>, <span class="hljs-string">"forceMajeure"</span>: <span class="hljs-keyword">false</span>,<span class="hljs-string">"agreedDelivery"</span>: <span class="hljs-string">"December 17, 2017 03:24:00"</span>, <span class="hljs-string">"deliveredAt"</span>: <span class="hljs-keyword">null</span>, <span class="hljs-string">"goodsValue"</span>: 200.00 }, <span class="hljs-string">"state"</span>: { <span class="hljs-string">"$class"</span>: <span class="hljs-string">"org.accordproject.cicero.contract.AccordContractState"</span>, <span class="hljs-string">"stateId"</span> : <span class="hljs-string">"org.accordproject.cicero.contract.AccordContractState#1"</span>}}'
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ref-errors.html"><span class="arrow-prev">← </span><span>Errors</span></a><a class="docs-next button" href="/docs/ref-migrate-0.20-0.21.html"><span>0.20 to 0.21</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#metadata-changes">Metadata Changes</a></li><li><a href="#template-directory-changes">Template Directory Changes</a></li><li><a href="#text-changes">Text Changes</a><ul class="toc-headings"><li><a href="#text-grammar-changes">Text Grammar Changes</a></li><li><a href="#text-samples-changes">Text Samples Changes</a></li></ul></li><li><a href="#model-changes">Model Changes</a></li><li><a href="#logic-changes">Logic Changes</a><ul class="toc-headings"><li><a href="#enumerated-values">Enumerated Values</a></li><li><a href="#other-changes">Other Changes</a></li></ul></li><li><a href="#command-line-changes">Command Line Changes</a></li><li><a href="#api-changes">API Changes</a></li><li><a href="#cicero-server-changes">Cicero Server Changes</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

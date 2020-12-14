@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Deploying on Hyperledger Fabric · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Hyperledger Fabric 1.3"/><meta name="docsearch:version" content="0.20"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Deploying on Hyperledger Fabric · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="## Hyperledger Fabric 1.3"/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.20</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/0.20/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Deploying on Hyperledger Fabric</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="hyperledger-fabric-13"></a><a href="#hyperledger-fabric-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hyperledger Fabric 1.3</h2>
+<p>Sample chaincode for Hyperledger Fabric that shows how to execute a Cicero template:
+<a href="https://github.com/clauseHQ/fabric-samples/tree/master/chaincode/cicero">https://github.com/clauseHQ/fabric-samples/tree/master/chaincode/cicero</a></p>
+<p>This sample shows how you can deploy and execute Smart Legal Contracts on-chain using Hyperledger Fabric v1.3.</p>
+<p>Using this guide you can deploy a <a href="https://templates.accordproject.org/">Smart Legal Contract Template</a> from the <a href="https://www.accordproject.org/">Open Source Accord Project</a> to your HLF v1.3 blockchain. You can then submit transactions to the Smart Legal Contract, with the contract state persisted to the blockchain, and return values and emitted events propagated back to the client.</p>
+<p>Before starting this tutorial, you are encouraged to review an <a href="https://docs.google.com/presentation/d/1lYT-XlY-4UDtYR7Oc0X62nvT7AzOqYZ4QA8YVZasgy8/edit">Introduction to the Accord Project</a>.</p>
+<p>These instructions have been tested with:</p>
+<ul>
+<li>MacOS 10.14 / Ubuntu 18.04</li>
+<li>Recent release of Chrome and Safari</li>
+<li>Docker 18.09</li>
+<li>Docker Compose 1.23</li>
+<li>Node 8.10</li>
+<li>Git 2.17</li>
+</ul>
+<p>If you're building a new environment yourself, we recommend using a cloud-hosted server (to save the conference WIFI!) as the installations can require large downloads.</p>
+<p>A small number of hosted virtual machines are available from the workshop facilitators if you have trouble installing the prerequisites yourself.</p>
+<h2><a class="anchor" aria-hidden="true" id="installing-prerequisites"></a><a href="#installing-prerequisites" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installing Prerequisites</h2>
+<h3><a class="anchor" aria-hidden="true" id="using-amazon-web-services"></a><a href="#using-amazon-web-services" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Amazon Web Services</h3>
+<p>If you have your own AWS account, you can use the customised Ubuntu image. From your EC2 Dashboard, create a new instance and search for <strong>Cicero</strong> in the Community AMIs. The AMI is available in the Frankfurt and N. Virginia regions.</p>
+<p><img src="/docs/assets/advanced/hlf1.png" alt="Amazon Image"></p>
+<p>The <code>t2.medium</code> instance type is sufficient for this tutorial.</p>
+<p>You'll need also need to add an inbound rule to your Security Group to allow connections on port <code>3389</code>. This will allow you to make a remote desktop connection to your server.</p>
+<p><img src="/docs/assets/advanced/hlf2.png" alt="Amazon Image Port"></p>
+<p>The default username and password for the prebuilt image is:</p>
+<ul>
+<li>Username: <code>guest</code></li>
+<li>Password: <code>hyperledger2018</code></li>
+</ul>
+<blockquote>
+<p>Connect to your image with a Remote Desktop Client, for example, Microsoft Remote Desktop on Mac and Windows.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="building-a-custom-docker-image"></a><a href="#building-a-custom-docker-image" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building a Custom Docker Image</h3>
+<p>If you're feeling a bit more adventurous, you can build your own system. If you don't have the tools locally on your machine, start with an <a href="https://www.ubuntu.com/download/cloud">Ubuntu Bionic 18.04 image from your favourite cloud provider</a>. You will need to be able to transfer files into your image, so if your server doesn't have a Desktop Manager and browser installed you'll need to find some other way to transfer files, e.g. via SCP or FTP, for example.
+Once you've provisioned your server, install all of the required tools using the corresponding installation instructions:</p>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04">Docker</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04">Node</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-18-04">Docker Compose</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04">Git</a></li>
+<li><a href="https://hyperledger-fabric.readthedocs.io/en/release-1.3/getting_started.html">Fabric</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="create-your-smart-legal-contract-with-template-studio"></a><a href="#create-your-smart-legal-contract-with-template-studio" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create your Smart Legal Contract with Template Studio</h2>
+<p>Cicero Templates are the magic glue that binds your clever legal words with the logic that will run on your network. In this first step, we'll create a template in <a href="https://studio.accordproject.org/">Template Studio</a>.</p>
+<p>Template Studio is a browser-based development environment for Cicero Templates. Your templates are only every stored in your browser (and are not shared with the Accord Project), so you should <strong>Export</strong> your work to save it for another time.</p>
+<p>This tutorial uses the <code>supplyagreement-perishable-goods</code> template. This Smart Legal Agreement combines a plaintext contract for the shipment of goods that impose conditions on temperature and humidity until the shipment is delivered.</p>
+<p>We simulate the submission of IoT events from sensors that get sent to the contract in a supply blockchain network. The contract determines the obligations and actions of the parties according to its logic and legal text.</p>
+<p>Once you've connected to your system, open <a href="https://studio.accordproject.org">https://studio.accordproject.org</a> in a new browser window.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>In the hosted images, Mozilla Firefox is preinstalled, click the icon on the top-left toolbar to launch it.</p>
+</div></div><p>The Template Studio allows you to load sample templates for smart legal agreements from the <a href="https://templates.accordproject.org/">Accord Project template library</a>.</p>
+<blockquote>
+<p>In the Template Studio search bar, type <strong>supplyagreement-perishable-goods</strong>. Select the 0.12.1 version.</p>
+</blockquote>
+<p>Explore the source components of the template.</p>
+<ul>
+<li>Contract Text &amp; Grammar</li>
+<li>Model</li>
+<li>Logic</li>
+<li>Test Execution</li>
+</ul>
+<p>Note the placeholders in the Template Grammar (found under <strong>Contract Text</strong> -&gt; <strong>Template</strong>), and the corresponding data model definition in <code>contract.cto</code> (found under <strong>Model</strong>).</p>
+<p>The logic definition in Ergo defines the behaviour of the contract in response to Requests. The logic also reference the same contract variables, through the <code>contract</code> keyword.</p>
+<p>You can simulate the performance of the contract using the <strong>Text Execution</strong> page (click <strong>Logic</strong> first). Clicking <strong>Send Request</strong> will trigger the smart clause and produce a response that indicates the total price due, along with any penalties.</p>
+<blockquote>
+<p>Change some of the values in the Test Contract, for example increase the lower limit for temperature readings from 2°C to 3°C. If you reset the Test Execution and send the same request again you should notice a penalty in the response.</p>
+</blockquote>
+<p><img src="/docs/assets/advanced/hlf3.png" alt="Change Test Contract"></p>
+<p>The <em>Obligations</em> that are emitted by the contract are configured to be emitted as Events in Fabric. This allows any party that is involved in the contract to perform an action automatically, for example to add a payment obligation to an invoice.</p>
+<blockquote>
+<p>Click <strong>Export</strong> to download your template</p>
+</blockquote>
+<p>Save your CTA (Cicero Template Archive) file somewhere safe, as you'll need to use it in a later step. We suggest saving the file in user's the home folder.</p>
+<blockquote>
+<p>Create a <code>request.json</code> file with the contents of the <strong>Request</strong> box from the <strong>Logic</strong> -&gt; <strong>Test Execution</strong> page in Template Studio.</p>
+</blockquote>
+<p>For example:</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.perishablegoods.ShipmentReceived"</span>,
+    <span class="hljs-attr">"unitCount"</span>: <span class="hljs-number">3002</span>,
+    <span class="hljs-attr">"shipment"</span>: {
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.perishablegoods.Shipment"</span>,
+      <span class="hljs-attr">"shipmentId"</span>: <span class="hljs-string">"SHIP_001"</span>,
+      <span class="hljs-attr">"sensorReadings"</span>: [
+        {
+          <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.perishablegoods.SensorReading"</span>,
+          <span class="hljs-attr">"centigrade"</span>: <span class="hljs-number">2</span>,
+          <span class="hljs-attr">"humidity"</span>: <span class="hljs-number">80</span>,
+          <span class="hljs-attr">"shipment"</span>: <span class="hljs-string">"resource:org.accordproject.perishablegoods.Shipment#SHIP_001"</span>,
+          <span class="hljs-attr">"transactionId"</span>: <span class="hljs-string">"a"</span>
+        }
+      ]
+    }
+  }
+</code></pre>
+<p>Finally, create a <code>contract.txt</code> file with the contents of the Test Contract  box from the Contract Text page in Template Studio.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>It's important that your sample contract text exactly matches your grammar's structure, this includes trailing spaces and line breaks. To be sure that you copy everything, right click the window and choose Select All, before choosing Copy.</p>
+<p>You'll be notified if there are errors in your contract text during the next step by messages such as:</p>
+<pre><code class="hljs css language-md">Unexpected "\n"
+</code></pre>
+</div></div><h2><a class="anchor" aria-hidden="true" id="provision-your-hyperledger-fabric-instance"></a><a href="#provision-your-hyperledger-fabric-instance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Provision your Hyperledger Fabric instance</h2>
+<p>In this step, we will provision a test Hyperledger Fabric network on your machine.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>If you're not using one of the prebuilt images you'll also need run the following command to download the tutorial resources from GitHub.</p>
+<pre><code class="hljs css language-sh">git <span class="hljs-built_in">clone</span> https://github.com/clauseHQ/fabric-samples
+<span class="hljs-built_in">cd</span> fabric-samples
+git checkout master
+</code></pre>
+</div></div><blockquote>
+<p>Open a Terminal window and type the following commands. In the hosted image there is a link start a terminal window on the desktop.</p>
+</blockquote>
+<pre><code class="hljs css language-sh"><span class="hljs-built_in">cd</span> fabric-samples/cicero
+</code></pre>
+<p>Next we'll download Fabric and start the docker containers. If you're doing this for the first time, go and get a coffee. This will usually take several minutes.</p>
+<blockquote>
+<p>In your Terminal, type the following command to download and start Fabric.</p>
+</blockquote>
+<pre><code class="hljs css language-sh">./startFabric.sh
+</code></pre>
+<blockquote>
+<p>Next install the node dependencies for the client code, with this command. This step can also take a few minutes.</p>
+</blockquote>
+<pre><code class="hljs css language-sh">npm install
+</code></pre>
+<blockquote>
+<p>You can then enroll the administrator into the network, and register a user that we'll use in later scripts.</p>
+</blockquote>
+<pre><code class="hljs css language-sh">node enrollAdmin.js &amp;&amp; node registerUser.js
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="deploy-your-contract-to-your-network"></a><a href="#deploy-your-contract-to-your-network" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy your contract to your network</h2>
+<blockquote>
+<p>Using the files that you downloaded earlier, run the <code>deploy.js</code> script.</p>
+</blockquote>
+<p>The example below assumes that all of the files are located in the same folder as <code>deploy.js</code>.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>The order of the parameters to the <code>deploy.js</code> script is important, please follow the pattern shown in the example. You'll also need to give the relative  or absolute path to the <code>sample.txt</code> file, for example if you saved the file in your home directory, replace <code>sample.txt</code> with <code>../../sample.txt</code>.</p>
+</div></div><pre><code class="hljs css language-sh">node deploy.js supplyagreement-perishable-goods.cta sample.txt
+</code></pre>
+<p>If deployment of your contract is successful, you should see the following output:</p>
+<pre><code class="hljs css language-sh">Transaction proposal was good
+Response payload: Successfully deployed contract MYCONTRACT based on supplyagreement-perishable-goods@0.9.0
+Successfully sent Proposal and received ProposalResponse: Status - 200, message - <span class="hljs-string">""</span>
+The transaction has been committed on peer localhost:7051
+Send transaction promise and event listener promise have completed
+Successfully sent transaction to the orderer.
+Successfully committed the change to the ledger by the peer
+</code></pre>
+<p>Finally, you can trigger your Smart Legal Agreement by sending requests to it. The <code>submitRequest.js</code> script is configured to route your request to your deployed contract.</p>
+<blockquote>
+<p>Run the <code>submitRequest.js</code> script using your <code>request.json</code> file, by typing the following command into the terminal.</p>
+</blockquote>
+<pre><code class="hljs css language-sh">node submitRequest.js request.json 
+</code></pre>
+<p>If the invocation is successful, you should see the following output:</p>
+<pre><code class="hljs css language-sh">Assigning transaction_id:  0788d105901c9f12316bb84dc1c5345be6fe96edf626d427de9871cefac4f063
+Transaction proposal was good
+Response payload: {<span class="hljs-string">"<span class="hljs-variable">$class</span>"</span>:<span class="hljs-string">"org.accordproject.perishablegoods.PriceCalculation"</span>,<span class="hljs-string">"totalPrice"</span>:{<span class="hljs-string">"<span class="hljs-variable">$class</span>"</span>:<span class="hljs-string">"org.accordproject.money.MonetaryAmount"</span>,<span class="hljs-string">"doubleValue"</span>:4503,<span class="hljs-string">"currencyCode"</span>:<span class="hljs-string">"USD"</span>},<span class="hljs-string">"penalty"</span>:{<span class="hljs-string">"<span class="hljs-variable">$class</span>"</span>:<span class="hljs-string">"org.accordproject.money.MonetaryAmount"</span>,<span class="hljs-string">"doubleValue"</span>:0,<span class="hljs-string">"currencyCode"</span>:<span class="hljs-string">"USD"</span>},<span class="hljs-string">"late"</span>:<span class="hljs-literal">false</span>,<span class="hljs-string">"shipment"</span>:<span class="hljs-string">"resource:org.accordproject.perishablegoods.Shipment#SHIP_001"</span>,<span class="hljs-string">"transactionId"</span>:<span class="hljs-string">"3a30f4b7-7537-4c2e-8186-49ce7e95681d"</span>,<span class="hljs-string">"timestamp"</span>:<span class="hljs-string">"2018-12-01T17:49:26.100Z"</span>}
+Successfully sent Proposal and received ProposalResponse: Status - 200, message - <span class="hljs-string">""</span>
+The transaction has been committed on peer localhost:7051
+Send transaction promise and event listener promise have completed
+Successfully sent transaction to the orderer.
+Successfully committed the change to the ledger by the peer
+</code></pre>
+<p>Congratulations you now have a legal agreement running on your blockchain network!</p>
+<p>Depending on the values in your request, the response payload will indicate whether a penalty is due.</p>
+<p>Because this contract is currently stateless, i.e. it doesn't store any data on-chain, you can submit multiple requests with different values to simulate the behaviour of the contract under different circumstances.</p>
+
+    <div class="admonition admonition-tip">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></div> tip</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Can you cause a breach due to out-of-range readings?</p>
+</div></div><h2><a class="anchor" aria-hidden="true" id="extension-tasks"></a><a href="#extension-tasks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extension Tasks</h2>
+<p>We gave you lots of help in the first few steps, but to learn properly, we always find that it helps to try things for yourself. Here are a few suggestions that will help you to understand what is going on better.</p>
+<ol>
+<li>Currently, <code>the supplyagreement-perishable-goods</code> template doesn't store any data on the chain. Modify the template to store sensor readings. The readings should be looked up from the state object in your logic rather than from your request when the shipment is accepted.
+:::note
+Take a look at some of the other stateful Cicero Templates to see what changes you will need to make. <code>installment-sale</code> and <code>helloworldstate</code> are good examples.
+If you get really stuck, a solution is available for you to <a href="https://drive.google.com/file/d/1cak_P_x01w8dz43aZX8N16G5DUNp6VbG/view?usp=sharing">download</a>.
+:::</li>
+<li>Explore the source code of the Cicero chaincode shim that transforms your requests and deployments into Fabric transactions using the Fabric Node SDK. <a href="https://github.com/clauseHQ/fabric-samples/tree/master/chaincode/cicero">https://github.com/clauseHQ/fabric-samples/tree/master/chaincode/cicero</a></li>
+<li>Create your own template from scratch using <a href="https://studio.accordproject.org/">Template Studio</a>, or download the <a href="https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin">VSCode plugin</a>.
+<img src="/docs/assets/advanced/hlf4.png" alt="Change Test Contract"></li>
+</ol>
+<blockquote>
+<p>A separate tutorial for creating a template using the Cicero CLI tool can be found in <a href="basic-create">Creating a New Template</a>.</p>
+</blockquote>
+<ol start="4">
+<li>This template also emits Obligations as Fabric events as well as returning a response to the client. Modify the Cicero chaincode to display the events do something interesting with them. How would you notify the parties that a penalty is due?</li>
+</ol>
+
+    <div class="admonition admonition-warning">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg></div> warning</h5>
+      </div>
+      <div class="admonition-content">
+    <p>If you would like to make changes to the cicero chaincode be aware that Docker caches the docker image for the chaincode. If you edit the source and run <code>./startFabric</code> you will <em>not</em> see your changes.</p>
+<p>For your code changes to take effect you need to <code>docker stop</code> the peer (use <code>docker ps</code> to get the container id) and then <code>docker rmi -f</code> your docker chaincode image. The image name should look something like <code>dev-peer0.org1.example.com-cicero-2.0-598263b3afa0267a29243ec2ab8d19b7d2016ac628f13641ed1822c4241c5734</code></p>
+</div></div><ol start="5">
+<li>Deploy the contract to a Fabric network that includes multiple users and nodes.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="hyperledger-composer"></a><a href="#hyperledger-composer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hyperledger Composer</h2>
+<p>A separate sample showing how to integrate Cicero with Hyperledger Composer is available here:
+<a href="https://github.com/accordproject/cicero-perishable-network">https://github.com/accordproject/cicero-perishable-network</a></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#hyperledger-fabric-13">Hyperledger Fabric 1.3</a></li><li><a href="#installing-prerequisites">Installing Prerequisites</a><ul class="toc-headings"><li><a href="#using-amazon-web-services">Using Amazon Web Services</a></li><li><a href="#building-a-custom-docker-image">Building a Custom Docker Image</a></li></ul></li><li><a href="#create-your-smart-legal-contract-with-template-studio">Create your Smart Legal Contract with Template Studio</a></li><li><a href="#provision-your-hyperledger-fabric-instance">Provision your Hyperledger Fabric instance</a></li><li><a href="#deploy-your-contract-to-your-network">Deploy your contract to your network</a></li><li><a href="#extension-tasks">Extension Tasks</a></li><li><a href="#hyperledger-composer">Hyperledger Composer</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

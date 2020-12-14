@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Authoring in Template Studio · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This tutorial will walk you through the steps of authoring a clause template in [Template Studio](https://studio.accordproject.org/)."/><meta name="docsearch:version" content="0.21"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Authoring in Template Studio · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="This tutorial will walk you through the steps of authoring a clause template in [Template Studio](https://studio.accordproject.org/)."/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.21</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Authoring in Template Studio</h1></header><article><div><span><p>This tutorial will walk you through the steps of authoring a clause template in <a href="https://studio.accordproject.org/">Template Studio</a>.</p>
+<p>We start with a very simple <em>Late Penalty and Delivery</em> Clause and gradually make it more complex, adding both legal text to it and the corresponding business logic in Ergo.</p>
+<h2><a class="anchor" aria-hidden="true" id="initial-late-delivery-clause"></a><a href="#initial-late-delivery-clause" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initial Late Delivery Clause</h2>
+<h3><a class="anchor" aria-hidden="true" id="load-the-template"></a><a href="#load-the-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Load the Template</h3>
+<p>To get started, head to the <code>minilatedeliveryandpenalty</code> template in the Accord Project Template Library at <a href="https://templates.accordproject.org/minilatedeliveryandpenalty@0.2.1.html">https://templates.accordproject.org/minilatedeliveryandpenalty@0.2.1.html</a> and click the &quot;Open In Template Studio&quot; button.</p>
+<p><img src="/docs/assets/advanced/late1.png" alt="Advanced-Late-1"></p>
+<p>Begin by inspecting the <code>README</code> and <code>package.json</code> tabs within the <code>Metadata</code> section. Feel free to change the name of the template to one you like.</p>
+<h3><a class="anchor" aria-hidden="true" id="the-contract-text"></a><a href="#the-contract-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Contract Text</h3>
+<p>Then head to the <code>Template</code> tab in the <code>Contract Text</code> section which shows the natural language for the template. You should see the following text.</p>
+<p><img src="/docs/assets/advanced/late2.png" alt="Advanced-Late-2"></p>
+<p>When the text in the <code>Template</code> tab is in sync with the text in the <code>Test Contract</code> tab, this results in a valid contract instance in the <code>Contract Data</code> tab. The contract data is represented using the JSON format, and contains the value of the variables declared in the contract template. For instance, the value for the <code>buyer</code> variable is <code>Betty Buyer</code>, highlighted in red:</p>
+<p><img src="/docs/assets/advanced/late3.png" alt="Advanced-Late-3"></p>
+<p>Changes to the variables in the <code>Test Contract</code> are reflected in the Contract Data in real time, and vice versa. For instance, change <code>Betty Buyer</code> to a different name in the contract text to see the <code>partyId</code> change in the contract data.</p>
+<p>If you edit part of the text which is not a variable in the template, this results in an error when parsing the <code>Contract Text</code>. The error will be shown in red in the status bar at the bottom of the page. For instance the following image shows the parsing error obtained when changing the word <code>delayed</code> to the word <code>timely</code> in the contract text.</p>
+<p><img src="/docs/assets/advanced/late4.png" alt="Advanced-Late-4"></p>
+<p>This is because the <code>Test Contract</code> relies on the <code>Template</code> text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can however edit the <code>Template</code> itself in order to change the legal text, thereby creating a new template.</p>
+<p>Revert your changes, changing the word <code>timely</code> back to the original word <code>delayed</code> and the parsing error will disappear.</p>
+<h3><a class="anchor" aria-hidden="true" id="the-model"></a><a href="#the-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Model</h3>
+<p>Moving along to the <code>Model</code> section, you will find the data model for the template variables (the <code>MiniLateDeliveryClause</code> type), as well as for the requests (the <code>LateRequest</code> type) and response (the <code>LateResponse</code> type) for the late delivery and penalty clause.</p>
+<p><img src="/docs/assets/advanced/late5.png" alt="Advanced-Late-5"></p>
+<p>Note that a <code>namespace</code> is declared at the beginning of the file for the model, and that several existing models are being imported (using e.g., <code>import org.accordproject.cicero.contract.*</code>). Those imports are needed to access the definition for several types used in the model:</p>
+<ul>
+<li><code>AccordClause</code> which is a generic type for all Accord Project clause templates, and is defined in the <code>org.accordproject.contract</code> namespace;</li>
+<li><code>Request</code> and <code>Response</code> which are generic types for responses and requests, and are defined in the <code>org.accordproject.runtime</code> namespace;</li>
+<li><code>Duration</code> which is defined in the <code>org.accordproject.time</code> namespace.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="the-logic"></a><a href="#the-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Logic</h3>
+<p>The final part of the template is the <code>Ergo</code> tab of the <code>Logic</code> section, which describes the business logic.</p>
+<p><img src="/docs/assets/advanced/late6.png" alt="Advanced-Late-6"></p>
+<p>Thanks to the <code>namespace</code> at the beginning of this file, the Ergo engine can know the definition for the <code>MiniLateDeliveryClause</code>, as well as the <code>LateRequest</code>, and <code>LateResponse</code> types defined in the <code>Model</code> tab.</p>
+<p>To test the template execution, go to the <code>Test Execution</code> tab in the <code>Logic</code> section. It should be already populated with a valid <code>Request</code>. Press the <code>Send Request</code> button to trigger the smart clause.</p>
+<p><img src="/docs/assets/advanced/late7.png" alt="Advanced-Late-7"></p>
+<p>Since the value of the <code>deliveredAt</code> parameter in the request is after the value of the <code>agreedDelivery</code> parameter in the request, this should return a new response which includes the calculated penalty.</p>
+<p>Changing the date for the <code>deliveredAt</code> parameter in the request will result in a different penalty.</p>
+<p><img src="/docs/assets/advanced/late8.png" alt="Advanced-Late-8"></p>
+<p>Note that the clause will return an error if it is called for a timely delivery.</p>
+<p><img src="/docs/assets/advanced/late9.png" alt="Advanced-Late-9"></p>
+<h2><a class="anchor" aria-hidden="true" id="add-a-penalty-cap"></a><a href="#add-a-penalty-cap" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a Penalty Cap</h2>
+<p>We can now start building a more advanced clause. Let us first take a moment to notice that there is no limitation to the penalty resulting from a late delivery. Under <code>Test Execution</code> in <code>Logic</code>, send this request:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.minilatedeliveryandpenalty.LateRequest"</span>,
+  <span class="hljs-attr">"agreedDelivery"</span>: <span class="hljs-string">"2019-04-10T12:00:00-05:00"</span>,
+  <span class="hljs-attr">"deliveredAt"</span>: <span class="hljs-string">"2019-04-20T03:24:00-05:00"</span>,
+  <span class="hljs-attr">"goodsValue"</span>: <span class="hljs-number">200</span>
+}
+</code></pre>
+<p>The penalty should be rather low. Now send this other request:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.minilatedeliveryandpenalty.LateRequest"</span>,
+  <span class="hljs-attr">"agreedDelivery"</span>: <span class="hljs-string">"2005-04-01T12:00:00-05:00"</span>,
+  <span class="hljs-attr">"deliveredAt"</span>: <span class="hljs-string">"2019-04-20T03:24:00-05:00"</span>,
+  <span class="hljs-attr">"goodsValue"</span>: <span class="hljs-number">200</span>
+}
+</code></pre>
+<p>Notice that the penalty is now quite a large value. It is not unusual to cap a penalty to a maximum amount. Let us now look at how to change the template to add such a cap based on a percentage of the total value of the delivered goods.</p>
+<h3><a class="anchor" aria-hidden="true" id="update-the-legal-text"></a><a href="#update-the-legal-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update the Legal Text</h3>
+<p>To implement this, we first go to the <code>Template</code> tab and add a sentence indicating: <code>The total amount of penalty shall not, however, exceed [{capPercentage}]% of the total value of the delayed goods.</code></p>
+<p>For convenience, you can copy-paste the new template text from here:</p>
+<pre><code class="hljs css language-md">Late Delivery and Penalty.
+
+In case of delayed delivery of Goods, [{buyer}] shall pay to
+[{seller}] a penalty amounting to [{penaltyPercentage}]% of the total
+value of the Goods for every [{penaltyDuration}] of delay. The total
+amount of penalty shall not, however, exceed [{capPercentage}]% of the
+total value of the delayed goods. If the delay is more than
+[{maximumDelay}], the Buyer is entitled to terminate this Contract.
+
+</code></pre>
+<p>This should immediately result in an error when parsing the contract text:</p>
+<p><img src="/docs/assets/advanced/late10.png" alt="Advanced-Late-10"></p>
+<p>As explained in the error message, this is because the new template text uses a variable <code>capPercentage</code> which has not been declared in the model.</p>
+<h3><a class="anchor" aria-hidden="true" id="update-the-model"></a><a href="#update-the-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update the Model</h3>
+<p>To define this new variable, go to the <code>Model</code> tab, and change the <code>MiniLateDeliveryClause</code> type to include <code>o Double capPercentage</code>.</p>
+<p><img src="/docs/assets/advanced/late10b.png" alt="Advanced-Late-11"></p>
+<p>For convenience, you can copy-paste the new <code>MiniLateDeliveryClause</code> type from here:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">asset</span> <span class="hljs-type">MiniLateDeliveryClause</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordClause</span> {
+  o <span class="hljs-type">AccordParty</span> buyer         <span class="hljs-comment">// Party to the contract (buyer)</span>
+  o <span class="hljs-type">AccordParty</span> seller        <span class="hljs-comment">// Party to the contract (seller)</span>
+  o <span class="hljs-type">Duration</span> penaltyDuration  <span class="hljs-comment">// Length of time resulting in penalty</span>
+  o <span class="hljs-type">Double</span> penaltyPercentage  <span class="hljs-comment">// Penalty percentage</span>
+  o <span class="hljs-type">Double</span> capPercentage      <span class="hljs-comment">// Maximum penalty percentage</span>
+  o <span class="hljs-type">Duration</span> maximumDelay     <span class="hljs-comment">// Maximum delay before termination</span>
+}
+</code></pre>
+<p>This result in a new error, this time on the test contract:</p>
+<p><img src="/docs/assets/advanced/late11.png" alt="Advanced-Late-11"></p>
+<p>To fix it, we simply need to add that same line we added to the template, replacing the <code>capPercentage</code> by a value in the <code>Test Contract</code>: <code>The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.</code></p>
+<p>For convenience, you can copy-paste the new test contract from here:</p>
+<pre><code class="hljs css language-md">Late Delivery and Penalty.
+
+In case of delayed delivery of Goods, "Betty Buyer" shall pay to
+"Steve Seller" a penalty amounting to 10.5% of the total
+value of the Goods for every 2 days of delay. The total
+amount of penalty shall not, however, exceed 52% of the
+total value of the delayed goods. If the delay is more than
+15 days, the Buyer is entitled to terminate this Contract.
+
+</code></pre>
+<p>Great, now the edited template should have no more errors, and the contract data should now include the value for the new <code>capPercentage</code> variable.</p>
+<p><img src="/docs/assets/advanced/late12.png" alt="Advanced-Late-12"></p>
+<p>Note that the <code>Current Template</code> Tab indicates that the template has been changed.</p>
+<h3><a class="anchor" aria-hidden="true" id="update-the-logic"></a><a href="#update-the-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update the Logic</h3>
+<p>At this point, executing the logic will still result in large penalties. This is because the logic does not take advantage of the new <code>capPercentage</code> variable. Edit the <code>logic.ergo</code> code to do so. After step <code>// 2. Penalty formula</code> in the logic, apply the penalty cap by adding some logic as follows:</p>
+<pre><code class="hljs">    // 3. Capped Penalty
+    <span class="hljs-built_in">let</span> <span class="hljs-built_in">cap</span> = contract.capPercentage / 100.0 * request.goodsValue;
+
+    <span class="hljs-built_in">let</span> cappedPenalty =
+      <span class="hljs-keyword">if</span> penalty &gt; <span class="hljs-built_in">cap</span>
+      <span class="hljs-keyword">then</span> <span class="hljs-built_in">cap</span>
+      <span class="hljs-keyword">else</span> penalty;
+    
+</code></pre>
+<p>Do not forget to also change the value of the penalty in the returned <code>LateResponse</code> to use the new variable <code>cappedPenalty</code>:</p>
+<pre><code class="hljs">    <span class="hljs-comment">// 5. Return the response</span>
+    return LateResponse{
+<span class="hljs-symbol">      penalty:</span> cappedPenalty,
+<span class="hljs-symbol">      buyerMayTerminate:</span> termination
+    }
+</code></pre>
+<p>The logic should now look as follows:</p>
+<p><img src="/docs/assets/advanced/late13.png" alt="Advanced-Late-13"></p>
+<h3><a class="anchor" aria-hidden="true" id="execute-the-new-logic"></a><a href="#execute-the-new-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Execute the new Logic</h3>
+<p>As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result into a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.</p>
+<p><img src="/docs/assets/advanced/late14.png" alt="Advanced-Late-14"></p>
+<h2><a class="anchor" aria-hidden="true" id="emit-a-payment-obligation"></a><a href="#emit-a-payment-obligation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Emit a Payment Obligation.</h2>
+<p>As a final extension to this template, we can modify it to emit a Payment Obligation. This first requires us to switch from a Clause template to a Contract template.</p>
+<h3><a class="anchor" aria-hidden="true" id="switch-to-a-contract-template"></a><a href="#switch-to-a-contract-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Switch to a Contract Template</h3>
+<p>The first place to change is in the metadata for the template. This can be done easily with the <code>full contract</code> button in the <code>Current Template</code> tab. This will immediately result in an error indicating that the model does not contain an <code>AccordContract</code> type.</p>
+<p><img src="/docs/assets/advanced/late15.png" alt="Advanced-Late-15"></p>
+<h3><a class="anchor" aria-hidden="true" id="update-the-model-1"></a><a href="#update-the-model-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update the Model</h3>
+<p>To fix this, change the model to reflect that we are now editing a contract template, and change the type <code>AccordClause</code> to <code>AccordContract</code> in the type definition for the template variables:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">asset</span> <span class="hljs-type">MiniLateDeliveryContract</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordContract</span> {
+  o <span class="hljs-type">AccordParty</span> buyer         <span class="hljs-comment">// Party to the contract (buyer)</span>
+  o <span class="hljs-type">AccordParty</span> seller        <span class="hljs-comment">// Party to the contract (seller)</span>
+  o <span class="hljs-type">Duration</span> penaltyDuration  <span class="hljs-comment">// Length of time resulting in penalty</span>
+  o <span class="hljs-type">Double</span> penaltyPercentage  <span class="hljs-comment">// Penalty percentage</span>
+  o <span class="hljs-type">Double</span> capPercentage      <span class="hljs-comment">// Maximum penalty percentage</span>
+  o <span class="hljs-type">Duration</span> maximumDelay     <span class="hljs-comment">// Maximum delay before termination</span>
+}
+</code></pre>
+<p>The next error is in the logic, since it still uses the old <code>MiniLateDeliveryClause</code> type which does not exist anymore.</p>
+<h3><a class="anchor" aria-hidden="true" id="update-the-logic-1"></a><a href="#update-the-logic-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update the Logic</h3>
+<p>The <code>Logic</code> error that occurs here is:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-type">Compilation</span> error (at file lib/logic.ergo line <span class="hljs-number">19</span> col <span class="hljs-number">31</span>). <span class="hljs-type">Cannot</span> find type <span class="hljs-keyword">with</span> name '<span class="hljs-type">MiniLateDeliveryClause'</span>
+<span class="hljs-keyword">contract</span> <span class="hljs-type">MiniLateDelivery</span> <span class="hljs-keyword">over</span> <span class="hljs-type">MiniLateDeliveryClause</span> {
+                               ^^^^^^^^^^^^^^^^^^^^^^ 
+</code></pre>
+<p>Update the logic to use the the new <code>MiniLateDeliveryContract</code> type instead, as follows:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">contract</span> <span class="hljs-type">MiniLateDelivery</span> <span class="hljs-keyword">over</span> <span class="hljs-type">MiniLateDeliveryContract</span> {
+</code></pre>
+<p>The template should now be without errors.</p>
+<h3><a class="anchor" aria-hidden="true" id="add-a-payment-obligation"></a><a href="#add-a-payment-obligation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a Payment Obligation</h3>
+<p>Our final task is to emit a <code>PaymentObligation</code> to indicate that the seller should pay the buyer in the amount of the calculated penalty.</p>
+<p>To do so, first import a couple of standard models: for the Cicero's <a href="https://models.accordproject.org/cicero/runtime.html">runtime model</a> (which contains the definition of a <code>PaymentObligation</code>), and for the Accord Project's <a href="https://models.accordproject.org/money.html">money model</a> (which contains the definition of a <code>MonetaryAmount). The</code>import` statements at the top of your logic should look as follows:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">import</span> org.accordproject.time.*
+<span class="hljs-keyword">import</span> org.accordproject.cicero.runtime.*
+<span class="hljs-keyword">import</span> org.accordproject.money.<span class="hljs-type">MonetaryAmount</span>
+
+</code></pre>
+<p>Lastly, add a new step between steps <code>// 4.</code> and <code>// 5.</code> in the logic to emit a payment obligation in USD:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">emit</span> <span class="hljs-type">PaymentObligation</span>{
+      <span class="hljs-keyword">contract</span>: <span class="hljs-keyword">contract</span>,
+      promisor: some(<span class="hljs-keyword">contract</span>.seller),
+      promisee: some(<span class="hljs-keyword">contract</span>.buyer),
+      deadline: <span class="hljs-literal">none</span>,
+      amount: <span class="hljs-type">MonetaryAmount</span>{ doubleValue: cappedPenalty, currencyCode: <span class="hljs-string">"USD"</span> },
+      description: <span class="hljs-keyword">contract</span>.seller.partyId ++ <span class="hljs-string">" should pay penalty amount to "</span> ++ <span class="hljs-keyword">contract</span>.buyer.partyId
+    };
+
+</code></pre>
+<p>That's it! You can observe in the <code>Test Execution</code> that an <code>Obligation</code> is now being emitted. Try out adjusting values and continuing to send requests and getting responses and obligations.</p>
+<p><img src="/docs/assets/advanced/late16.png" alt="Advanced-Late-16"></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#initial-late-delivery-clause">Initial Late Delivery Clause</a><ul class="toc-headings"><li><a href="#load-the-template">Load the Template</a></li><li><a href="#the-contract-text">The Contract Text</a></li><li><a href="#the-model">The Model</a></li><li><a href="#the-logic">The Logic</a></li></ul></li><li><a href="#add-a-penalty-cap">Add a Penalty Cap</a><ul class="toc-headings"><li><a href="#update-the-legal-text">Update the Legal Text</a></li><li><a href="#update-the-model">Update the Model</a></li><li><a href="#update-the-logic">Update the Logic</a></li><li><a href="#execute-the-new-logic">Execute the new Logic</a></li></ul></li><li><a href="#emit-a-payment-obligation">Emit a Payment Obligation.</a><ul class="toc-headings"><li><a href="#switch-to-a-contract-template">Switch to a Contract Template</a></li><li><a href="#update-the-model-1">Update the Model</a></li><li><a href="#update-the-logic-1">Update the Logic</a></li><li><a href="#add-a-payment-obligation">Add a Payment Obligation</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

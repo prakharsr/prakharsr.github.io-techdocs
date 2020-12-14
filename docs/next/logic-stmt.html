@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Statements · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="A clause&#x27;s body is composed of statements. Statements are a special kind of expression which can manipulate the contract state and emit obligations. Unlike other expressions they may return a response or an error."/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Statements · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="A clause&#x27;s body is composed of statements. Statements are a special kind of expression which can manipulate the contract state and emit obligations. Unlike other expressions they may return a response or an error."/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/next/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Ergo Logic</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/accordproject.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/next/accordproject-slc.html">Smart Legal Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/next/accordproject-template.html">Accord Project Templates</a></li><li class="navListItem"><a class="navItem" href="/docs/next/accordproject-tour.html">Online Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/next/accordproject-faq.html">FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/next/started-installation.html">Install Cicero</a></li><li class="navListItem"><a class="navItem" href="/docs/next/started-hello.html">Hello World Template</a></li><li class="navListItem"><a class="navItem" href="/docs/next/started-resources.html">Resources</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Template Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Text</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/markup-preliminaries.html">Preliminaries</a></li><li class="navListItem"><a class="navItem" href="/docs/next/markup-commonmark.html">CommonMark</a></li><li class="navListItem"><a class="navItem" href="/docs/next/markup-ciceromark.html">CiceroMark</a></li><li class="navListItem"><a class="navItem" href="/docs/next/markup-templatemark.html">TemplateMark</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Model</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/model-concerto.html">Concerto Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/next/model-namespaces.html">Namespaces</a></li><li class="navListItem"><a class="navItem" href="/docs/next/model-classes.html">Classes</a></li><li class="navListItem"><a class="navItem" href="/docs/next/model-enums.html">Enumerations</a></li><li class="navListItem"><a class="navItem" href="/docs/next/model-properties.html">Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/next/model-relationships.html">Relationships</a></li><li class="navListItem"><a class="navItem" href="/docs/next/model-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/next/model-api.html">Using the API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Logic</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/logic-ergo.html">Ergo Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/next/logic-simple-expr.html">Simple Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/next/logic-simple-type.html">Introducing Types</a></li><li class="navListItem"><a class="navItem" href="/docs/next/logic-complex-type.html">Complex Values &amp; Types</a></li><li class="navListItem"><a class="navItem" href="/docs/next/logic-advanced-expr.html">Advanced Expressions</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/next/logic-stmt.html">Statements</a></li><li class="navListItem"><a class="navItem" href="/docs/next/logic-decl.html">Declarations</a></li><li class="navListItem"><a class="navItem" href="/docs/next/logic-module.html">Modules</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Using Cicero</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/tutorial-templates.html">Templates Deep Dive</a></li><li class="navListItem"><a class="navItem" href="/docs/next/tutorial-library.html">Template Library</a></li><li class="navListItem"><a class="navItem" href="/docs/next/tutorial-create.html">Template Generator</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Authoring</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/tutorial-studio.html">With Template Studio</a></li><li class="navListItem"><a class="navItem" href="/docs/next/tutorial-vscode.html">With VS Code</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Execution</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/tutorial-nodejs.html">With Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/next/tutorial-hyperledger.html">With Hyperledger Fabric</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Reference Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">General</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/ref-glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-errors.html">Errors</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Migration</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/ref-migrate-0.13-0.20.html">0.13 to 0.20</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-migrate-0.20-0.21.html">0.20 to 0.21</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Cicero Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/ref-cicero-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-cicero-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-cicero-testing.html">Template Testing</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Transform Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/ref-markus-cli.html">Command Line</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/ref-concerto-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-concerto-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-concerto-api.html">Node.js API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/ref-ergo-stdlib.html">Standard Library</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-ergo-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-ergo-repl.html">Read-Eval-Print Loop</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-ergo-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/next/ref-ergo-spec.html">Specification</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Web Components Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/next/ref-web-components-overview.html">Overview</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Statements</h1></header><article><div><span><p>A clause's body is composed of statements. Statements are a special kind of expression which can manipulate the contract state and emit obligations. Unlike other expressions they may return a response or an error.</p>
+<h2><a class="anchor" aria-hidden="true" id="contract-data"></a><a href="#contract-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contract data</h2>
+<p>When inside a statement, data about the contract -- either the contract parameters, clause parameters or contract state are available using the following Ergo keywords:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">contract</span>   <span class="hljs-comment">// The contract parameters (from a contract template)</span>
+    <span class="hljs-keyword">clause</span>     <span class="hljs-comment">// Local clause parameters (from a clause template)</span>
+    <span class="hljs-keyword">state</span>      <span class="hljs-comment">// The contract state</span>
+</code></pre>
+<p>For instance, if your contract template parameters and state information have the following types:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-comment">// Template parameters</span>
+    <span class="hljs-keyword">asset</span> <span class="hljs-type">InstallmentSaleContract</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordContract</span> {
+      o <span class="hljs-type">AccordParty</span> <span class="hljs-type">BUYER</span>
+      o <span class="hljs-type">AccordParty</span> <span class="hljs-type">SELLER</span>
+      o <span class="hljs-type">Double</span> <span class="hljs-type">INITIAL_DUE</span>
+      o <span class="hljs-type">Double</span> <span class="hljs-type">INTEREST_RATE</span>
+      o <span class="hljs-type">Double</span> <span class="hljs-type">TOTAL_DUE_BEFORE_CLOSING</span>
+      o <span class="hljs-type">Double</span> <span class="hljs-type">MIN_PAYMENT</span>
+      o <span class="hljs-type">Double</span> <span class="hljs-type">DUE_AT_CLOSING</span>
+      o <span class="hljs-type">Integer</span> <span class="hljs-type">FIRST_MONTH</span>
+    }
+    <span class="hljs-comment">// Contract state</span>
+    <span class="hljs-keyword">enum</span> <span class="hljs-type">ContractStatus</span> {
+      o <span class="hljs-type">WaitingForFirstDayOfNextMonth</span>
+      o <span class="hljs-type">Fulfilled</span>
+    }
+    <span class="hljs-keyword">asset</span> <span class="hljs-type">InstallmentSaleState</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordContractState</span> {
+      o <span class="hljs-type">ContractStatus</span> status
+      o <span class="hljs-type">Double</span> balance_remaining
+      o <span class="hljs-type">Integer</span> next_payment_month
+      o <span class="hljs-type">Double</span> total_paid
+   }
+</code></pre>
+<p>You can use the following expressions:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">contract</span>.<span class="hljs-type">BUYER</span>
+    <span class="hljs-keyword">state</span>.balance_remaining
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="returning-a-response"></a><a href="#returning-a-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returning a response</h2>
+<p>Returning a response from a clause can be done by using a <code>return</code> statement:</p>
+<pre><code class="hljs css language-ergo">     <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>                       <span class="hljs-comment">// Return the integer one</span>
+     <span class="hljs-keyword">return</span> <span class="hljs-type">Payout</span>{ amount: <span class="hljs-number">39.99</span> } <span class="hljs-comment">// Return a new Payout object</span>
+     <span class="hljs-keyword">return</span>                         <span class="hljs-comment">// Return nothing</span>
+</code></pre>
+<blockquote>
+<p><strong>TechNote:</strong> the <a href="https://ergorepl.netlify.com">Ergo REPL</a> takes statements as input which is why we had to add <code>return</code> to expressions in previous examples.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="returning-a-failure"></a><a href="#returning-a-failure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returning a failure</h2>
+<p>Returning a failure from a clause can be done by using a <code>throw</code> statement:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">throw</span> <span class="hljs-type">ErgoErrorResponse</span>{ message: <span class="hljs-string">"This is wrong"</span> }
+    <span class="hljs-keyword">define</span> <span class="hljs-keyword">concept</span> <span class="hljs-type">MyOwnError</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">ErgoErrorResponse</span>{ fee: <span class="hljs-type">Double</span> }
+    <span class="hljs-keyword">throw</span> <span class="hljs-type">MyOwnError</span>{ message: <span class="hljs-string">"This is wrong and costs a fee"</span>, fee: <span class="hljs-number">29.99</span> }
+</code></pre>
+<p>For convenience, Ergo provides a <code>failure</code> function which takes a string as part of its <a href="ref-logic-stdlib#other-functions">standard library</a>, so you can also write:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">throw</span> failure(<span class="hljs-string">"This is wrong"</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="enforce-statement"></a><a href="#enforce-statement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enforce statement</h2>
+<p>Before a contract is enforceable some preconditions must be satisfied:</p>
+<ul>
+<li>Competent parties who have the legal capacity to contract</li>
+<li>Lawful subject matter</li>
+<li>Mutuality of obligation</li>
+<li>Consideration</li>
+</ul>
+<p>The constructs below will be used to determine if the preconditions have been met and what actions to take if they are not</p>
+<pre><code class="hljs css language-test">Example Prose
+    Do the parties have adequate funds to<span class="hljs-built_in"> execute </span>this contract?  
+</code></pre>
+<p>One can check preconditions in a clause using enforce statements, as
+follows:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">enforce</span> x &gt;= <span class="hljs-number">0.0</span>                    <span class="hljs-comment">// Condition</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">throw</span> failure(<span class="hljs-string">"not positive"</span>); <span class="hljs-comment">// Statement if condition is false</span>
+    <span class="hljs-keyword">return</span> x+<span class="hljs-number">1.0</span>                        <span class="hljs-comment">// Statement if condition is true</span>
+</code></pre>
+<p>The else part of the statement can be omitted in which case Ergo
+returns an error by default.</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">enforce</span> x &gt;= <span class="hljs-number">0.0</span>;         <span class="hljs-comment">// Condition</span>
+    <span class="hljs-keyword">return</span> x+<span class="hljs-number">1.0</span>              <span class="hljs-comment">// Statement if condition is true</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="emitting-obligations"></a><a href="#emitting-obligations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Emitting obligations</h2>
+<p>When inside a clause or contract, you can emit (one or more) obligations as follows:</p>
+<pre><code class="hljs css language-ergo">   <span class="hljs-keyword">emit</span> <span class="hljs-type">PaymentObligation</span>{ amount: <span class="hljs-number">29.99</span>, description: <span class="hljs-string">"12 red roses"</span> };
+   <span class="hljs-keyword">emit</span> <span class="hljs-type">PaymentObligation</span>{ amount: <span class="hljs-number">19.99</span>, description: <span class="hljs-string">"12 white tulips"</span> };
+   <span class="hljs-keyword">return</span>
+</code></pre>
+<p>Note that <code>emit</code> is always terminated by a <code>;</code> followed by another statement.</p>
+<p>To conditionally emit an obligation you must ensure that both the <code>then</code> and the <code>else</code> branches
+in your Ergo code have a <code>return</code> value. For example:</p>
+<pre><code class="hljs css language-ergo">  <span class="hljs-keyword">let</span> response = <span class="hljs-type">VehiclePaymentResponse</span>{ message: <span class="hljs-string">"A missed payment was declared for "</span> ++ 
+      <span class="hljs-keyword">contract</span>.buyer.partyId ++ <span class="hljs-string">". There have been "</span> ++ toString(newCounter) ++ <span class="hljs-string">" missed payments."</span> };
+
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">state</span>.numMissedPayments &gt; <span class="hljs-keyword">contract</span>.numMissedPayments <span class="hljs-keyword">then</span>
+      <span class="hljs-keyword">emit</span> <span class="hljs-type">DisableVehicle</span> {
+        vehicleId : <span class="hljs-keyword">contract</span>.vehicleId,
+        <span class="hljs-keyword">contract</span>: <span class="hljs-keyword">contract</span>,
+        deadline: <span class="hljs-literal">none</span>,
+        promisor: some(<span class="hljs-keyword">contract</span>.buyer),
+        promisee: some(<span class="hljs-keyword">contract</span>.seller),
+        numMissedPayments : newCounter
+      };
+      <span class="hljs-keyword">return</span> response
+    <span class="hljs-keyword">else</span>  
+      <span class="hljs-keyword">return</span> response
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="setting-the-contract-state"></a><a href="#setting-the-contract-state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting the contract state</h2>
+<p>When inside a clause or contract, you can create a contract state as follows:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">set</span> <span class="hljs-keyword">state</span> <span class="hljs-type">InstallmentSaleState</span>{
+      stateId: <span class="hljs-string">"#1"</span>,
+      status: <span class="hljs-string">"WaitingForFirstDayOfNextMonth"</span>,
+      balance_remaining: <span class="hljs-keyword">contract</span>.<span class="hljs-type">INITIAL_DUE</span>,
+      total_paid: <span class="hljs-number">0.0</span>,
+      next_payment_month: <span class="hljs-keyword">contract</span>.<span class="hljs-type">FIRST_MONTH</span>
+    };
+    <span class="hljs-keyword">return</span>
+</code></pre>
+<p>Note that <code>set state</code> is always terminated by a <code>;</code> followed by another statement.</p>
+<p>Once the state is set, you can change its properties individually with the shorter:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">set</span> <span class="hljs-keyword">state</span>.total_paid = <span class="hljs-number">100.0</span>;
+<span class="hljs-keyword">return</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="printing-intermediate-results"></a><a href="#printing-intermediate-results" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Printing intermediate results</h2>
+<p>For debugging purposes a special <code>info</code> statement can be used in your contract logic. For instance, the following indicates that you would like the Ergo execution engine to print out the result of expression <code>state.status</code> on the standard output.</p>
+<pre><code class="hljs css language-ergo">   <span class="hljs-keyword">set</span> <span class="hljs-keyword">state</span> <span class="hljs-type">InstallmentSaleState</span>{
+     stateId: <span class="hljs-string">"#1"</span>,
+     status: <span class="hljs-string">"WaitingForFirstDayOfNextMonth"</span>,
+     balance_remaining: <span class="hljs-keyword">contract</span>.<span class="hljs-type">INITIAL_DUE</span>,
+     total_paid: <span class="hljs-number">0.0</span>,
+     next_payment_month: <span class="hljs-keyword">contract</span>.<span class="hljs-type">FIRST_MONTH</span>
+   };
+   info(<span class="hljs-keyword">state</span>.status);     <span class="hljs-comment">// Directive to print to standard output</span>
+   <span class="hljs-keyword">return</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/logic-advanced-expr.html"><span class="arrow-prev">← </span><span>Advanced Expressions</span></a><a class="docs-next button" href="/docs/next/logic-decl.html"><span>Declarations</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#contract-data">Contract data</a></li><li><a href="#returning-a-response">Returning a response</a></li><li><a href="#returning-a-failure">Returning a failure</a></li><li><a href="#enforce-statement">Enforce statement</a></li><li><a href="#emitting-obligations">Emitting obligations</a></li><li><a href="#setting-the-contract-state">Setting the contract state</a></li><li><a href="#printing-intermediate-results">Printing intermediate results</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

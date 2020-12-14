@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>TemplateMark · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="TemplateMark is an extension to CommonMark used to write the text in Accord Project templates. The extension includes new markdown for variables, inline and container elements of the markdown and template formulas."/><meta name="docsearch:version" content="0.21"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="TemplateMark · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="TemplateMark is an extension to CommonMark used to write the text in Accord Project templates. The extension includes new markdown for variables, inline and container elements of the markdown and template formulas."/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.21</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Markdown Text</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/accordproject.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-slc.html">Smart Legal Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-template.html">Accord Project Templates</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-tour.html">Online Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-faq.html">FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/started-installation.html">Install Cicero</a></li><li class="navListItem"><a class="navItem" href="/docs/started-hello.html">Hello World Template</a></li><li class="navListItem"><a class="navItem" href="/docs/started-resources.html">Resources</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Template Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Text</h4><ul><li class="navListItem"><a class="navItem" href="/docs/markup-preliminaries.html">Preliminaries</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-commonmark.html">CommonMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-ciceromark.html">CiceroMark</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/markup-templatemark.html">TemplateMark</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Model</h4><ul><li class="navListItem"><a class="navItem" href="/docs/model-concerto.html">Concerto Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/model-namespaces.html">Namespaces</a></li><li class="navListItem"><a class="navItem" href="/docs/model-classes.html">Classes</a></li><li class="navListItem"><a class="navItem" href="/docs/model-enums.html">Enumerations</a></li><li class="navListItem"><a class="navItem" href="/docs/model-properties.html">Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/model-relationships.html">Relationships</a></li><li class="navListItem"><a class="navItem" href="/docs/model-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/model-api.html">Using the API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Logic</h4><ul><li class="navListItem"><a class="navItem" href="/docs/logic-ergo.html">Ergo Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-expr.html">Simple Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-type.html">Introducing Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-complex-type.html">Complex Values &amp; Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-advanced-expr.html">Advanced Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-stmt.html">Statements</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-decl.html">Declarations</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-module.html">Modules</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Using Cicero</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-templates.html">Templates Deep Dive</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-library.html">Template Library</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-create.html">Template Generator</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Authoring</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-studio.html">With Template Studio</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-vscode.html">With VS Code</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Execution</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-nodejs.html">Working with Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-hyperledger.html">With Hyperledger Fabric</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Reference Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">General</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-errors.html">Errors</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Migration</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.13-0.20.html">0.13 to 0.20</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.20-0.21.html">0.20 to 0.21</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Cicero Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-testing.html">Template Testing</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Transform Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-markus-cli.html">Command Line</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-api.html">Node.js API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-stdlib.html">Standard Library</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-repl.html">Read-Eval-Print Loop</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-spec.html">Specification</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Web Components Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-web-components-overview.html">Overview</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">TemplateMark</h1></header><article><div><span><p>TemplateMark is an extension to CommonMark used to write the text in Accord Project templates. The extension includes new markdown for variables, inline and container elements of the markdown and template formulas.</p>
+<p>The kind of extension which can be used is based on the <em>type</em> of the variable in the <a href="model-concerto">Concerto Model</a> for your template. For each type in your model differrent markdown elements apply: variable markdown for atomic types in the model, list blocks for array types in the model, optional blocks for optional types in the model, etc.</p>
+<h2><a class="anchor" aria-hidden="true" id="variables"></a><a href="#variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables</h2>
+<p>Standard variables are written <code>{{variableName}}</code> where <code>variableName</code> is a variable declared in the model.</p>
+<p>The following example shows a template text with three variables (<code>buyer</code>, <code>amount</code>, and <code>seller</code>):</p>
+<pre><code class="hljs css language-tem"><span class="markdown">Upon the signing of this Agreement, </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">buyer</span>}}</span><span class="markdown"> shall pay </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">amount</span>}}</span><span class="markdown"> to </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">seller</span>}}</span><span class="markdown">.
+</span></code></pre>
+<p>The way variables are handled (both during parsing and drafting) is based on their type.</p>
+<h3><a class="anchor" aria-hidden="true" id="string-variable"></a><a href="#string-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>String Variable</h3>
+<h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>If the variable <code>variableName</code> has type <code>String</code> in the model:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">String</span> variableName
+</code></pre>
+<p>The corresponding instance should contain text between quotes (<code>&quot;</code>).</p>
+<h4><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">asset</span> <span class="hljs-type">Template</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordClause</span> {
+  o <span class="hljs-type">String</span> buyer
+  o <span class="hljs-type">String</span> supplier
+}
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">This Supply Sales Agreement is made between "Steve Supplier" and "Betty Byer".
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">This Supply Sales Agreement is made between </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">supplier</span>}}</span><span class="markdown"> and </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">buyer</span>}}</span><span class="markdown">.
+</span></code></pre>
+<p>while the following instance texts do not match:</p>
+<pre><code class="hljs css language-md">This Supply Sales Agreement is made between 2019 and 2020.
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-md">This Supply Sales Agreement is made between Steve Supplier and Betty Byer.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="numeric-variable"></a><a href="#numeric-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Numeric Variable</h3>
+<h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>If the variable <code>variableName</code> has type <code>Double</code>, <code>Integer</code> or <code>Long</code> in the model:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">Double</span> variableName
+o <span class="hljs-type">Integer</span> variableName2
+o <span class="hljs-type">Long</span> variableName3
+</code></pre>
+<p>The corresponding instance should contain the corresponding number.</p>
+<h4><a class="anchor" aria-hidden="true" id="examples-1"></a><a href="#examples-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">asset</span> <span class="hljs-type">Template</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordClause</span> {
+  o <span class="hljs-type">Double</span> penaltyPercentage
+}
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">The penalty amount is 10.5% of the total value of the Equipment whose delivery has been delayed.
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">The penalty amount is </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">penaltyPercentage</span>}}</span><span class="markdown">% of the total value of the Equipment whose delivery has been delayed.
+</span></code></pre>
+<p>while the following instance texts do not match:</p>
+<pre><code class="hljs css language-md">The penalty amount is ten% of the total value of the Equipment whose delivery has been delayed.
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-md">The penalty amount is "10.5"% of the total value of the Equipment whose delivery has been delayed.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="enum-variables"></a><a href="#enum-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enum Variables</h3>
+<h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>If the variable <code>variableName</code> has an enumerated type:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">EnumType</span> variableName
+</code></pre>
+<p>The corresponding instance should contain a corresponding enumerated value without quotes.</p>
+<h4><a class="anchor" aria-hidden="true" id="examples-2"></a><a href="#examples-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">import</span> org.accordproject.money.<span class="hljs-type">CurrencyCode</span> from https:<span class="hljs-comment">//models.accordproject.org/money.cto</span>
+<span class="hljs-keyword">asset</span> <span class="hljs-type">Template</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordClause</span> {
+  o <span class="hljs-type">CurrencyCode</span> currency
+}
+
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">Monetary amounts in this contract are denominated in USD.
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">Monetary amounts in this contract are denominated in </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">currency</span>}}</span><span class="markdown">.
+</span></code></pre>
+<p>while the following instance texts do not match:</p>
+<pre><code class="hljs css language-md">Monetary amounts in this contract are denominated in "USD".
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-md">Monetary amounts in this contract are denominated in $.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="formatted-variables"></a><a href="#formatted-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formatted Variables</h2>
+<p>Formatted variables are written <code>{{variableName as &quot;FORMAT&quot;}}</code> where <code>variableName</code> is a variable declared in the model and the <code>FORMAT</code> is a type-dependent description for the syntax of the variables in the contract.</p>
+<p>The following example shows a template text with one variable with a format <code>DD/MM/YYYY</code>.</p>
+<pre><code class="hljs css language-tem"><span class="markdown">The contract was signed on </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">contractDate</span> <span class="hljs-template-tag"><span class="hljs-keyword">as</span></span> <span class="hljs-string">"DD/MM/YYYY"</span>}}</span><span class="markdown">.
+</span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="datetime-variables"></a><a href="#datetime-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateTime Variables</h3>
+<h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>If the variable <code>variableName</code> has type <code>DateTime</code>:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">DateTime</span> variableName
+</code></pre>
+<p>The corresponding instance should be a date and time, and can optionally be formatted. The default format is <code>MM/DD/YYYY</code>, commonly used in the US.</p>
+<h4><a class="anchor" aria-hidden="true" id="datetime-formats"></a><a href="#datetime-formats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateTime Formats</h4>
+<p>The textual representation of a DateTime can be customized by including an optional format string using the <code>as</code> keyword directly in a template grammar. The following formatting tokens are supported:</p>
+<p>Tokens are case-sensitive.</p>
+<table>
+<thead>
+<tr><th>Input</th><th>Example</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>YYYY</code></td><td><code>2014</code></td><td>4 or 2 digit year</td></tr>
+<tr><td><code>M</code></td><td><code>12</code></td><td>1 or 2 digit month number</td></tr>
+<tr><td><code>MM</code></td><td><code>04</code></td><td>2 digit month number</td></tr>
+<tr><td><code>MMM</code></td><td><code>Feb.</code></td><td>Short month name</td></tr>
+<tr><td><code>MMMM</code></td><td><code>December</code></td><td>Long month name</td></tr>
+<tr><td><code>D</code></td><td><code>3</code></td><td>1 or 2 digit day of month</td></tr>
+<tr><td><code>DD</code></td><td><code>04</code></td><td>2 digit day of month</td></tr>
+<tr><td><code>H</code></td><td><code>3</code></td><td>24 hours (1 or 2 digits)</td></tr>
+<tr><td><code>HH</code></td><td><code>04</code></td><td>24 hours (2 digits)</td></tr>
+<tr><td><code>h</code></td><td><code>1</code></td><td>12 hours (1 or 2 digits)</td></tr>
+<tr><td><code>hh</code></td><td><code>02</code></td><td>12 hours (2 digits)</td></tr>
+<tr><td><code>a</code></td><td><code>am</code> or <code>pm</code></td><td>morning/afternoon (lowercase)</td></tr>
+<tr><td><code>A</code></td><td><code>AM</code> or <code>PM</code></td><td>morning/afternoon (uppercase)</td></tr>
+<tr><td><code>mm</code></td><td><code>59</code></td><td>2 digit minutes</td></tr>
+<tr><td><code>ss</code></td><td><code>34</code></td><td>2 digit seconds</td></tr>
+<tr><td><code>SSS</code></td><td><code>002</code></td><td>3 digit milliseconds</td></tr>
+<tr><td><code>Z</code></td><td><code>+01:00</code></td><td>UTC offset</td></tr>
+</tbody>
+</table>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>If <code>Z</code> is specified, it must occur as the last token in the format string.</p>
+</div></div><h4><a class="anchor" aria-hidden="true" id="examples-3"></a><a href="#examples-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>The format of the <code>contractDate</code> variable of type <code>DateTime</code> can be specified with the <code>DD/MM/YYYY</code> format, as is commonly used in Europe.</p>
+<pre><code class="hljs css language-tem"><span class="markdown">The contract was signed on </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">contractDate</span> <span class="hljs-template-tag"><span class="hljs-keyword">as</span></span> <span class="hljs-string">"DD/MM/YYYY"</span>}}</span><span class="markdown">.
+The contract was signed on 26/04/2019.
+</span></code></pre>
+<p>Other examples:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">dateTimeProperty: </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">dateTimeProperty</span> <span class="hljs-template-tag"><span class="hljs-keyword">as</span></span> <span class="hljs-string">"D MMM YYYY HH:mm:ss.SSSZ"</span>}}</span><span class="markdown">
+dateTimeProperty: 1 Jan 2018 05:15:20.123+01:02
+</span></code></pre>
+<pre><code class="hljs css language-tem"><span class="markdown">dateTimeProperty: </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">dateTimeProperty</span> <span class="hljs-template-tag"><span class="hljs-keyword">as</span></span> <span class="hljs-string">"D MMMM YYYY HH:mm:ss.SSSZ"</span>}}</span><span class="markdown">
+dateTimeProperty: 1 January 2018 05:15:20.123+01:02
+</span></code></pre>
+<pre><code class="hljs css language-tem"><span class="markdown">dateTimeProperty: </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">dateTimeProperty</span> <span class="hljs-template-tag"><span class="hljs-keyword">as</span></span> <span class="hljs-string">"D-M-YYYY H mm:ss.SSSZ"</span>}}</span><span class="markdown">
+dateTimeProperty: 31-12-2019 2 59:01.001+01:01
+</span></code></pre>
+<pre><code class="hljs css language-tem"><span class="markdown">dateTimeProperty: </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">dateTimeProperty</span> <span class="hljs-template-tag"><span class="hljs-keyword">as</span></span> <span class="hljs-string">"DD/MM/YYYY"</span>}}</span><span class="markdown">
+dateTimeProperty: 01/12/2018
+</span></code></pre>
+<pre><code class="hljs css language-tem"><span class="markdown">dateTimeProperty: </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">dateTimeProperty</span> <span class="hljs-template-tag"><span class="hljs-keyword">as</span></span> <span class="hljs-string">"DD-MMM-YYYY H mm:ss.SSSZ"</span>}}</span><span class="markdown">
+dateTimeProperty: 04-Jan-2019 2 59:01.001+01:01
+</span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="amount-variables"></a><a href="#amount-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Amount Variables</h3>
+<h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>If the variable <code>variableName</code> is of type <code>Integer</code>, <code>Long</code>, <code>Double</code> or <code>MonetaryAmount</code>:</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">Integer</span> integerVariable
+o <span class="hljs-type">Long</span> longVariable
+o <span class="hljs-type">Double</span> doubleVariable
+o <span class="hljs-type">MonetaryAmount</span> monetaryVariable
+</code></pre>
+<p>The corresponding instance should be a numeric value (with a currency code in the case of monetary amounts), and can optionally be formatted.</p>
+<h4><a class="anchor" aria-hidden="true" id="amount-formats"></a><a href="#amount-formats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Amount Formats</h4>
+<p>The textual representation of an amount can be customized by including an optional format string using the <code>as</code> keyword directly in a template grammar. The following formatting tokens are supported:</p>
+<p>Tokens are case-sensitive.</p>
+<table>
+<thead>
+<tr><th>Input</th><th>Example</th><th>Description</th><th>Type Supported</th></tr>
+</thead>
+<tbody>
+<tr><td><code>0,0</code></td><td><code>3,100,200</code></td><td>integer part with <code>,</code> separator</td><td>Integer,Long,Double,MonetaryAmount</td></tr>
+<tr><td><code>0 0</code></td><td><code>3 100 200</code></td><td>integer part with <code></code> separator</td><td>Integer,Long,Double,MonetaryAmount</td></tr>
+<tr><td><code>0,0.00</code></td><td><code>3,100,200.95</code></td><td>decimal with two digits precision</td><td>Double,MonetaryAmount</td></tr>
+<tr><td><code>0 0,00</code></td><td><code>3 100 200,95</code></td><td>decimal with two digits precision</td><td>Double,MonetaryAmount</td></tr>
+<tr><td><code>0,0.0000</code></td><td><code>3,100,200.95</code></td><td>decimal with four digits precision</td><td>Double,MonetaryAmount</td></tr>
+<tr><td><code>CCC</code></td><td><code>USD</code></td><td>currency code</td><td>MonetaryAmount</td></tr>
+<tr><td><code>K</code></td><td><code>$</code></td><td>currency symbol</td><td>MonetaryAmount</td></tr>
+</tbody>
+</table>
+<p>The general format for the amount is <code>0{sep}0({sep}0+)?</code> where <code>{sep}</code> is a single character (e.g., <code>,</code> or <code>.</code>). The first <code>{sep}</code> is used to separate every three digits of the integer part. The second <code>{sep}</code> is used as a decimal point. And the number of <code>0</code> after the second separator is used to indicate precision (number of digits after the decimal point).</p>
+<h4><a class="anchor" aria-hidden="true" id="examples-4"></a><a href="#examples-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>The following examples show formating for <code>Integer</code> or <code>Long</code> values.</p>
+<pre><code class="hljs">The manuscript <span class="hljs-keyword">shall </span><span class="hljs-keyword">be </span>completed within {{days as <span class="hljs-string">"0,0"</span>}} days.
+The manuscript <span class="hljs-keyword">shall </span><span class="hljs-keyword">be </span>completed within <span class="hljs-number">1</span>,<span class="hljs-number">001</span> days.
+</code></pre>
+<pre><code class="hljs">The manuscript shall <span class="hljs-keyword">contain</span> <span class="hljs-keyword">at</span> most {{<span class="hljs-built_in">words</span> <span class="hljs-keyword">as</span> <span class="hljs-string">"0 0"</span>}} <span class="hljs-built_in">words</span>.
+The manuscript shall <span class="hljs-keyword">contain</span> <span class="hljs-keyword">at</span> most <span class="hljs-number">1</span> <span class="hljs-number">500</span> <span class="hljs-number">001</span> <span class="hljs-built_in">words</span>.
+</code></pre>
+<p>The following examples show formatting for <code>Double</code> values.</p>
+<pre><code class="hljs">The effective range of the device <span class="hljs-keyword">should </span><span class="hljs-keyword">be </span><span class="hljs-built_in">at</span> least {{<span class="hljs-keyword">distance </span>as <span class="hljs-string">"0,0.00mm"</span>}}.
+The effective range of the device <span class="hljs-keyword">should </span><span class="hljs-keyword">be </span><span class="hljs-built_in">at</span> least <span class="hljs-number">1</span>,<span class="hljs-number">250</span>,<span class="hljs-number">400</span>.<span class="hljs-number">99</span>mm.
+</code></pre>
+<pre><code class="hljs">The effective range of the device <span class="hljs-keyword">should </span><span class="hljs-keyword">be </span><span class="hljs-built_in">at</span> least {{<span class="hljs-keyword">distance </span>as <span class="hljs-string">"0 0,0000mm"</span>}}.
+The effective range of the device <span class="hljs-keyword">should </span><span class="hljs-keyword">be </span><span class="hljs-built_in">at</span> least <span class="hljs-number">1</span> <span class="hljs-number">250</span> <span class="hljs-number">400</span>,<span class="hljs-number">9900</span>mm.
+</code></pre>
+<p>The following examples show formatting for <code>MonetaryAmount</code> values.</p>
+<pre><code class="hljs">The loan principal <span class="hljs-keyword">is</span> {{principal as <span class="hljs-string">"0,0.00 CCC"</span>}}.
+The loan principal <span class="hljs-keyword">is</span> <span class="hljs-number">2</span>,<span class="hljs-number">000</span>,<span class="hljs-number">500</span>,<span class="hljs-number">000.00</span> GBP.
+</code></pre>
+<pre><code class="hljs">The loan principal <span class="hljs-keyword">is</span> {{principal as <span class="hljs-string">"K0,0.00"</span>}}.
+The loan principal <span class="hljs-keyword">is</span> £<span class="hljs-number">2</span>,<span class="hljs-number">000</span>,<span class="hljs-number">500</span>,<span class="hljs-number">000.00</span>.
+</code></pre>
+<pre><code class="hljs">The loan principal <span class="hljs-keyword">is</span> {{principal as <span class="hljs-string">"0 0,00 K"</span>}}.
+The loan principal <span class="hljs-keyword">is</span> <span class="hljs-number">2</span> <span class="hljs-number">000</span> <span class="hljs-number">500</span> <span class="hljs-number">000</span>,<span class="hljs-number">00</span> €.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="complex-types-variables"></a><a href="#complex-types-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Complex Types Variables</h2>
+<h3><a class="anchor" aria-hidden="true" id="duration-types"></a><a href="#duration-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Duration Types</h3>
+<h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>If the variable <code>variableName</code> has type <code>Duration</code>:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">import</span> org.accordproject.time.<span class="hljs-type">Duration</span>
+o <span class="hljs-type">Duration</span> variableName
+</code></pre>
+<p>The corresponding instance should contain the corresponding duration written with the amount as a number and the duration unit as literal text.</p>
+<h4><a class="anchor" aria-hidden="true" id="examples-5"></a><a href="#examples-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">asset</span> <span class="hljs-type">Template</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordClause</span> {
+  o <span class="hljs-type">Duration</span> termination
+}
+</code></pre>
+<p>the following instance texts:</p>
+<pre><code class="hljs css language-md">If the delay is more than 15 days, the Buyer is entitled to terminate this Contract.
+</code></pre>
+<p>and</p>
+<pre><code class="hljs css language-md">If the delay is more than 1 week, the Buyer is entitled to terminate this Contract.
+</code></pre>
+<p>both match the template:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">If the delay is more than </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">termination</span>}}</span><span class="markdown">, the Buyer is entitled to terminate this Contract.
+</span></code></pre>
+<p>while the following instance texts do not match:</p>
+<pre><code class="hljs css language-md">If the delay is more than a month, the Buyer is entitled to terminate this Contract.
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-md">If the delay is more than "two weeks", the Buyer is entitled to terminate this Contract.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="other-complex-types"></a><a href="#other-complex-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other Complex Types</h3>
+<h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>If the variable <code>variableName</code> has a complex type <code>ComplexType</code> (such as an <code>asset</code>, a <code>concept</code>, etc.)</p>
+<pre><code class="hljs css language-ergo">o <span class="hljs-type">ComplexType</span> variableName
+</code></pre>
+<p>The corresponding instance should contain all fields in the corresponding complex type in the order they occur in the model, separated by a single white space character.</p>
+<h4><a class="anchor" aria-hidden="true" id="examples-6"></a><a href="#examples-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>For example, consider the following model:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">import</span> org.accordproject.address.<span class="hljs-type">PostalAddress</span> from https:<span class="hljs-comment">//models.accordproject.org/address.cto</span>
+<span class="hljs-keyword">asset</span> <span class="hljs-type">Template</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">AccordClause</span> {
+  o <span class="hljs-type">PostalAddress</span> address
+}
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">Address of the supplier: "555 main street" "10290" "" "NY" "New York" "10001".
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">Address of the supplier: </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">address</span>}}</span><span class="markdown">.
+</span></code></pre>
+<p>Consider the following model:</p>
+<pre><code class="hljs css language-md">import org.accordproject.money.MonetaryAmount from https://models.accordproject.org/money.cto
+asset Template extends AccordClause {
+  o MonetaryAmount amount
+}
+</code></pre>
+<p>the following instance text:</p>
+<pre><code class="hljs css language-md">Total value of the goods: 50.0 USD.
+</code></pre>
+<p>matches the template:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">Total value of the goods: </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">amount</span>}}</span><span class="markdown">.
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="inline-blocks"></a><a href="#inline-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Inline Blocks</h2>
+<p>CiceroMark uses blocks to enable more advanced scenarios, to handle optional or repeated text (e.g., lists), to change the variables in scope for a given section of the text, etc. Inline blocks correspond to inline elements in the markdown.</p>
+<p>Inline blocks always have the following syntactic structure:</p>
+<pre><code class="hljs css language-tem"><span class="hljs-template-variable">{{#<span class="hljs-template-tag">blockName</span> <span class="hljs-template-tag">variableName</span> <span class="hljs-template-tag">parameters</span>}}</span><span class="markdown">...</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag">blockName</span>}}</span><span class="markdown">
+</span></code></pre>
+<p>where <code>blockName</code> indicates which kind of block it is (e.g., conditional block or optional block), <code>variableName</code> indicates the template variable which is in scope within the block. For certain blocks, additional <code>parameters</code> can be passed to control the behavior of that block (e.g., the <code>join</code> block creates text from a list with an optional separator).</p>
+<h3><a class="anchor" aria-hidden="true" id="conditional-blocks"></a><a href="#conditional-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditional Blocks</h3>
+<p>Conditional blocks enables text which depends on a value of a <code>Boolean</code> variable in your model:</p>
+<pre><code class="hljs css language-tem"><span class="hljs-template-variable">{{#<span class="hljs-template-tag"><span class="hljs-keyword">if</span></span> <span class="hljs-template-tag">forceMajeure</span>}}</span><span class="markdown">This is a force majeure</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag"><span class="hljs-keyword">if</span></span>}}</span><span class="markdown">
+</span></code></pre>
+<p>Conditional blocks can also include an <code>else</code> branch to indicate that some other text should be use when the value of the variable is <code>false</code>:</p>
+<pre><code class="hljs css language-tem"><span class="hljs-template-variable">{{#<span class="hljs-template-tag"><span class="hljs-keyword">if</span></span> <span class="hljs-template-tag">forceMajeure</span>}}</span><span class="markdown">This is a force majeure</span><span class="hljs-template-variable">{{<span class="hljs-template-tag"><span class="hljs-keyword">else</span></span>}}</span><span class="markdown">This is <span class="hljs-emphasis">*not*</span> a force majeure</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag"><span class="hljs-keyword">if</span></span>}}</span><span class="markdown">
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="examples-7"></a><a href="#examples-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>Drafting text with the first conditional block above using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.foo.Status"</span>,
+  <span class="hljs-attr">"forceMajeure"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md">This is a force majeure
+</code></pre>
+<p>Drafting text with this block using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.foo.Status"</span>,
+  <span class="hljs-attr">"forceMajeure"</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md">
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="optional-blocks"></a><a href="#optional-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optional Blocks</h3>
+<p>Optional blocks enables text which depends on the presence of absence of an <code>optional</code> variable in your model:</p>
+<pre><code class="hljs css language-tem"><span class="hljs-template-variable">{{#<span class="hljs-template-tag">optional</span> <span class="hljs-template-tag">forceMajeure</span>}}</span><span class="markdown">This applies except for Force Majeure cases in a </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">miles</span>}}</span><span class="markdown"> miles radius.</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag">optional</span>}}</span><span class="markdown">
+</span></code></pre>
+<p>Optional blocks can also include an <code>else</code> branch to indicate that some other text should be use when the value of the variable is absent (<code>null</code> in the JSON data):</p>
+<pre><code class="hljs css language-tem"><span class="hljs-template-variable">{{#<span class="hljs-template-tag">optional</span> <span class="hljs-template-tag">forceMajeure</span>}}</span><span class="markdown">This applies except for Force Majeure cases in a </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">miles</span>}}</span><span class="markdown"> miles radius.</span><span class="hljs-template-variable">{{<span class="hljs-template-tag"><span class="hljs-keyword">else</span></span>}}</span><span class="markdown">This applies even in case a force majeure.</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag">optional</span>}}</span><span class="markdown">
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="examples-8"></a><a href="#examples-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>Drafting text with the second optional block above using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.foo.Status"</span>,
+  <span class="hljs-attr">"forceMajeure"</span>: {
+    <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.foo.Distance"</span>,
+    <span class="hljs-attr">"miles"</span>: <span class="hljs-number">250</span>
+  }
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md">This applies except for Force Majeure cases in a 250 miles radius.
+</code></pre>
+<p>Drafting text with this block using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.foo.Status"</span>,
+  <span class="hljs-attr">"forceMajeure"</span>: <span class="hljs-literal">null</span>
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md">This applies even in case a force majeure.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="with-blocks"></a><a href="#with-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>With Blocks</h3>
+<p>A <code>with</code> block can be used to changes variables that are in scope in a specific part of a template grammar:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">For the Tenant: </span><span class="hljs-template-variable">{{#<span class="hljs-template-tag"><span class="hljs-keyword">with</span></span> <span class="hljs-template-tag">tenant</span>}}</span><span class="hljs-template-variable">{{<span class="hljs-template-tag">partyId</span>}}</span><span class="markdown">, domiciled at </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">address</span>}}</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag"><span class="hljs-keyword">with</span></span>}}</span><span class="markdown">
+For the Landlord: </span><span class="hljs-template-variable">{{#<span class="hljs-template-tag"><span class="hljs-keyword">with</span></span> <span class="hljs-template-tag">landlord</span>}}</span><span class="hljs-template-variable">{{<span class="hljs-template-tag">partyId</span>}}</span><span class="markdown">, domiciled at </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">address</span>}}</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag"><span class="hljs-keyword">with</span></span>}}</span><span class="markdown">
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Drafting text with this block using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.rentaldeposit.RentalDepositClause"</span>,
+  <span class="hljs-attr">"contractId"</span>: <span class="hljs-string">"31d817e2-d62a-4b70-b395-acd0d5da09f5"</span>,
+  <span class="hljs-attr">"tenant"</span>: {
+    <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.rentaldeposit.RentalParty"</span>,
+    <span class="hljs-attr">"partyId"</span>: <span class="hljs-string">"Michael"</span>,
+    <span class="hljs-attr">"address"</span>: <span class="hljs-string">"111, main street"</span>
+  }
+  ...
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md">For the Tenant: "Michael", domiciled at "111, main street"
+For the Landlord: "Parsa", domiciled at "222, chestnut road"
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="join-blocks"></a><a href="#join-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Join Blocks</h3>
+<p>A <code>join</code> block can be used to iterate over a variable containing an array of values, and can use an (optional) separator.</p>
+<pre><code class="hljs css language-tem"><span class="markdown">Discount applies to the following items: </span><span class="hljs-template-variable">{{#<span class="hljs-template-tag">join</span> <span class="hljs-template-tag">items</span> <span class="hljs-template-tag">separator</span>=<span class="hljs-string">", "</span>}}</span><span class="hljs-template-variable">{{<span class="hljs-template-tag">name</span>}}</span><span class="markdown"> (</span><span class="hljs-template-variable">{{<span class="hljs-template-tag">id</span>}}</span><span class="markdown">)</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag">join</span>}}</span><span class="markdown">.
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Drafting text with this block using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.sale.Order"</span>,
+  <span class="hljs-attr">"contractId"</span>: <span class="hljs-string">"31d817e2-d62a-4b70-b395-acd0d5da09f5"</span>,
+  <span class="hljs-attr">"items"</span>: [{
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.slate.Item"</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"111"</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Pineapple"</span>
+    },{
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.slate.Item"</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"222"</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Strawberries"</span>
+    },{
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.slate.Item"</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"333"</span>,
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Pomegranate"</span>
+    }
+  ]
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md">Discount applies to the following items: Pineapple (111), Strawberries (222), Pomegranate (333).
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="container-blocks"></a><a href="#container-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Container Blocks</h2>
+<p>CiceroMark uses block expressions to enable more advanced scenarios, to handle optional or repeated text (e.g., lists), to change the variables in scope for a given section of the text, etc.</p>
+<p>Container blocks always have the following syntactic structure:</p>
+<pre><code class="hljs css language-tem"><span class="hljs-template-variable">{{#<span class="hljs-template-tag">blockName</span> <span class="hljs-template-tag">variableName</span> <span class="hljs-template-tag">parameters</span>}}</span><span class="markdown">
+...
+</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag">blockName</span>}}</span><span class="markdown">
+</span></code></pre>
+<p>where <code>blockName</code> indicates which kind of block it is (e.g., conditional block or list block), <code>variableName</code> indicates the template variable which is in scope within the block. For certain blocks, additional <code>parameters</code> can be passed to control the behavior of that block (e.g., the <code>join</code> block creates text from a list with an optional separator).</p>
+<h3><a class="anchor" aria-hidden="true" id="unordered-lists"></a><a href="#unordered-lists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unordered Lists</h3>
+<pre><code class="hljs css language-tem"><span class="hljs-template-variable">{{#<span class="hljs-template-tag"><span class="hljs-keyword">ulist</span></span> <span class="hljs-template-tag">rates</span>}}</span><span class="markdown">
+</span><span class="hljs-template-variable">{{<span class="hljs-template-tag">volumeAbove</span>}}</span><span class="markdown">$ M<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">=</span> <span class="hljs-attr">Volume</span> &lt; </span></span></span><span class="hljs-template-variable">{{<span class="hljs-template-tag">volumeUpTo</span>}}</span><span class="markdown"><span class="xml">$ M : </span></span><span class="hljs-template-variable">{{<span class="hljs-template-tag">rate</span>}}</span><span class="markdown"><span class="xml">%
+</span></span><span class="hljs-template-variable">{{/<span class="hljs-template-tag"><span class="hljs-keyword">ulist</span></span>}}</span><span class="markdown"><span class="xml">
+</span></span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Drafting text with this block using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.volumediscountlist.VolumeDiscountContract"</span>,
+  <span class="hljs-attr">"contractId"</span>: <span class="hljs-string">"19243313-adc2-4ff1-aa41-993816ed2cdc"</span>,
+  <span class="hljs-attr">"rates"</span>: [
+    {
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.volumediscountlist.RateRange"</span>,
+      <span class="hljs-attr">"volumeUpTo"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"volumeAbove"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"rate"</span>: <span class="hljs-number">3.1</span>
+    },
+    {
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.volumediscountlist.RateRange"</span>,
+      <span class="hljs-attr">"volumeUpTo"</span>: <span class="hljs-number">10</span>,
+      <span class="hljs-attr">"volumeAbove"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"rate"</span>: <span class="hljs-number">3.1</span>
+    },
+    {
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.volumediscountlist.RateRange"</span>,
+      <span class="hljs-attr">"volumeUpTo"</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-attr">"volumeAbove"</span>: <span class="hljs-number">10</span>,
+      <span class="hljs-attr">"rate"</span>: <span class="hljs-number">2.9</span>
+    }
+  ]
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md"><span class="hljs-bullet">- </span>0.0$ M <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">=</span> <span class="hljs-attr">Volume</span> &lt; <span class="hljs-attr">1.0</span>$ <span class="hljs-attr">M</span> <span class="hljs-attr">:</span> <span class="hljs-attr">3.1</span>%
+<span class="hljs-attr">-</span> <span class="hljs-attr">1.0</span>$ <span class="hljs-attr">M</span> &lt;= <span class="hljs-string">Volume</span> &lt; <span class="hljs-attr">10.0</span>$ <span class="hljs-attr">M</span> <span class="hljs-attr">:</span> <span class="hljs-attr">3.1</span>%
+<span class="hljs-attr">-</span> <span class="hljs-attr">10.0</span>$ <span class="hljs-attr">M</span> &lt;= <span class="hljs-string">Volume</span> &lt; <span class="hljs-attr">50.0</span>$ <span class="hljs-attr">M</span> <span class="hljs-attr">:</span> <span class="hljs-attr">2.9</span>%
+</span></span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="ordered-lists"></a><a href="#ordered-lists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ordered Lists</h3>
+<pre><code class="hljs css language-tem"><span class="hljs-template-variable">{{#<span class="hljs-template-tag"><span class="hljs-keyword">olist</span></span> <span class="hljs-template-tag">rates</span>}}</span><span class="markdown">
+</span><span class="hljs-template-variable">{{<span class="hljs-template-tag">volumeAbove</span>}}</span><span class="markdown">$ M <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">=</span> <span class="hljs-attr">Volume</span> &lt; </span></span></span><span class="hljs-template-variable">{{<span class="hljs-template-tag">volumeUpTo</span>}}</span><span class="markdown"><span class="xml">$ M : </span></span><span class="hljs-template-variable">{{<span class="hljs-template-tag">rate</span>}}</span><span class="markdown"><span class="xml">%
+</span></span><span class="hljs-template-variable">{{/<span class="hljs-template-tag"><span class="hljs-keyword">olist</span></span>}}</span><span class="markdown"><span class="xml">
+</span></span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Drafting text with this block using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.volumediscountlist.VolumeDiscountContract"</span>,
+  <span class="hljs-attr">"contractId"</span>: <span class="hljs-string">"19243313-adc2-4ff1-aa41-993816ed2cdc"</span>,
+  <span class="hljs-attr">"rates"</span>: [
+    {
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.volumediscountlist.RateRange"</span>,
+      <span class="hljs-attr">"volumeUpTo"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"volumeAbove"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"rate"</span>: <span class="hljs-number">3.1</span>
+    },
+    {
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.volumediscountlist.RateRange"</span>,
+      <span class="hljs-attr">"volumeUpTo"</span>: <span class="hljs-number">10</span>,
+      <span class="hljs-attr">"volumeAbove"</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">"rate"</span>: <span class="hljs-number">3.1</span>
+    },
+    {
+      <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.volumediscountlist.RateRange"</span>,
+      <span class="hljs-attr">"volumeUpTo"</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-attr">"volumeAbove"</span>: <span class="hljs-number">10</span>,
+      <span class="hljs-attr">"rate"</span>: <span class="hljs-number">2.9</span>
+    }
+  ]
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md"><span class="hljs-bullet">1. </span>0.0$ M <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">=</span> <span class="hljs-attr">Volume</span> &lt; <span class="hljs-attr">1.0</span>$ <span class="hljs-attr">M</span> <span class="hljs-attr">:</span> <span class="hljs-attr">3.1</span>%
+<span class="hljs-attr">2.</span> <span class="hljs-attr">1.0</span>$ <span class="hljs-attr">M</span> &lt;= <span class="hljs-string">Volume</span> &lt; <span class="hljs-attr">10.0</span>$ <span class="hljs-attr">M</span> <span class="hljs-attr">:</span> <span class="hljs-attr">3.1</span>%
+<span class="hljs-attr">3.</span> <span class="hljs-attr">10.0</span>$ <span class="hljs-attr">M</span> &lt;= <span class="hljs-string">Volume</span> &lt; <span class="hljs-attr">50.0</span>$ <span class="hljs-attr">M</span> <span class="hljs-attr">:</span> <span class="hljs-attr">2.9</span>%
+</span></span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="clause-blocks"></a><a href="#clause-blocks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clause Blocks</h3>
+<p>Clause blocks can be used to include a clause template within a contract template:</p>
+<pre><code class="hljs css language-tem"><span class="markdown"><span class="hljs-section">Payment
+-------</span>
+</span><span class="hljs-template-variable">{{#<span class="hljs-template-tag"><span class="hljs-keyword">clause</span></span> <span class="hljs-template-tag">payment</span>}}</span><span class="markdown">
+As consideration in full for the rights granted herein, Licensee shall pay Licensor a one-time
+fee in the amount of </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">amountText</span>}}</span><span class="markdown"> (</span><span class="hljs-template-variable">{{<span class="hljs-template-tag">amount</span>}}</span><span class="markdown">) upon execution of this Agreement, payable as
+follows: </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">paymentProcedure</span>}}</span><span class="markdown">.
+</span><span class="hljs-template-variable">{{/<span class="hljs-template-tag"><span class="hljs-keyword">clause</span></span>}}</span><span class="markdown">
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example-4"></a><a href="#example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<p>Drafting text with this block using the following JSON data:</p>
+<pre><code class="hljs css language-json">{
+  "$class": "org.accordproject.copyrightlicense.CopyrightLicenseContract",
+  "contractId": "944535e8-213c-4649-9e60-cc062cce24e8",
+  ...
+  "paymentClause": {
+    "$class": "org.accordproject.copyrightlicense.PaymentClause",
+    "clauseId": "6c7611dc-410c-4134-a9ec-17fb6aad5607",
+    "amountText": "one hundred US Dollars",
+    "amount": {
+      "$class": "org.accordproject.money.MonetaryAmount",
+      "doubleValue": 100,
+      "currencyCode": "USD"
+    },
+    "paymentProcedure": "bank transfer"
+  }
+}
+</code></pre>
+<p>results in the following markdown text:</p>
+<pre><code class="hljs css language-md"><span class="hljs-section">Payment
+----</span>
+
+As consideration in full for the rights granted herein, Licensee shall pay Licensor a one-time
+fee in the amount of "one hundred US Dollars" (100.0 USD) upon execution of this Agreement, payable as
+follows: "bank transfer".
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="ergo-formulas"></a><a href="#ergo-formulas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ergo Formulas</h2>
+<p>Ergo formulas in template text are essentially similar to Excel formulas, and enable to create legal text dynamically, based on the other variables in your contract. They are written <code>{{% ergoExpression %}}</code> where <code>ergoExpression</code> is any valid <a href="logic-ergo">Ergo Expression</a>.</p>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Formulas allow the template developer to generate arbitrary contract text from other contract and clause variables. They therefore cannot be used to set a template model variable during parsing. In other words formulas are evaluated when drafting a contract but are ignored when parsing the contract text.</p>
+</div></div><h3><a class="anchor" aria-hidden="true" id="evaluation-context"></a><a href="#evaluation-context" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Evaluation Context</h3>
+<p>The context in which expressions within templates text are evaluated includes:</p>
+<ul>
+<li>The contract variables, which can be accessed using the variable name (or <code>contract.variableName</code>)</li>
+<li>All constants or functions declared or imported in the main <a href="logic-module">Ergo module</a> for your template.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="fixed-interests-clause"></a><a href="#fixed-interests-clause" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fixed Interests Clause</h4>
+<p>For instance, let us look one more time at <a href="https://templates.accordproject.org/fixed-interests-static@0.2.0.html">fixed rate loan</a> clause that was used previously:</p>
+<pre><code class="hljs css language-tem"><span class="markdown"><span class="hljs-section">## Fixed rate loan</span>
+
+This is a <span class="hljs-emphasis">*fixed interest*</span> loan to the amount of </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">loanAmount</span>}}</span><span class="markdown">
+at the yearly interest rate of </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">rate</span>}}</span><span class="markdown">%
+with a loan term of </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">loanDuration</span>}}</span><span class="markdown">,
+and monthly payments of </span><span class="ergo"><span class="hljs-template-variable">{{%</span> monthlyPaymentFormula(loanAmount,rate,loanDuration) <span class="hljs-template-variable">%}}</span></span><span class="markdown">
+</span></code></pre>
+<p>The <a href="https://github.com/accordproject/cicero-template-library/tree/master/src/fixed-interests/logic"><code>logic</code> directory</a> for that template includes two Ergo modules:</p>
+<pre><code class="hljs">./<span class="hljs-keyword">logic</span>/interests<span class="hljs-variable">.ergo</span>  <span class="hljs-comment">// Module containing the monthlyPaymentFormula function</span>
+./<span class="hljs-keyword">logic</span>/<span class="hljs-keyword">logic</span><span class="hljs-variable">.ergo</span>      <span class="hljs-comment">// Main module</span>
+</code></pre>
+<p>A look inside the <code>logic.ergo</code> module shows the corresponding import, which ensures the <code>monthlyPaymentFormula</code> function is also in scope in the text for the template:</p>
+<pre><code class="hljs"><span class="hljs-keyword">namespace</span> org.accordproject.interests
+
+<span class="hljs-keyword">import</span> org.accordproject.loan.interests.*
+
+<span class="hljs-keyword">contract</span> <span class="hljs-type">Interests</span> <span class="hljs-keyword">over</span> <span class="hljs-type">TemplateModel</span> {
+  ...
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="examples-9"></a><a href="#examples-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h3>
+<p>Ergo provides a wide range of capabilities which you can use to construct the text that should be included in the final clause or contract. Below are a few examples for illustrations, but we encourage you to consult the <a href="logic-ergo">Ergo Logic</a> guide for a more comprehensive overview of Ergo.</p>
+<h4><a class="anchor" aria-hidden="true" id="path-expressions"></a><a href="#path-expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path expressions</h4>
+<p>The contents of complex values can be accessed using the <code>.</code> notation.</p>
+<p>For instance the following template uses the <code>.</code> notation to access the first name and last name of the contract author.</p>
+<pre><code class="hljs css language-tem"><span class="markdown">This contract was drafted by </span><span class="ergo"><span class="hljs-template-variable">{{%</span> author.name.firstName <span class="hljs-template-variable">%}}</span></span><span class="markdown"> </span><span class="ergo"><span class="hljs-template-variable">{{%</span> author.name.lastName <span class="hljs-template-variable">%}}</span></span><span class="markdown">
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="built-in-functions"></a><a href="#built-in-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Built-in Functions</h4>
+<p>Ergo offers a number of pre-defined functions for a variety of primitive types. Please consult the <a href="ref-logic-stdlib">Ergo Standard Library</a> reference for the complete list of built-in functions.</p>
+<p>For instance the following template uses the <code>addPeriod</code> function to automatically include the date at which a lease expires in the text of the contract:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">This lease was signed on </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">signatureDate</span>}}</span><span class="markdown">, and is valid for a </span><span class="hljs-template-variable">{{<span class="hljs-template-tag">leaseTerm</span>}}</span><span class="markdown"> period.
+This lease will expire on </span><span class="ergo"><span class="hljs-template-variable">{{%</span> addPeriod(signatureDate, leaseTerm) <span class="hljs-template-variable">%}}</span></span><span class="markdown">`
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="iterators"></a><a href="#iterators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Iterators</h4>
+<p>Ergo's <code>foreach</code> expressions lets you iterate over collections of values.</p>
+<p>For instance the following template uses a <code>foreach</code> expression combined with the <code>avg</code> built-in function to include the average product price in the text of the contract:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">The average price of the products included in this purchase
+order is </span><span class="ergo"><span class="hljs-template-variable">{{%</span> avg(<span class="hljs-keyword">foreach</span> p <span class="hljs-keyword">in</span> products <span class="hljs-keyword">return</span> p.price) <span class="hljs-template-variable">%}}</span></span><span class="markdown">.
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="conditionals"></a><a href="#conditionals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conditionals</h4>
+<p>Conditional expressions lets you include alternative text based on arbitrary conditions.</p>
+<p>For instance, the following template uses a conditional expression to indicate the governing jurisdiction:</p>
+<pre><code class="hljs css language-tem"><span class="markdown">Each party hereby irrevocably agrees that process may be served on it in
+any manner authorized by the Laws of </span><span class="ergo"><span class="hljs-template-variable">{{%</span>
+    <span class="hljs-keyword">if</span> address.country = <span class="hljs-type">US</span> <span class="hljs-keyword">and</span> getYear(<span class="hljs-built_in">now</span>()) &gt; <span class="hljs-number">1959</span>
+    <span class="hljs-keyword">then</span> <span class="hljs-string">"the State of "</span> ++ address.<span class="hljs-keyword">state</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-string">"the Country of "</span> ++ address.country
+<span class="hljs-template-variable">%}}</span></span><span class="markdown">
+</span></code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/markup-ciceromark.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">CiceroMark</span></a><a class="docs-next button" href="/docs/model-concerto.html"><span>Concerto Overview</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#variables">Variables</a><ul class="toc-headings"><li><a href="#string-variable">String Variable</a></li><li><a href="#numeric-variable">Numeric Variable</a></li><li><a href="#enum-variables">Enum Variables</a></li></ul></li><li><a href="#formatted-variables">Formatted Variables</a><ul class="toc-headings"><li><a href="#datetime-variables">DateTime Variables</a></li><li><a href="#amount-variables">Amount Variables</a></li></ul></li><li><a href="#complex-types-variables">Complex Types Variables</a><ul class="toc-headings"><li><a href="#duration-types">Duration Types</a></li><li><a href="#other-complex-types">Other Complex Types</a></li></ul></li><li><a href="#inline-blocks">Inline Blocks</a><ul class="toc-headings"><li><a href="#conditional-blocks">Conditional Blocks</a></li><li><a href="#optional-blocks">Optional Blocks</a></li><li><a href="#with-blocks">With Blocks</a></li><li><a href="#join-blocks">Join Blocks</a></li></ul></li><li><a href="#container-blocks">Container Blocks</a><ul class="toc-headings"><li><a href="#unordered-lists">Unordered Lists</a></li><li><a href="#ordered-lists">Ordered Lists</a></li><li><a href="#clause-blocks">Clause Blocks</a></li></ul></li><li><a href="#ergo-formulas">Ergo Formulas</a><ul class="toc-headings"><li><a href="#evaluation-context">Evaluation Context</a></li><li><a href="#examples-9">Examples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Complex Values &amp; Types · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the [Concerto Modeling](model-concerto) (often referred to as CTO models after the `.cto` file extension). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc."/><meta name="docsearch:version" content="0.20"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Complex Values &amp; Types · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the [Concerto Modeling](model-concerto) (often referred to as CTO models after the `.cto` file extension). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc."/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.20</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/0.20/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Ergo Logic</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/0.20/accordproject.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/accordproject-concepts.html">Key Concepts</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/accordproject-business.html">For Business</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/accordproject-developers.html">For Developers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/0.20/started-installation.html">Install Cicero</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/started-hello.html">Hello World Template</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/started-studio.html">Online Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/started-resources.html">Resources</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">User Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Authoring with Template Studio</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/tutorial-latedelivery.html">Editing a Late Delivery Clause</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Work with Cicero</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/tutorial-templates.html">Templates Deep Dive</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/tutorial-library.html">Template Library</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/tutorial-create.html">Template Generator</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Developers Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Execution</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/tutorial-nodejs.html">Working with Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/tutorial-hyperledger.html">Deploying on Hyperledger Fabric</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Template Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">CiceroMark</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/markup-cicero.html">CiceroMark Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/markup-commonmark.html">Rich Text Markdown</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/markup-variables.html">Variable Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/markup-blocks.html">Block Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/markup-ergo.html">Ergo Expressions</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Modeling</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/model-concerto.html">Concerto Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/model-namespaces.html">Namespaces</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/model-classes.html">Classes</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/model-enums.html">Enumerations</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/model-properties.html">Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/model-relationships.html">Relationships</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/model-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/model-api.html">Using the API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Logic</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/logic-ergo.html">Ergo Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/logic-simple-expr.html">Simple Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/logic-simple-type.html">Introducing Types</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/0.20/logic-complex-type.html">Complex Values &amp; Types</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/logic-advanced-expr.html">Advanced Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/logic-stmt.html">Statements</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/logic-decl.html">Declarations</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/logic-module.html">Modules</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Reference Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/0.20/ref-glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ref-cicero-ui.html">Cicero UI Reference</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ref-testing.html">Testing Reference</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ref-errors.html">Errors Reference</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ref-logic.html">Ergo Language Reference</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ref-logic-stdlib.html">Ergo Standard Library</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ref-logic-specification.html">Ergo Compiler</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Migration</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/ref-migrate-0.13-0.20.html">0.13 to 0.20</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Command Line Interface</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/cicero-cli.html">Cicero CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/concerto-cli.html">Concerto CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ergo-cli.html">Ergo CLI</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ergo-repl.html">Ergo REPL</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/markus-cli.html">Markdown Transform CLI</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">JavaScript API</h4><ul><li class="navListItem"><a class="navItem" href="/docs/0.20/cicero-api.html">Cicero API</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/ergo-api.html">Ergo API</a></li><li class="navListItem"><a class="navItem" href="/docs/0.20/concerto-api.html">Concerto API</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Complex Values &amp; Types</h1></header><article><div><span><p>So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the <a href="model-concerto">Concerto Modeling</a> (often referred to as CTO models after the <code>.cto</code> file extension). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc.</p>
+<p>In Ergo, you can either import an existing CTO model or declare types directly within your code. Let us look at the different kinds of types you can define and how to create values with those types.</p>
+<h2><a class="anchor" aria-hidden="true" id="arrays"></a><a href="#arrays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Arrays</h2>
+<p>Array types lets you define collections of values and are denoted with <code>[]</code> after the type of elements in that collection:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-type">String</span>[]                         <span class="hljs-comment">// a String array</span>
+    <span class="hljs-type">Double</span>[]                         <span class="hljs-comment">// a Double array</span>
+</code></pre>
+<p>You can write arrays as follows:</p>
+<pre><code class="hljs css language-ergo">    [<span class="hljs-string">"pear"</span>,<span class="hljs-string">"apple"</span>,<span class="hljs-string">"strawberries"</span>]  <span class="hljs-comment">// an array of String values</span>
+    [<span class="hljs-number">3.14</span>,<span class="hljs-number">2.72</span>,<span class="hljs-number">1.62</span>]                 <span class="hljs-comment">// an array of Double values</span>
+</code></pre>
+<p>You can construct arrays using other expressions:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">let</span> pi = <span class="hljs-number">3.14</span>;
+    <span class="hljs-keyword">let</span> e = <span class="hljs-number">2.72</span>;
+    <span class="hljs-keyword">let</span> golden = <span class="hljs-number">1.62</span>;
+    [pi,e,golden]
+</code></pre>
+<p>Ergo also provides functions to manipulate arrays as parts of its <a href="ref-logic-stdlib.html#functions-on-arrays">standard library</a>. The following example uses the <code>sum</code> function to calculate the sum of all the elements in the <code>prettynumbers</code> array.</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">let</span> pi = <span class="hljs-number">3.14</span>;
+    <span class="hljs-keyword">let</span> e = <span class="hljs-number">2.72</span>;
+    <span class="hljs-keyword">let</span> golden = <span class="hljs-number">1.62</span>;
+    <span class="hljs-keyword">let</span> prettynumbers : <span class="hljs-type">Double</span>[] = [pi,e,golden];
+    sum(prettynumbers)
+</code></pre>
+<p>You can access the element at a given position inside the array using an index:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">let</span> fruits = [<span class="hljs-string">"pear"</span>,<span class="hljs-string">"apple"</span>,<span class="hljs-string">"strawberries"</span>];
+    fruits[<span class="hljs-number">0</span>]          <span class="hljs-comment">// Returns: some("pear")</span>
+     <span class="hljs-keyword">let</span> fruits = [<span class="hljs-string">"pear"</span>,<span class="hljs-string">"apple"</span>,<span class="hljs-string">"strawberries"</span>];
+    fruits[<span class="hljs-number">2</span>]          <span class="hljs-comment">// Returns: some("strawberries")</span>
+     <span class="hljs-keyword">let</span> fruits = [<span class="hljs-string">"pear"</span>,<span class="hljs-string">"apple"</span>,<span class="hljs-string">"strawberries"</span>];
+    fruits[<span class="hljs-number">4</span>]          <span class="hljs-comment">// Returns: none</span>
+</code></pre>
+<p>Note that the index starts at <code>0</code> for the first element and that indexed-based access returns an optional value, since Ergo compiler cannot statically determine whether there will be an element at the corresponding index. You can learn more about how to handle optional values and types in the <a href="logic-complex-type#optionals">Optionals</a> Section below.</p>
+<h2><a class="anchor" aria-hidden="true" id="classes"></a><a href="#classes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classes</h2>
+<p>You can declare classes in the Concerto Modeling Language (concepts, transactions, events, participants or assets) by importing them from a CTO file or directly within your Ergo program:</p>
+<pre><code class="hljs css language-ergo">   <span class="hljs-keyword">define</span> <span class="hljs-keyword">concept</span> <span class="hljs-type">Seminar</span> {
+     name : <span class="hljs-type">String</span>,
+     fee : <span class="hljs-type">Double</span>
+   }
+   <span class="hljs-keyword">define</span> <span class="hljs-keyword">asset</span> <span class="hljs-type">Product</span> {
+     id : <span class="hljs-type">String</span>
+   }
+   <span class="hljs-keyword">define</span> <span class="hljs-keyword">asset</span> <span class="hljs-type">Car</span> <span class="hljs-keyword">extends</span> <span class="hljs-type">Product</span> {
+     range : <span class="hljs-type">String</span>
+   }
+   <span class="hljs-keyword">define</span> <span class="hljs-keyword">transaction</span> <span class="hljs-type">Response</span> {
+     rate : <span class="hljs-type">Double</span>,
+     penalty : <span class="hljs-type">Double</span>
+   }
+  <span class="hljs-keyword">define</span> <span class="hljs-keyword">event</span> <span class="hljs-type">PaymentObligation</span>{
+    amount : <span class="hljs-type">Double</span>,
+    description : <span class="hljs-type">String</span>
+  }
+</code></pre>
+<p>Once a class type has been defined, you can create an instance of that type using the class name along with the values for each fields:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-type">Seminar</span>{
+      name: <span class="hljs-string">"Law for developers"</span>,
+      fee: <span class="hljs-number">29.99</span>
+    }
+    <span class="hljs-type">Car</span>{
+      id: <span class="hljs-string">"Batmobile4156"</span>,
+      range: <span class="hljs-string">"Infinite"</span>
+    }
+</code></pre>
+<blockquote>
+<p><strong>TechNote:</strong> When extending an existing class (e.g., <code>Car extends Product</code>), the sub-class includes the fields from the super-class. So <code>Car</code> includes the field <code>range</code> which is locally declared and the field <code>id</code> which is declared in <code>Product</code>.</p>
+</blockquote>
+<p>You can access fields for values of a class type by using the <code>.</code> operator:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-type">Seminar</span>{
+      name: <span class="hljs-string">"Law for developers"</span>,
+      fee: <span class="hljs-number">29.99</span>
+    }.fee                        <span class="hljs-comment">// Returns 29.99</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="records"></a><a href="#records" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Records</h2>
+<p>Sometimes it is convenient to declare a structure without having to declare it first. You can do that using a record, which is similar to a class but without a name attached to it:</p>
+<pre><code class="hljs css language-ergo">   {
+     name : <span class="hljs-type">String</span>,  <span class="hljs-comment">// A record with a name of type String</span>
+     fee : <span class="hljs-type">Double</span>    <span class="hljs-comment">// and a fee of type Double</span>
+   }
+</code></pre>
+<p>You do not need to declare that record, and can directly write an instance of that record as follows:</p>
+<pre><code class="hljs css language-ergo">    {
+      name: <span class="hljs-string">"Law for developers"</span>,
+      fee: <span class="hljs-number">29.99</span>
+    }
+</code></pre>
+<blockquote>
+<p>Typing <code>return { name: &quot;Law for developers&quot;, fee: 29.99 }</code> in the <a href="https://ergorepl.netlify.com">Ergo REPL</a>, should answer <code>Response. {name: &quot;Law for developers&quot;, fee: 29.99} : {fee: Double, name: String}</code>.</p>
+</blockquote>
+<p>You can access the field of a record using the <code>.</code> operator:</p>
+<pre><code class="hljs css language-ergo">    {
+      name: <span class="hljs-string">"Law for developers"</span>,
+      fee: <span class="hljs-number">29.99</span>
+    }.fee                        <span class="hljs-comment">// Returns 29.99</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="enums"></a><a href="#enums" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enums</h2>
+<p>Here is how to declare an enumerated type:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">define</span> <span class="hljs-keyword">enum</span> <span class="hljs-type">ProductType</span> {
+   <span class="hljs-type">DAIRY</span>,
+   <span class="hljs-type">BEEF</span>,
+   <span class="hljs-type">VEGETABLES</span>
+}
+</code></pre>
+<p>To create an instance of that enum:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-type">DAIRY</span>
+<span class="hljs-type">BEEF</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="optionals"></a><a href="#optionals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optionals</h2>
+<p>An optional type can contain a value or not and is indicated with a <code>?</code>.</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-type">Integer</span>?           <span class="hljs-comment">// An optional integer</span>
+<span class="hljs-type">PaymentObligation</span>? <span class="hljs-comment">// An optional payment obligation</span>
+<span class="hljs-type">Double</span>[]?          <span class="hljs-comment">// An optional array of doubles</span>
+</code></pre>
+<p>A an optional value can be either present, written <code>some(v)</code>, or absent, written <code>none</code>.</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">let</span> i1 : <span class="hljs-type">Integer</span>? = some(<span class="hljs-number">1</span>); i1
+<span class="hljs-keyword">let</span> i2 : <span class="hljs-type">Integer</span>? = <span class="hljs-literal">none</span>; i2
+</code></pre>
+<p>To operate on an optional type, you need to say what to do when the value is present and what to do when the value is not present. The most general way to do that is with a match expression:</p>
+<p>This example matches a value which is present:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">match</span> some(<span class="hljs-number">1</span>)
+<span class="hljs-keyword">with</span> <span class="hljs-keyword">let</span>? x <span class="hljs-keyword">then</span> <span class="hljs-string">"I found "</span> ++ toString(x) ++ <span class="hljs-string">" :-)"</span>
+<span class="hljs-keyword">else</span> <span class="hljs-string">"I found nothing :-("</span>
+</code></pre>
+<p>and should return <code>&quot;I found 1 :-)&quot;</code>.</p>
+<p>While this example matches against a value which is absent:</p>
+<pre><code class="hljs"><span class="hljs-keyword">match</span> none
+<span class="hljs-keyword">with</span> <span class="hljs-keyword">let</span>? x <span class="hljs-keyword">then</span> <span class="hljs-string">"I found "</span><span class="hljs-operator"> ++ </span><span class="hljs-keyword">to</span><span class="hljs-constructor">String(<span class="hljs-params">x</span>)</span><span class="hljs-operator"> ++ </span><span class="hljs-string">" :-)"</span>
+<span class="hljs-keyword">else</span> <span class="hljs-string">"I found nothing :-("</span>
+</code></pre>
+<p>and should return <code>&quot;I found nothing :-(&quot;</code>.</p>
+<p>More details on match expressions can be found in <a href="logic-advanced-expr#match">Advanced Expressions</a>.</p>
+<p>For conciseness, a few operators are also available on optional values. One can give a default value when the optional is <code>none</code> using the operator <code>??</code>. For instance:</p>
+<pre><code class="hljs css language-ergo">some(<span class="hljs-number">1</span>) ?? <span class="hljs-number">0</span>       <span class="hljs-comment">// Returns the integer 1</span>
+<span class="hljs-literal">none</span> ?? <span class="hljs-number">0</span>          <span class="hljs-comment">// Returns the integer 0</span>
+</code></pre>
+<p>You can also access the field inside an optional concept or an optional record using the operator <code>?.</code>. For instance:</p>
+<pre><code class="hljs css language-ergo">some({a:<span class="hljs-number">1</span>})?.a     <span class="hljs-comment">// Returns the optional value: some(1)</span>
+<span class="hljs-literal">none</span>?.a            <span class="hljs-comment">// Returns the optional value: none</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/0.20/logic-simple-type.html"><span class="arrow-prev">← </span><span>Introducing Types</span></a><a class="docs-next button" href="/docs/0.20/logic-advanced-expr.html"><span>Advanced Expressions</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#arrays">Arrays</a></li><li><a href="#classes">Classes</a></li><li><a href="#records">Records</a></li><li><a href="#enums">Enums</a></li><li><a href="#optionals">Optionals</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

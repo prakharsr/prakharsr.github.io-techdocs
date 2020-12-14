@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Specification · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Lexical Conventions"/><meta name="docsearch:version" content="0.21"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Specification · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="## Lexical Conventions"/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.21</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Ergo Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/accordproject.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-slc.html">Smart Legal Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-template.html">Accord Project Templates</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-tour.html">Online Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-faq.html">FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/started-installation.html">Install Cicero</a></li><li class="navListItem"><a class="navItem" href="/docs/started-hello.html">Hello World Template</a></li><li class="navListItem"><a class="navItem" href="/docs/started-resources.html">Resources</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Template Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Text</h4><ul><li class="navListItem"><a class="navItem" href="/docs/markup-preliminaries.html">Preliminaries</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-commonmark.html">CommonMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-ciceromark.html">CiceroMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-templatemark.html">TemplateMark</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Model</h4><ul><li class="navListItem"><a class="navItem" href="/docs/model-concerto.html">Concerto Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/model-namespaces.html">Namespaces</a></li><li class="navListItem"><a class="navItem" href="/docs/model-classes.html">Classes</a></li><li class="navListItem"><a class="navItem" href="/docs/model-enums.html">Enumerations</a></li><li class="navListItem"><a class="navItem" href="/docs/model-properties.html">Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/model-relationships.html">Relationships</a></li><li class="navListItem"><a class="navItem" href="/docs/model-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/model-api.html">Using the API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Logic</h4><ul><li class="navListItem"><a class="navItem" href="/docs/logic-ergo.html">Ergo Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-expr.html">Simple Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-type.html">Introducing Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-complex-type.html">Complex Values &amp; Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-advanced-expr.html">Advanced Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-stmt.html">Statements</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-decl.html">Declarations</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-module.html">Modules</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Using Cicero</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-templates.html">Templates Deep Dive</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-library.html">Template Library</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-create.html">Template Generator</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Authoring</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-studio.html">With Template Studio</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-vscode.html">With VS Code</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Execution</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-nodejs.html">Working with Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-hyperledger.html">With Hyperledger Fabric</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Reference Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">General</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-errors.html">Errors</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Migration</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.13-0.20.html">0.13 to 0.20</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.20-0.21.html">0.20 to 0.21</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Cicero Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-testing.html">Template Testing</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Transform Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-markus-cli.html">Command Line</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-api.html">Node.js API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-stdlib.html">Standard Library</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-repl.html">Read-Eval-Print Loop</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-api.html">Node.js API</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ref-ergo-spec.html">Specification</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Web Components Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-web-components-overview.html">Overview</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Specification</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="lexical-conventions"></a><a href="#lexical-conventions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lexical Conventions</h2>
+<h3><a class="anchor" aria-hidden="true" id="file-extension"></a><a href="#file-extension" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File Extension</h3>
+<p>Ergo files have the <code>.ergo</code> extension.</p>
+<h3><a class="anchor" aria-hidden="true" id="blanks"></a><a href="#blanks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Blanks</h3>
+<p>Blank characters (such as space, tabulation, carriage return) are
+ignored but they are used to separate identifiers.</p>
+<h3><a class="anchor" aria-hidden="true" id="comments"></a><a href="#comments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comments</h3>
+<p>Comments come in two forms. Single line comments are introduced by the
+two characters <code>//</code> and are terminated by the end of the current
+line. Multi-line comments start with the two characters <code>/*</code> and are
+terminated by the two characters <code>*/</code>. Multi-line comments can be
+nested.</p>
+<p>Here are examples of comments:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-comment">// This is a single line comment</span>
+    <span class="hljs-comment">/* This comment spans multiple lines
+       and it can also be <span class="hljs-comment">/* nested */</span> */</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="reserved-words"></a><a href="#reserved-words" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reserved Words</h3>
+<p>The following are reserved as keywords in Ergo. They cannot be used as identifiers.</p>
+<pre><code class="hljs css language-text">namespace, import, define, function, transaction, concept, event, asset,
+participant, enum, extends, contract, over, clause, throws, emits, state, call,
+enforce, if, then, else, let, foreach, return, in, where, throw,
+constant, match, set, emit, with, or, and, true, false, unit, none
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="condition-expressions"></a><a href="#condition-expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Condition Expressions</h2>
+<p>Conditional statements, conditional expressions and conditional constructs are features of a programming language which perform different computations or actions depending on whether a programmer-specified boolean condition evaluates to true or false.</p>
+<p>Conditional expressions (also known as <code>if</code> statements) allow us to conditionally execute Ergo code depending on the value of a test condition. If the test condition evaluates to <code>true</code> then the code on the <code>then</code> branch is evaluated. Otherwise, when the test condition evaluates to <code>false</code> then the <code>else</code> branch is evaluated.</p>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">if</span> delayInDays &gt; <span class="hljs-number">15.0</span> <span class="hljs-keyword">then</span>
+  <span class="hljs-type">BuyerMayTerminateResponse</span>{};
+<span class="hljs-keyword">else</span>
+  <span class="hljs-type">BuyerMayNotTerminateResponse</span>{}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="legal-prose"></a><a href="#legal-prose" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Legal Prose</h3>
+<p>For example, this corresponds to a conditional logic statement in legal
+prose.</p>
+<pre><code class="hljs">If the delay is more than 15 days, the Buyer is entitled to terminate this Contract.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="syntax"></a><a href="#syntax" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h3>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">if</span> expression1 <span class="hljs-keyword">then</span>     <span class="hljs-comment">// Condition</span>
+      expression2           <span class="hljs-comment">// Expression if condition is true</span>
+    <span class="hljs-keyword">else</span>
+      expression3           <span class="hljs-comment">// Expression if condition is false</span>
+</code></pre>
+<p>Where <code>expression1</code> is an Ergo expression that evaluates to a Boolean
+value (i.e. <code>true</code> or <code>false</code>), and <code>expression2</code> and <code>expression3</code> are
+Ergo expressions.</p>
+<blockquote>
+<p>Note that as with all Ergo expressions, new lines and indentation
+don't change the meaning of your code. However it is good practice to
+standardise the way that you using whitespace in your code to make it
+easier to read.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="usage"></a><a href="#usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h3>
+<p>If statements can be chained , i.e., <code>if ... then .... else if ... then ... else ...</code> to build more compound conditionals.</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">if</span> request.netAnnualChargeVolume &lt; <span class="hljs-keyword">contract</span>.firstVolume <span class="hljs-keyword">then</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-type">VolumeDiscountResponse</span>{ discountRate: <span class="hljs-keyword">contract</span>.firstRate }
+<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> request.netAnnualChargeVolume &lt; <span class="hljs-keyword">contract</span>.secondVolume <span class="hljs-keyword">then</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-type">VolumeDiscountResponse</span>{ discountRate: <span class="hljs-keyword">contract</span>.secondRate }
+<span class="hljs-keyword">else</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-type">VolumeDiscountResponse</span>{ discountRate: <span class="hljs-keyword">contract</span>.thirdRate }
+</code></pre>
+<p>Conditional expressions can also be used as expressions, e.g., inside a constant declaration:</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">define</span> <span class="hljs-keyword">constant</span> price = <span class="hljs-number">42</span>;
+<span class="hljs-keyword">define</span> <span class="hljs-keyword">constant</span> message =  <span class="hljs-keyword">if</span> price &gt;i <span class="hljs-number">100</span> <span class="hljs-keyword">then</span> <span class="hljs-string">"High price"</span> <span class="hljs-keyword">else</span> <span class="hljs-string">"Low Price"</span>;
+message;
+</code></pre>
+<p>The value of message after running this code will be <code>&quot;Low Price&quot;</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="related"></a><a href="#related" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Related</h3>
+<ul>
+<li><a href="ref-logic#match-expressions">Match expression</a> - where many
+alternative conditions check the same variable</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="match-expressions"></a><a href="#match-expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Match Expressions</h2>
+<p>Match expressions allow us to check an expression against multiple
+possible values or patterns. If a match is found, then Ergo will
+evaluate the corresponding expression.</p>
+<blockquote>
+<p>Match expressions are similar to <code>switch</code> statements in other
+programming languages</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">match</span> request.status
+  <span class="hljs-keyword">with</span> <span class="hljs-string">"CREATED"</span> <span class="hljs-keyword">then</span>
+    new <span class="hljs-type">PayOut</span>{ amount : <span class="hljs-keyword">contract</span>.deliveryPrice }
+  <span class="hljs-keyword">with</span> <span class="hljs-string">"ARRIVED"</span> <span class="hljs-keyword">then</span>
+    new <span class="hljs-type">PayOut</span>{ amount : <span class="hljs-keyword">contract</span>.deliveryPrice - shockPenalty }
+  <span class="hljs-keyword">else</span>
+    new <span class="hljs-type">PayOut</span>{ amount : <span class="hljs-number">0.0</span> }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="legal-prose-1"></a><a href="#legal-prose-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Legal Prose</h3>
+<blockquote>
+<p>Example needed.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="syntax-1"></a><a href="#syntax-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h3>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">match</span> expression0        
+  <span class="hljs-keyword">with</span> pattern1 <span class="hljs-keyword">then</span>       <span class="hljs-comment">// Repeat this line</span>
+    expression1            <span class="hljs-comment">//    and this line</span>
+  <span class="hljs-keyword">else</span>
+    expression2
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="usage-1"></a><a href="#usage-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h3>
+<p>You can use a match expression to look for patterns based on the type of
+an expression.</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">match</span> response
+    <span class="hljs-keyword">with</span> <span class="hljs-keyword">let</span> b1 : <span class="hljs-type">BuyerMayTerminateResponse</span> <span class="hljs-keyword">then</span>
+        <span class="hljs-comment">// Do something with b1</span>
+    <span class="hljs-keyword">with</span> <span class="hljs-keyword">let</span> b2 : <span class="hljs-type">BuyerMayNotTerminateResponse</span> <span class="hljs-keyword">then</span>
+        <span class="hljs-comment">// Do something with b2</span>
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-comment">// Do a default action</span>
+</code></pre>
+<p>You can use it to match against an optional value.</p>
+<pre><code class="hljs css language-ergo"><span class="hljs-keyword">match</span> maybe_response
+    <span class="hljs-keyword">with</span> <span class="hljs-keyword">let</span>? b1 : <span class="hljs-type">BuyerMayTerminateResponse</span> <span class="hljs-keyword">then</span>
+        <span class="hljs-comment">// Do something when there is a response</span>
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-comment">// Do something else when there is no response</span>
+</code></pre>
+<p>Often a match expression is a more concise way to represent a
+conditional expression with a repeating, regular condition. For example:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">if</span> x = <span class="hljs-number">1</span> <span class="hljs-keyword">then</span>
+      ...
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> x = <span class="hljs-number">2</span> <span class="hljs-keyword">then</span>
+      ...
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> x = <span class="hljs-number">3</span> <span class="hljs-keyword">then</span>
+      ...
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> x = <span class="hljs-number">4</span> <span class="hljs-keyword">then</span>
+      ...
+    <span class="hljs-keyword">else</span>
+      ...
+</code></pre>
+<p>This is equivalent to the match expression:</p>
+<pre><code class="hljs css language-ergo">    <span class="hljs-keyword">match</span> x
+      <span class="hljs-keyword">with</span> <span class="hljs-number">1</span> <span class="hljs-keyword">then</span>
+        ...
+      <span class="hljs-keyword">with</span> <span class="hljs-number">2</span> <span class="hljs-keyword">then</span>
+        ...
+      <span class="hljs-keyword">with</span> <span class="hljs-number">3</span> <span class="hljs-keyword">then</span>
+        ...
+      <span class="hljs-keyword">with</span> <span class="hljs-number">4</span> <span class="hljs-keyword">then</span>
+        ...
+      <span class="hljs-keyword">else</span>
+        ...
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="operator-precedence"></a><a href="#operator-precedence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operator Precedence</h2>
+<p>Precedence determines the order of operations in expressions with operators of different priority. In the case of the same precedence, it is based on the associativity of operators.</p>
+<h3><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p><code>a = b * c ^ d + e</code> is the same as <code>(a = (b * (c ^ d)) + e)</code></p>
+<p><code>a = b * c * d / e</code> is the same as <code>(a = (((b * c) * d) / e)</code></p>
+<p><code>a.b.c.d.e ^ f</code> is the same as <code>(((((a.b).c).d).e) ^ f)</code></p>
+<h3><a class="anchor" aria-hidden="true" id="table-of-precedence"></a><a href="#table-of-precedence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table of precedence</h3>
+<p>Table of operators in Ergo with their associativity and precedence from highest to lowest:</p>
+<table>
+<thead>
+<tr><th><strong>Order</strong></th><th><strong>Operator(s)</strong></th><th><strong>Description</strong></th><th><strong>Associativity</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>. <br> ?.</td><td>field access <br> field access of optional type</td><td>left to right</td></tr>
+<tr><td>2</td><td>[]</td><td>array index access</td><td>right to left</td></tr>
+<tr><td>3</td><td>!</td><td>logical not</td><td>right to left</td></tr>
+<tr><td>4</td><td>-</td><td>arithmetic negation</td><td>right to left</td></tr>
+<tr><td>5</td><td>++</td><td>string concatenation</td><td>left to right</td></tr>
+<tr><td>6</td><td>^</td><td>floating point number power</td><td>left to right</td></tr>
+<tr><td>7</td><td>* <br> / <br> %</td><td>multiplication <br> division <br> remainder</td><td>left to right</td></tr>
+<tr><td>8</td><td>+ <br> -</td><td>addition <br> subtraction</td><td>left to right</td></tr>
+<tr><td>9</td><td>??</td><td>default value of optional type</td><td>left to right</td></tr>
+<tr><td>10</td><td>and</td><td>logical conjunction</td><td>left to right</td></tr>
+<tr><td>11</td><td>or</td><td>logical disjunction</td><td>left to right</td></tr>
+<tr><td>12</td><td>&lt; <br> &gt; <br> &lt;= <br> &gt;= <br> = <br> !=</td><td>less than <br> greater than <br> less or equal <br> greater or equal <br> equal <br> not equal</td><td>left to right</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ref-ergo-api.html"><span class="arrow-prev">← </span><span>Node.js API</span></a><a class="docs-next button" href="/docs/ref-web-components-overview.html"><span>Overview</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#lexical-conventions">Lexical Conventions</a><ul class="toc-headings"><li><a href="#file-extension">File Extension</a></li><li><a href="#blanks">Blanks</a></li><li><a href="#comments">Comments</a></li><li><a href="#reserved-words">Reserved Words</a></li></ul></li><li><a href="#condition-expressions">Condition Expressions</a><ul class="toc-headings"><li><a href="#example">Example</a></li><li><a href="#legal-prose">Legal Prose</a></li><li><a href="#syntax">Syntax</a></li><li><a href="#usage">Usage</a></li><li><a href="#related">Related</a></li></ul></li><li><a href="#match-expressions">Match Expressions</a><ul class="toc-headings"><li><a href="#example-1">Example</a></li><li><a href="#legal-prose-1">Legal Prose</a></li><li><a href="#syntax-1">Syntax</a></li><li><a href="#usage-1">Usage</a></li></ul></li><li><a href="#operator-precedence">Operator Precedence</a><ul class="toc-headings"><li><a href="#example-2">Example</a></li><li><a href="#table-of-precedence">Table of precedence</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

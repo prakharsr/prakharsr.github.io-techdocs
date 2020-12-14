@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Accord Project Blog</title>
+        <link>https://docs.accordproject.org/blog</link>
+        <description>The best place to stay up-to-date with the latest Accord Project news and events.</description>
+        <lastBuildDate>Fri, 18 May 2018 06:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>Accord Project Blog</title>
+            <url>https://docs.accordproject.org/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg</url>
+            <link>https://docs.accordproject.org/blog</link>
+        </image>
+        <copyright>Copyright © 2018-2020 Accord Project, LLC.</copyright>
+        <item>
+            <title><![CDATA[Welcome!]]></title>
+            <link>https://docs.accordproject.org/blog/2018/05/18/blog-post.html</link>
+            <guid>https://docs.accordproject.org/blog/2018/05/18/blog-post.html</guid>
+            <pubDate>Fri, 18 May 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>This is a test.</p>
+]]></description>
+        </item>
+    </channel>
+</rss>

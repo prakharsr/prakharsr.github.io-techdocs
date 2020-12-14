@@ -1,0 +1,1435 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Node.js API · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Modules"/><meta name="docsearch:version" content="0.21"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Node.js API · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="## Modules"/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.21</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Cicero Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/accordproject.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-slc.html">Smart Legal Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-template.html">Accord Project Templates</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-tour.html">Online Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-faq.html">FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/started-installation.html">Install Cicero</a></li><li class="navListItem"><a class="navItem" href="/docs/started-hello.html">Hello World Template</a></li><li class="navListItem"><a class="navItem" href="/docs/started-resources.html">Resources</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Template Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Text</h4><ul><li class="navListItem"><a class="navItem" href="/docs/markup-preliminaries.html">Preliminaries</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-commonmark.html">CommonMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-ciceromark.html">CiceroMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-templatemark.html">TemplateMark</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Model</h4><ul><li class="navListItem"><a class="navItem" href="/docs/model-concerto.html">Concerto Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/model-namespaces.html">Namespaces</a></li><li class="navListItem"><a class="navItem" href="/docs/model-classes.html">Classes</a></li><li class="navListItem"><a class="navItem" href="/docs/model-enums.html">Enumerations</a></li><li class="navListItem"><a class="navItem" href="/docs/model-properties.html">Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/model-relationships.html">Relationships</a></li><li class="navListItem"><a class="navItem" href="/docs/model-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/model-api.html">Using the API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Logic</h4><ul><li class="navListItem"><a class="navItem" href="/docs/logic-ergo.html">Ergo Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-expr.html">Simple Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-type.html">Introducing Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-complex-type.html">Complex Values &amp; Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-advanced-expr.html">Advanced Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-stmt.html">Statements</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-decl.html">Declarations</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-module.html">Modules</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Using Cicero</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-templates.html">Templates Deep Dive</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-library.html">Template Library</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-create.html">Template Generator</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Authoring</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-studio.html">With Template Studio</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-vscode.html">With VS Code</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Execution</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-nodejs.html">Working with Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-hyperledger.html">With Hyperledger Fabric</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Reference Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">General</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-errors.html">Errors</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Migration</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.13-0.20.html">0.13 to 0.20</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.20-0.21.html">0.20 to 0.21</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Cicero Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-cli.html">Command Line</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ref-cicero-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-testing.html">Template Testing</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Transform Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-markus-cli.html">Command Line</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-api.html">Node.js API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-stdlib.html">Standard Library</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-repl.html">Read-Eval-Print Loop</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-spec.html">Specification</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Web Components Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-web-components-overview.html">Overview</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Node.js API</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="modules"></a><a href="#modules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modules</h2>
+<dl>
+<dt><a href="#module_cicero-engine">cicero-engine</a></dt>
+<dd><p>Clause Engine</p>
+</dd>
+<dt><a href="#module_cicero-core">cicero-core</a></dt>
+<dd><p>Cicero Core - defines the core data types for Cicero.</p>
+</dd>
+</dl>
+<h2><a class="anchor" aria-hidden="true" id="classes"></a><a href="#classes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classes</h2>
+<dl>
+<dt><a href="#AmountFormatParser">AmountFormatParser</a></dt>
+<dd><p>Parses an amount format string</p>
+</dd>
+<dt><a href="#Clause">Clause</a></dt>
+<dd><p>A Clause is executable business logic, linked to a natural language (legally enforceable) template.
+A Clause must be constructed with a template and then prior to execution the data for the clause must be set.
+Set the data for the clause (an instance of the template model) by either calling the setData method or by
+calling the parse method and passing in natural language text that conforms to the template grammar.</p>
+</dd>
+<dt><a href="#Contract">Contract</a></dt>
+<dd><p>A Contract is executable business logic, linked to a natural language (legally enforceable) template.
+A Clause must be constructed with a template and then prior to execution the data for the clause must be set.
+Set the data for the clause (an instance of the template model) by either calling the setData method or by
+calling the parse method and passing in natural language text that conforms to the template grammar.</p>
+</dd>
+<dt><a href="#DateTimeFormatParser">DateTimeFormatParser</a></dt>
+<dd><p>Parses a date/time format string</p>
+</dd>
+<dt><a href="#FormatParser">FormatParser</a></dt>
+<dd><p>Parses a format string</p>
+</dd>
+<dt><a href="#Metadata">Metadata</a></dt>
+<dd><p>Defines the metadata for a Template, including the name, version, README markdown.</p>
+</dd>
+<dt><a href="#MonetaryAmountFormatParser">MonetaryAmountFormatParser</a></dt>
+<dd><p>Parses a monetary/amount format string</p>
+</dd>
+<dt><a href="#ParserManager">ParserManager</a></dt>
+<dd><p>Generates and manages a Nearley parser for a template.</p>
+</dd>
+<dt><a href="#Template">Template</a></dt>
+<dd><p>A template for a legal clause or contract. A Template has a template model, request/response transaction types,
+a template grammar (natural language for the template) as well as Ergo code for the business logic of the
+template.</p>
+</dd>
+<dt><a href="#TemplateInstance">TemplateInstance</a></dt>
+<dd><p>A TemplateInstance is an instance of a Clause or Contract template. It is executable business logic, linked to
+a natural language (legally enforceable) template.
+A TemplateInstance must be constructed with a template and then prior to execution the data for the clause must be set.
+Set the data for the TemplateInstance by either calling the setData method or by
+calling the parse method and passing in natural language text that conforms to the template grammar.</p>
+</dd>
+<dt><a href="#CompositeArchiveLoader">CompositeArchiveLoader</a></dt>
+<dd><p>Manages a set of archive loaders, delegating to the first archive
+loader that accepts a URL.</p>
+</dd>
+</dl>
+<h2><a class="anchor" aria-hidden="true" id="functions"></a><a href="#functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions</h2>
+<dl>
+<dt><a href="#locationOfError">locationOfError(error)</a> ⇒ <code>object</code></dt>
+<dd><p>Extract the file location from the parse error</p>
+</dd>
+<dt><a href="#isPNG">isPNG(buffer)</a> ⇒ <code>Boolean</code></dt>
+<dd><p>Checks whether the file is PNG</p>
+</dd>
+<dt><a href="#getMimeType">getMimeType(buffer)</a> ⇒ <code>Object</code></dt>
+<dd><p>Returns the mime-type of the file</p>
+</dd>
+</dl>
+<p><a name="module_cicero-engine"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="cicero-engine"></a><a href="#cicero-engine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cicero-engine</h2>
+<p>Clause Engine</p>
+<ul>
+<li><a href="#module_cicero-engine">cicero-engine</a>
+<ul>
+<li><a href="#module_cicero-engine.Engine">~Engine</a>
+<ul>
+<li><a href="#new_module_cicero-engine.Engine_new">new Engine()</a></li>
+<li><a href="#module_cicero-engine.Engine+trigger">.trigger(clause, request, state, currentTime)</a> ⇒ <code>Promise</code></li>
+<li><a href="#module_cicero-engine.Engine+invoke">.invoke(clause, clauseName, params, state, currentTime)</a> ⇒ <code>Promise</code></li>
+<li><a href="#module_cicero-engine.Engine+init">.init(clause, currentTime)</a> ⇒ <code>Promise</code></li>
+<li><a href="#module_cicero-engine.Engine+draft">.draft(clause, [options], currentTime)</a> ⇒ <code>Promise</code></li>
+<li><a href="#module_cicero-engine.Engine+getErgoEngine">.getErgoEngine()</a> ⇒ <code>ErgoEngine</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="module_cicero-engine.Engine"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="cicero-engineengine"></a><a href="#cicero-engineengine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cicero-engine~Engine</h3>
+<p>
+Engine class. Stateless execution of clauses against a request object, returning a response to the caller.
+</p>
+<p><strong>Kind</strong>: inner class of <a href="#module_cicero-engine"><code>cicero-engine</code></a>  <br>
+<strong>Access</strong>: public</p>
+<ul>
+<li><a href="#module_cicero-engine.Engine">~Engine</a>
+<ul>
+<li><a href="#new_module_cicero-engine.Engine_new">new Engine()</a></li>
+<li><a href="#module_cicero-engine.Engine+trigger">.trigger(clause, request, state, currentTime)</a> ⇒ <code>Promise</code></li>
+<li><a href="#module_cicero-engine.Engine+invoke">.invoke(clause, clauseName, params, state, currentTime)</a> ⇒ <code>Promise</code></li>
+<li><a href="#module_cicero-engine.Engine+init">.init(clause, currentTime)</a> ⇒ <code>Promise</code></li>
+<li><a href="#module_cicero-engine.Engine+draft">.draft(clause, [options], currentTime)</a> ⇒ <code>Promise</code></li>
+<li><a href="#module_cicero-engine.Engine+getErgoEngine">.getErgoEngine()</a> ⇒ <code>ErgoEngine</code></li>
+</ul></li>
+</ul>
+<p><a name="new_module_cicero-engine.Engine_new"></a></p>
+<h4><a class="anchor" aria-hidden="true" id="new-engine"></a><a href="#new-engine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new Engine()</h4>
+<p>Create the Engine.</p>
+<p><a name="module_cicero-engine.Engine+trigger"></a></p>
+<h4><a class="anchor" aria-hidden="true" id="enginetriggerclause-request-state-currenttime-⇒-codepromisecode"></a><a href="#enginetriggerclause-request-state-currenttime-⇒-codepromisecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>engine.trigger(clause, request, state, currentTime) ⇒ <code>Promise</code></h4>
+<p>Send a request to a clause for execution</p>
+<p><strong>Kind</strong>: instance method of <a href="#module_cicero-engine.Engine"><code>Engine</code></a>  <br>
+<strong>Returns</strong>: <code>Promise</code> - a promise that resolves to a result for the clause</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>clause</td><td><a href="#Clause"><code>Clause</code></a></td><td>the clause</td></tr>
+<tr><td>request</td><td><code>object</code></td><td>the request, a JS object that can be deserialized using the Composer serializer.</td></tr>
+<tr><td>state</td><td><code>object</code></td><td>the contract state, a JS object that can be deserialized using the Composer serializer.</td></tr>
+<tr><td>currentTime</td><td><code>string</code></td><td>the definition of 'now'</td></tr>
+</tbody>
+</table>
+<p><a name="module_cicero-engine.Engine+invoke"></a></p>
+<h4><a class="anchor" aria-hidden="true" id="engineinvokeclause-clausename-params-state-currenttime-⇒-codepromisecode"></a><a href="#engineinvokeclause-clausename-params-state-currenttime-⇒-codepromisecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>engine.invoke(clause, clauseName, params, state, currentTime) ⇒ <code>Promise</code></h4>
+<p>Invoke a specific clause for execution</p>
+<p><strong>Kind</strong>: instance method of <a href="#module_cicero-engine.Engine"><code>Engine</code></a>  <br>
+<strong>Returns</strong>: <code>Promise</code> - a promise that resolves to a result for the clause</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>clause</td><td><a href="#Clause"><code>Clause</code></a></td><td>the clause</td></tr>
+<tr><td>clauseName</td><td><code>string</code></td><td>the clause name</td></tr>
+<tr><td>params</td><td><code>object</code></td><td>the clause parameters, a JS object whose fields that can be deserialized using the Composer serializer.</td></tr>
+<tr><td>state</td><td><code>object</code></td><td>the contract state, a JS object that can be deserialized using the Composer serializer.</td></tr>
+<tr><td>currentTime</td><td><code>string</code></td><td>the definition of 'now'</td></tr>
+</tbody>
+</table>
+<p><a name="module_cicero-engine.Engine+init"></a></p>
+<h4><a class="anchor" aria-hidden="true" id="engineinitclause-currenttime-⇒-codepromisecode"></a><a href="#engineinitclause-currenttime-⇒-codepromisecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>engine.init(clause, currentTime) ⇒ <code>Promise</code></h4>
+<p>Initialize a clause</p>
+<p><strong>Kind</strong>: instance method of <a href="#module_cicero-engine.Engine"><code>Engine</code></a>  <br>
+<strong>Returns</strong>: <code>Promise</code> - a promise that resolves to a result for the clause initialization</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>clause</td><td><a href="#Clause"><code>Clause</code></a></td><td>the clause</td></tr>
+<tr><td>currentTime</td><td><code>string</code></td><td>the definition of 'now'</td></tr>
+</tbody>
+</table>
+<p><a name="module_cicero-engine.Engine+draft"></a></p>
+<h4><a class="anchor" aria-hidden="true" id="enginedraftclause-options-currenttime-⇒-codepromisecode"></a><a href="#enginedraftclause-options-currenttime-⇒-codepromisecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>engine.draft(clause, [options], currentTime) ⇒ <code>Promise</code></h4>
+<p>Generate Text for a clause</p>
+<p><strong>Kind</strong>: instance method of <a href="#module_cicero-engine.Engine"><code>Engine</code></a>  <br>
+<strong>Returns</strong>: <code>Promise</code> - a promise that resolves to a result for the clause initialization</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>clause</td><td><a href="#Clause"><code>Clause</code></a></td><td>the clause</td></tr>
+<tr><td>[options]</td><td><code>*</code></td><td>text generation options. options.wrapVariables encloses variables and editable sections in '&lt;variable ...' and '/&gt;'</td></tr>
+<tr><td>currentTime</td><td><code>string</code></td><td>the definition of 'now'</td></tr>
+</tbody>
+</table>
+<p><a name="module_cicero-engine.Engine+getErgoEngine"></a></p>
+<h4><a class="anchor" aria-hidden="true" id="enginegetergoengine-⇒-codeergoenginecode"></a><a href="#enginegetergoengine-⇒-codeergoenginecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>engine.getErgoEngine() ⇒ <code>ErgoEngine</code></h4>
+<p>Provides access to the underlying Ergo engine.</p>
+<p><strong>Kind</strong>: instance method of <a href="#module_cicero-engine.Engine"><code>Engine</code></a>  <br>
+<strong>Returns</strong>: <code>ErgoEngine</code> - the Ergo Engine for this Engine<br>
+<a name="module_cicero-core"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="cicero-core"></a><a href="#cicero-core" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cicero-core</h2>
+<p>Cicero Core - defines the core data types for Cicero.</p>
+<p><a name="AmountFormatParser"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="amountformatparser"></a><a href="#amountformatparser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AmountFormatParser</h2>
+<p>Parses an amount format string</p>
+<p><strong>Kind</strong>: global class<br>
+<strong>Access</strong>: public</p>
+<ul>
+<li><a href="#AmountFormatParser">AmountFormatParser</a>
+<ul>
+<li><em>instance</em>
+<ul>
+<li><a href="#AmountFormatParser+addGrammars">.addGrammars(grammars, field)</a></li>
+<li><a href="#AmountFormatParser+buildFormatRules">.buildFormatRules(formatString)</a> ⇒ <code>Object</code></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><a href="#AmountFormatParser.parseAmountFormatField">.parseAmountFormatField(field)</a> ⇒ <code>string</code></li>
+<li><a href="#AmountFormatParser.amountFormatField">.amountFormatField(field)</a> ⇒ <code>string</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="AmountFormatParser+addGrammars"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="amountformatparseraddgrammarsgrammars-field"></a><a href="#amountformatparseraddgrammarsgrammars-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>amountFormatParser.addGrammars(grammars, field)</h3>
+<p>Given current grammar parts, add necessary grammars parts for the format.</p>
+<p><strong>Kind</strong>: instance method of <a href="#AmountFormatParser"><code>AmountFormatParser</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>grammars</td><td><code>Array.&lt;object&gt;</code></td><td>the current grammar parts</td></tr>
+<tr><td>field</td><td><code>string</code></td><td>grammar field</td></tr>
+</tbody>
+</table>
+<p><a name="AmountFormatParser+buildFormatRules"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="amountformatparserbuildformatrulesformatstring-⇒-codeobjectcode"></a><a href="#amountformatparserbuildformatrulesformatstring-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>amountFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code></h3>
+<p>Converts a format string to a Nearley action</p>
+<p><strong>Kind</strong>: instance method of <a href="#AmountFormatParser"><code>AmountFormatParser</code></a>  <br>
+<strong>Returns</strong>: <code>Object</code> - the tokens and action and name to use for the Nearley rule</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>formatString</td><td><code>string</code></td><td>the input format string</td></tr>
+</tbody>
+</table>
+<p><a name="AmountFormatParser.parseAmountFormatField"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="amountformatparserparseamountformatfieldfield-⇒-codestringcode"></a><a href="#amountformatparserparseamountformatfieldfield-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AmountFormatParser.parseAmountFormatField(field) ⇒ <code>string</code></h3>
+<p>Given a format field (like 0,0.0) this method returns
+a logical name for the field. Note the logical names
+have been picked to align with the moment constructor that takes an object.</p>
+<p><strong>Kind</strong>: static method of <a href="#AmountFormatParser"><code>AmountFormatParser</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the field designator</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>field</td><td><code>string</code></td><td>the input format field</td></tr>
+</tbody>
+</table>
+<p><a name="AmountFormatParser.amountFormatField"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="amountformatparseramountformatfieldfield-⇒-codestringcode"></a><a href="#amountformatparseramountformatfieldfield-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AmountFormatParser.amountFormatField(field) ⇒ <code>string</code></h3>
+<p>Given a double format field (like 0,0.0) this method returns a new unique field name</p>
+<p><strong>Kind</strong>: static method of <a href="#AmountFormatParser"><code>AmountFormatParser</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the field designator</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>field</td><td><code>string</code></td><td>the input format field</td></tr>
+</tbody>
+</table>
+<p><a name="Clause"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="clause"></a><a href="#clause" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clause</h2>
+<p>A Clause is executable business logic, linked to a natural language (legally enforceable) template.
+A Clause must be constructed with a template and then prior to execution the data for the clause must be set.
+Set the data for the clause (an instance of the template model) by either calling the setData method or by
+calling the parse method and passing in natural language text that conforms to the template grammar.</p>
+<p><strong>Kind</strong>: global class<br>
+<strong>Access</strong>: public<br>
+<a name="Contract"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="contract"></a><a href="#contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Contract</h2>
+<p>A Contract is executable business logic, linked to a natural language (legally enforceable) template.
+A Clause must be constructed with a template and then prior to execution the data for the clause must be set.
+Set the data for the clause (an instance of the template model) by either calling the setData method or by
+calling the parse method and passing in natural language text that conforms to the template grammar.</p>
+<p><strong>Kind</strong>: global class<br>
+<strong>Access</strong>: public<br>
+<a name="DateTimeFormatParser"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="datetimeformatparser"></a><a href="#datetimeformatparser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateTimeFormatParser</h2>
+<p>Parses a date/time format string</p>
+<p><strong>Kind</strong>: global class<br>
+<strong>Access</strong>: public</p>
+<ul>
+<li><a href="#DateTimeFormatParser">DateTimeFormatParser</a>
+<ul>
+<li><em>instance</em>
+<ul>
+<li><a href="#DateTimeFormatParser+addGrammars">.addGrammars(grammars, field)</a></li>
+<li><a href="#DateTimeFormatParser+buildFormatRules">.buildFormatRules(formatString)</a> ⇒ <code>Object</code></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><a href="#DateTimeFormatParser.parseDateTimeFormatField">.parseDateTimeFormatField(field)</a> ⇒ <code>string</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="DateTimeFormatParser+addGrammars"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="datetimeformatparseraddgrammarsgrammars-field"></a><a href="#datetimeformatparseraddgrammarsgrammars-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>dateTimeFormatParser.addGrammars(grammars, field)</h3>
+<p>Given current grammar parts, add necessary grammars parts for the format.</p>
+<p><strong>Kind</strong>: instance method of <a href="#DateTimeFormatParser"><code>DateTimeFormatParser</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>grammars</td><td><code>Array.&lt;object&gt;</code></td><td>the current grammar parts</td></tr>
+<tr><td>field</td><td><code>string</code></td><td>grammar field</td></tr>
+</tbody>
+</table>
+<p><a name="DateTimeFormatParser+buildFormatRules"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="datetimeformatparserbuildformatrulesformatstring-⇒-codeobjectcode"></a><a href="#datetimeformatparserbuildformatrulesformatstring-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>dateTimeFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code></h3>
+<p>Converts a format string to a Nearley action</p>
+<p><strong>Kind</strong>: instance method of <a href="#DateTimeFormatParser"><code>DateTimeFormatParser</code></a>  <br>
+<strong>Returns</strong>: <code>Object</code> - the tokens and action and name to use for the Nearley rule</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>formatString</td><td><code>string</code></td><td>the input format string</td></tr>
+</tbody>
+</table>
+<p><a name="DateTimeFormatParser.parseDateTimeFormatField"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="datetimeformatparserparsedatetimeformatfieldfield-⇒-codestringcode"></a><a href="#datetimeformatparserparsedatetimeformatfieldfield-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateTimeFormatParser.parseDateTimeFormatField(field) ⇒ <code>string</code></h3>
+<p>Given a format field (like HH or D) this method returns
+a logical name for the field. Note the logical names
+have been picked to align with the moment constructor that takes an object.</p>
+<p><strong>Kind</strong>: static method of <a href="#DateTimeFormatParser"><code>DateTimeFormatParser</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the field designator</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>field</td><td><code>string</code></td><td>the input format field</td></tr>
+</tbody>
+</table>
+<p><a name="FormatParser"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="formatparser"></a><a href="#formatparser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FormatParser</h2>
+<p>Parses a format string</p>
+<p><strong>Kind</strong>: global class<br>
+<strong>Access</strong>: public</p>
+<ul>
+<li><a href="#FormatParser">FormatParser</a>
+<ul>
+<li><em>instance</em>
+<ul>
+<li><a href="#FormatParser+addGrammars">.addGrammars(grammars, field)</a></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><a href="#FormatParser.buildFormatRules">.buildFormatRules(format)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="FormatParser+addGrammars"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="formatparseraddgrammarsgrammars-field"></a><a href="#formatparseraddgrammarsgrammars-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>formatParser.addGrammars(grammars, field)</h3>
+<p>Given current grammar parts, add necessary grammars parts for the format.</p>
+<p><strong>Kind</strong>: instance method of <a href="#FormatParser"><code>FormatParser</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>grammars</td><td><code>Array.&lt;object&gt;</code></td><td>the current grammar parts</td></tr>
+<tr><td>field</td><td><code>string</code></td><td>grammar field</td></tr>
+</tbody>
+</table>
+<p><a name="FormatParser.buildFormatRules"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="formatparserbuildformatrulesformat"></a><a href="#formatparserbuildformatrulesformat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FormatParser.buildFormatRules(format)</h3>
+<p>Given a format, returns grammar rules to parse that format</p>
+<p><strong>Kind</strong>: static method of <a href="#FormatParser"><code>FormatParser</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>format</td><td><code>string</code></td><td>the format</td></tr>
+<tr><td></td><td><code>Array.&lt;object&gt;</code></td><td>grammar rules for the format</td></tr>
+</tbody>
+</table>
+<p><a name="Metadata"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="metadata"></a><a href="#metadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Metadata</h2>
+<p>Defines the metadata for a Template, including the name, version, README markdown.</p>
+<p><strong>Kind</strong>: global class<br>
+<strong>Access</strong>: public</p>
+<ul>
+<li><a href="#Metadata">Metadata</a>
+<ul>
+<li><a href="#new_Metadata_new">new Metadata(packageJson, readme, samples, request, logo)</a></li>
+<li><em>instance</em>
+<ul>
+<li><a href="#Metadata+getTemplateType">.getTemplateType()</a> ⇒ <code>number</code></li>
+<li><a href="#Metadata+getLogo">.getLogo()</a> ⇒ <code>Buffer</code></li>
+<li><a href="#Metadata+getAuthor">.getAuthor()</a> ⇒ <code>*</code></li>
+<li><a href="#Metadata+getRuntime">.getRuntime()</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+getCiceroVersion">.getCiceroVersion()</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+satisfiesCiceroVersion">.satisfiesCiceroVersion(version)</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+getSamples">.getSamples()</a> ⇒ <code>object</code></li>
+<li><a href="#Metadata+getRequest">.getRequest()</a> ⇒ <code>object</code></li>
+<li><a href="#Metadata+getSample">.getSample(locale)</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+getREADME">.getREADME()</a> ⇒ <code>String</code></li>
+<li><a href="#Metadata+getPackageJson">.getPackageJson()</a> ⇒ <code>object</code></li>
+<li><a href="#Metadata+getName">.getName()</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+getDisplayName">.getDisplayName()</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+getKeywords">.getKeywords()</a> ⇒ <code>Array</code></li>
+<li><a href="#Metadata+getDescription">.getDescription()</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+getVersion">.getVersion()</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+getIdentifier">.getIdentifier()</a> ⇒ <code>string</code></li>
+<li><a href="#Metadata+createTargetMetadata">.createTargetMetadata(runtimeName)</a> ⇒ <code>object</code></li>
+<li><a href="#Metadata+toJSON">.toJSON()</a> ⇒ <code>object</code></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><a href="#Metadata.checkImage">.checkImage(buffer)</a></li>
+<li><a href="#Metadata.checkImageDimensions">.checkImageDimensions(buffer, mimeType)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="new_Metadata_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-metadatapackagejson-readme-samples-request-logo"></a><a href="#new-metadatapackagejson-readme-samples-request-logo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new Metadata(packageJson, readme, samples, request, logo)</h3>
+<p>Create the Metadata.</p>
+<p>
+<strong>Note: Only to be called by framework code. Applications should
+retrieve instances from [Template](#Template)</strong>
+</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>packageJson</td><td><code>object</code></td><td>the JS object for package.json (required)</td></tr>
+<tr><td>readme</td><td><code>String</code></td><td>the README.md for the template (may be null)</td></tr>
+<tr><td>samples</td><td><code>object</code></td><td>the sample markdown for the template in different locales,</td></tr>
+<tr><td>request</td><td><code>object</code></td><td>the JS object for the sample request</td></tr>
+<tr><td>logo</td><td><code>Buffer</code></td><td>the bytes data for the image represented as an object whose keys are the locales and whose values are the sample markdown. For example:  {      default: 'default sample markdown',      en: 'sample text in english',      fr: 'exemple de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). THe <code>default</code> key represents sample template text in a non-specified language, stored in a file called <code>sample.md</code>.</td></tr>
+</tbody>
+</table>
+<p><a name="Metadata+getTemplateType"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagettemplatetype-⇒-codenumbercode"></a><a href="#metadatagettemplatetype-⇒-codenumbercode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getTemplateType() ⇒ <code>number</code></h3>
+<p>Returns either a 0 (for a contract template), or 1 (for a clause template)</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>number</code> - the template type<br>
+<a name="Metadata+getLogo"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetlogo-⇒-codebuffercode"></a><a href="#metadatagetlogo-⇒-codebuffercode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getLogo() ⇒ <code>Buffer</code></h3>
+<p>Returns the logo at the root of the template</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>Buffer</code> - the bytes data of logo<br>
+<a name="Metadata+getAuthor"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetauthor-⇒-codecode"></a><a href="#metadatagetauthor-⇒-codecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getAuthor() ⇒ <code>*</code></h3>
+<p>Returns the author for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>*</code> - the author information<br>
+<a name="Metadata+getRuntime"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetruntime-⇒-codestringcode"></a><a href="#metadatagetruntime-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getRuntime() ⇒ <code>string</code></h3>
+<p>Returns the name of the runtime target for this template, or null if this template
+has not been compiled for a specific runtime.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the name of the runtime<br>
+<a name="Metadata+getCiceroVersion"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetciceroversion-⇒-codestringcode"></a><a href="#metadatagetciceroversion-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getCiceroVersion() ⇒ <code>string</code></h3>
+<p>Returns the version of Cicero that this template is compatible with.
+i.e. which version of the runtime was this template built for?
+The version string conforms to the semver definition</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the semantic version<br>
+<a name="Metadata+satisfiesCiceroVersion"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatasatisfiesciceroversionversion-⇒-codestringcode"></a><a href="#metadatasatisfiesciceroversionversion-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.satisfiesCiceroVersion(version) ⇒ <code>string</code></h3>
+<p>Only returns true if the current cicero version satisfies the target version of this template</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the semantic version</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>version</td><td><code>string</code></td><td>the cicero version to check against</td></tr>
+</tbody>
+</table>
+<p><a name="Metadata+getSamples"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetsamples-⇒-codeobjectcode"></a><a href="#metadatagetsamples-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getSamples() ⇒ <code>object</code></h3>
+<p>Returns the samples for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the sample files for the template<br>
+<a name="Metadata+getRequest"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetrequest-⇒-codeobjectcode"></a><a href="#metadatagetrequest-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getRequest() ⇒ <code>object</code></h3>
+<p>Returns the sample request for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the sample request for the template<br>
+<a name="Metadata+getSample"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetsamplelocale-⇒-codestringcode"></a><a href="#metadatagetsamplelocale-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getSample(locale) ⇒ <code>string</code></h3>
+<p>Returns the sample for this template in the given locale. This may be null.
+If no locale is specified returns the default sample if it has been specified.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the sample file for the template in the given locale or null</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>locale</td><td><code>string</code></td><td><code>null</code></td><td>the IETF language code for the language.</td></tr>
+</tbody>
+</table>
+<p><a name="Metadata+getREADME"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetreadme-⇒-codestringcode"></a><a href="#metadatagetreadme-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getREADME() ⇒ <code>String</code></h3>
+<p>Returns the README.md for this template. This may be null if the template does not have a README.md</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>String</code> - the README.md file for the template or null<br>
+<a name="Metadata+getPackageJson"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetpackagejson-⇒-codeobjectcode"></a><a href="#metadatagetpackagejson-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getPackageJson() ⇒ <code>object</code></h3>
+<p>Returns the package.json for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the Javascript object for package.json<br>
+<a name="Metadata+getName"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetname-⇒-codestringcode"></a><a href="#metadatagetname-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getName() ⇒ <code>string</code></h3>
+<p>Returns the name for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the name of the template<br>
+<a name="Metadata+getDisplayName"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetdisplayname-⇒-codestringcode"></a><a href="#metadatagetdisplayname-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getDisplayName() ⇒ <code>string</code></h3>
+<p>Returns the display name for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the display name of the template<br>
+<a name="Metadata+getKeywords"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetkeywords-⇒-codearraycode"></a><a href="#metadatagetkeywords-⇒-codearraycode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getKeywords() ⇒ <code>Array</code></h3>
+<p>Returns the keywords for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>Array</code> - the keywords of the template<br>
+<a name="Metadata+getDescription"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetdescription-⇒-codestringcode"></a><a href="#metadatagetdescription-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getDescription() ⇒ <code>string</code></h3>
+<p>Returns the description for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the description of the template<br>
+<a name="Metadata+getVersion"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetversion-⇒-codestringcode"></a><a href="#metadatagetversion-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getVersion() ⇒ <code>string</code></h3>
+<p>Returns the version for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the description of the template<br>
+<a name="Metadata+getIdentifier"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatagetidentifier-⇒-codestringcode"></a><a href="#metadatagetidentifier-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.getIdentifier() ⇒ <code>string</code></h3>
+<p>Returns the identifier for this template, formed from name@version.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the identifier of the template<br>
+<a name="Metadata+createTargetMetadata"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatacreatetargetmetadataruntimename-⇒-codeobjectcode"></a><a href="#metadatacreatetargetmetadataruntimename-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.createTargetMetadata(runtimeName) ⇒ <code>object</code></h3>
+<p>Return new Metadata for a target runtime</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the new Metadata</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>runtimeName</td><td><code>string</code></td><td>the target runtime name</td></tr>
+</tbody>
+</table>
+<p><a name="Metadata+toJSON"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatatojson-⇒-codeobjectcode"></a><a href="#metadatatojson-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>metadata.toJSON() ⇒ <code>object</code></h3>
+<p>Return the whole metadata content, for hashing</p>
+<p><strong>Kind</strong>: instance method of <a href="#Metadata"><code>Metadata</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the content of the metadata object<br>
+<a name="Metadata.checkImage"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatacheckimagebuffer"></a><a href="#metadatacheckimagebuffer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Metadata.checkImage(buffer)</h3>
+<p>Check the buffer is a png file with the right size</p>
+<p><strong>Kind</strong>: static method of <a href="#Metadata"><code>Metadata</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buffer</td><td><code>Buffer</code></td><td>the buffer object</td></tr>
+</tbody>
+</table>
+<p><a name="Metadata.checkImageDimensions"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="metadatacheckimagedimensionsbuffer-mimetype"></a><a href="#metadatacheckimagedimensionsbuffer-mimetype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Metadata.checkImageDimensions(buffer, mimeType)</h3>
+<p>Checks if dimensions for the image are correct.</p>
+<p><strong>Kind</strong>: static method of <a href="#Metadata"><code>Metadata</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buffer</td><td><code>Buffer</code></td><td>the buffer object</td></tr>
+<tr><td>mimeType</td><td><code>string</code></td><td>the mime type of the object</td></tr>
+</tbody>
+</table>
+<p><a name="MonetaryAmountFormatParser"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="monetaryamountformatparser"></a><a href="#monetaryamountformatparser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MonetaryAmountFormatParser</h2>
+<p>Parses a monetary/amount format string</p>
+<p><strong>Kind</strong>: global class<br>
+<strong>Access</strong>: public</p>
+<ul>
+<li><a href="#MonetaryAmountFormatParser">MonetaryAmountFormatParser</a>
+<ul>
+<li><em>instance</em>
+<ul>
+<li><a href="#MonetaryAmountFormatParser+addGrammars">.addGrammars(grammars, field)</a></li>
+<li><a href="#MonetaryAmountFormatParser+buildFormatRules">.buildFormatRules(formatString)</a> ⇒ <code>Object</code></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><a href="#MonetaryAmountFormatParser.parseMonetaryAmountFormatField">.parseMonetaryAmountFormatField(field)</a> ⇒ <code>string</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="MonetaryAmountFormatParser+addGrammars"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="monetaryamountformatparseraddgrammarsgrammars-field"></a><a href="#monetaryamountformatparseraddgrammarsgrammars-field" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>monetaryAmountFormatParser.addGrammars(grammars, field)</h3>
+<p>Given current grammar parts, add necessary grammars parts for the format.</p>
+<p><strong>Kind</strong>: instance method of <a href="#MonetaryAmountFormatParser"><code>MonetaryAmountFormatParser</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>grammars</td><td><code>Array.&lt;object&gt;</code></td><td>the current grammar parts</td></tr>
+<tr><td>field</td><td><code>string</code></td><td>grammar field</td></tr>
+</tbody>
+</table>
+<p><a name="MonetaryAmountFormatParser+buildFormatRules"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="monetaryamountformatparserbuildformatrulesformatstring-⇒-codeobjectcode"></a><a href="#monetaryamountformatparserbuildformatrulesformatstring-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>monetaryAmountFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code></h3>
+<p>Converts a format string to a Nearley action</p>
+<p><strong>Kind</strong>: instance method of <a href="#MonetaryAmountFormatParser"><code>MonetaryAmountFormatParser</code></a>  <br>
+<strong>Returns</strong>: <code>Object</code> - the tokens and action and name to use for the Nearley rule</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>formatString</td><td><code>string</code></td><td>the input format string</td></tr>
+</tbody>
+</table>
+<p><a name="MonetaryAmountFormatParser.parseMonetaryAmountFormatField"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="monetaryamountformatparserparsemonetaryamountformatfieldfield-⇒-codestringcode"></a><a href="#monetaryamountformatparserparsemonetaryamountformatfieldfield-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MonetaryAmountFormatParser.parseMonetaryAmountFormatField(field) ⇒ <code>string</code></h3>
+<p>Given a format field (like CCC or 0,0.0) this method returns
+a logical name for the field. Note the logical names
+have been picked to align with the moment constructor that takes an object.</p>
+<p><strong>Kind</strong>: static method of <a href="#MonetaryAmountFormatParser"><code>MonetaryAmountFormatParser</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the field designator</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>field</td><td><code>string</code></td><td>the input format field</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="parsermanager"></a><a href="#parsermanager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ParserManager</h2>
+<p>Generates and manages a Nearley parser for a template.</p>
+<p><strong>Kind</strong>: global class</p>
+<ul>
+<li><a href="#ParserManager">ParserManager</a>
+<ul>
+<li><a href="#new_ParserManager_new">new ParserManager(template)</a></li>
+<li><em>instance</em>
+<ul>
+<li><a href="#ParserManager+getParser">.getParser()</a> ⇒ <code>object</code></li>
+<li><a href="#ParserManager+getTemplateAst">.getTemplateAst()</a> ⇒ <code>object</code></li>
+<li><a href="#ParserManager+setGrammar">.setGrammar(grammar)</a></li>
+<li><a href="#ParserManager+buildGrammar">.buildGrammar(templatizedGrammar)</a></li>
+<li><a href="#ParserManager+buildGrammarRules">.buildGrammarRules(ast, templateModel, prefix, parts)</a></li>
+<li><a href="#ParserManager+handleBinding">.handleBinding(templateModel, parts, inputRule, element)</a></li>
+<li><a href="#ParserManager+cleanChunk">.cleanChunk(input)</a> ⇒ <code>string</code></li>
+<li><a href="#ParserManager+findFirstBinding">.findFirstBinding(propertyName, elements)</a> ⇒ <code>int</code></li>
+<li><a href="#ParserManager+getGrammar">.getGrammar()</a> ⇒ <code>String</code></li>
+<li><a href="#ParserManager+getTemplatizedGrammar">.getTemplatizedGrammar()</a> ⇒ <code>String</code></li>
+<li><a href="#ParserManager+roundtripMarkdown">.roundtripMarkdown(text)</a> ⇒ <code>string</code></li>
+<li><a href="#ParserManager+formatText">.formatText(text, options, format)</a> ⇒ <code>string</code></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><a href="#ParserManager.adjustListBlock">.adjustListBlock(x, separator)</a> ⇒ <code>object</code></li>
+<li><a href="#ParserManager.getProperty">.getProperty(templateModel, element)</a> ⇒ <code>*</code></li>
+<li><a href="#ParserManager._throwTemplateExceptionForElement">._throwTemplateExceptionForElement(message, element)</a></li>
+<li><a href="#ParserManager.compileGrammar">.compileGrammar(sourceCode)</a> ⇒ <code>object</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="new_ParserManager_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-parsermanagertemplate"></a><a href="#new-parsermanagertemplate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new ParserManager(template)</h3>
+<p>Create the ParserManager.</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>template</td><td><code>object</code></td><td>the template instance</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager+getParser"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagergetparser-⇒-codeobjectcode"></a><a href="#parsermanagergetparser-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.getParser() ⇒ <code>object</code></h3>
+<p>Gets a parser object for this template</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the parser for this template<br>
+<a name="ParserManager+getTemplateAst"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagergettemplateast-⇒-codeobjectcode"></a><a href="#parsermanagergettemplateast-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.getTemplateAst() ⇒ <code>object</code></h3>
+<p>Gets the AST for the template</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the AST for the template<br>
+<a name="ParserManager+setGrammar"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagersetgrammargrammar"></a><a href="#parsermanagersetgrammargrammar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.setGrammar(grammar)</h3>
+<p>Set the grammar for the template</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>grammar</td><td><code>String</code></td><td>the grammar for the template</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager+buildGrammar"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagerbuildgrammartemplatizedgrammar"></a><a href="#parsermanagerbuildgrammartemplatizedgrammar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.buildGrammar(templatizedGrammar)</h3>
+<p>Build a grammar from a template</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>templatizedGrammar</td><td><code>String</code></td><td>the annotated template using the markdown parser</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager+buildGrammarRules"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagerbuildgrammarrulesast-templatemodel-prefix-parts"></a><a href="#parsermanagerbuildgrammarrulesast-templatemodel-prefix-parts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.buildGrammarRules(ast, templateModel, prefix, parts)</h3>
+<p>Build grammar rules from a template</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>ast</td><td><code>object</code></td><td>the AST from which to build the grammar</td></tr>
+<tr><td>templateModel</td><td><code>ClassDeclaration</code></td><td>the type of the parent class for this AST</td></tr>
+<tr><td>prefix</td><td><code>String</code></td><td>A unique prefix for the grammar rules</td></tr>
+<tr><td>parts</td><td><code>Object</code></td><td>Result object to acculumate rules and required sub-grammars</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager+handleBinding"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagerhandlebindingtemplatemodel-parts-inputrule-element"></a><a href="#parsermanagerhandlebindingtemplatemodel-parts-inputrule-element" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.handleBinding(templateModel, parts, inputRule, element)</h3>
+<p>Utility method to generate a grammar rule for a variable binding</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>templateModel</td><td><code>ClassDeclaration</code></td><td>the current template model</td></tr>
+<tr><td>parts</td><td><code>*</code></td><td>the parts, where the rule will be added</td></tr>
+<tr><td>inputRule</td><td><code>*</code></td><td>the rule we are processing in the AST</td></tr>
+<tr><td>element</td><td><code>*</code></td><td>the current element in the AST</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager+cleanChunk"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagercleanchunkinput-⇒-codestringcode"></a><a href="#parsermanagercleanchunkinput-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.cleanChunk(input) ⇒ <code>string</code></h3>
+<p>Cleans a chunk of text to make it safe to include
+as a grammar rule. We need to remove linefeeds and
+escape any '&quot;' characters.</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - cleaned text</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>input</td><td><code>string</code></td><td>the input text from the template</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager+findFirstBinding"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagerfindfirstbindingpropertyname-elements-⇒-codeintcode"></a><a href="#parsermanagerfindfirstbindingpropertyname-elements-⇒-codeintcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.findFirstBinding(propertyName, elements) ⇒ <code>int</code></h3>
+<p>Finds the first binding for the given property</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>int</code> - the index of the element or -1</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>propertyName</td><td><code>string</code></td><td>the name of the property</td></tr>
+<tr><td>elements</td><td><code>Array.&lt;object&gt;</code></td><td>the result of parsing the template_txt.</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager+getGrammar"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagergetgrammar-⇒-codestringcode"></a><a href="#parsermanagergetgrammar-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.getGrammar() ⇒ <code>String</code></h3>
+<p>Get the (compiled) grammar for the template</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>String</code> - - the grammar for the template<br>
+<a name="ParserManager+getTemplatizedGrammar"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagergettemplatizedgrammar-⇒-codestringcode"></a><a href="#parsermanagergettemplatizedgrammar-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.getTemplatizedGrammar() ⇒ <code>String</code></h3>
+<p>Returns the templatized grammar</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>String</code> - the contents of the templatized grammar<br>
+<a name="ParserManager+roundtripMarkdown"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagerroundtripmarkdowntext-⇒-codestringcode"></a><a href="#parsermanagerroundtripmarkdowntext-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.roundtripMarkdown(text) ⇒ <code>string</code></h3>
+<p>Round-trip markdown</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the result of parsing and printing back the text</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>text</td><td><code>string</code></td><td>the markdown text</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager+formatText"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagerformattexttext-options-format-⇒-codestringcode"></a><a href="#parsermanagerformattexttext-options-format-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>parserManager.formatText(text, options, format) ⇒ <code>string</code></h3>
+<p>Format text</p>
+<p><strong>Kind</strong>: instance method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the result of parsing and printing back the text</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>text</td><td><code>string</code></td><td>the markdown text</td></tr>
+<tr><td>options</td><td><code>object</code></td><td>parameters to the formatting</td></tr>
+<tr><td>format</td><td><code>string</code></td><td>to the text generation</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager.adjustListBlock"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanageradjustlistblockx-separator-⇒-codeobjectcode"></a><a href="#parsermanageradjustlistblockx-separator-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ParserManager.adjustListBlock(x, separator) ⇒ <code>object</code></h3>
+<p>Adjust the template for list blocks</p>
+<p><strong>Kind</strong>: static method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the new template AST node</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td><code>object</code></td><td>The current template AST node</td></tr>
+<tr><td>separator</td><td><code>String</code></td><td>The list separator</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager.getProperty"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagergetpropertytemplatemodel-element-⇒-codecode"></a><a href="#parsermanagergetpropertytemplatemodel-element-⇒-codecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ParserManager.getProperty(templateModel, element) ⇒ <code>*</code></h3>
+<p>Throws an error if a template variable doesn't exist on the model.</p>
+<p><strong>Kind</strong>: static method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>*</code> - the property</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>templateModel</td><td><code>*</code></td><td>the model for the template</td></tr>
+<tr><td>element</td><td><code>*</code></td><td>the current element in the AST</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager._throwTemplateExceptionForElement"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanager_throwtemplateexceptionforelementmessage-element"></a><a href="#parsermanager_throwtemplateexceptionforelementmessage-element" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ParserManager._throwTemplateExceptionForElement(message, element)</h3>
+<p>Throw a template exception for the element</p>
+<p><strong>Kind</strong>: static method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Throws</strong>:</p>
+<ul>
+<li><code>TemplateException</code></li>
+</ul>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>message</td><td><code>string</code></td><td>the error message</td></tr>
+<tr><td>element</td><td><code>object</code></td><td>the AST</td></tr>
+</tbody>
+</table>
+<p><a name="ParserManager.compileGrammar"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="parsermanagercompilegrammarsourcecode-⇒-codeobjectcode"></a><a href="#parsermanagercompilegrammarsourcecode-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ParserManager.compileGrammar(sourceCode) ⇒ <code>object</code></h3>
+<p>Compiles a Nearley grammar to its AST</p>
+<p><strong>Kind</strong>: static method of <a href="#ParserManager"><code>ParserManager</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the AST for the grammar</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>sourceCode</td><td><code>string</code></td><td>the source text for the grammar</td></tr>
+</tbody>
+</table>
+<p><a name="Template"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="template"></a><a href="#template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>Template</em></h2>
+<p>A template for a legal clause or contract. A Template has a template model, request/response transaction types,
+a template grammar (natural language for the template) as well as Ergo code for the business logic of the
+template.</p>
+<p><strong>Kind</strong>: global abstract class<br>
+<strong>Access</strong>: public</p>
+<ul>
+<li><em><a href="#Template">Template</a></em>
+<ul>
+<li><em><a href="#new_Template_new">new Template(packageJson, readme, samples, request, logo, options)</a></em></li>
+<li><em>instance</em>
+<ul>
+<li><em><a href="#Template+validate">.validate()</a></em></li>
+<li><em><a href="#Template+getTemplateModel">.getTemplateModel()</a> ⇒ <code>ClassDeclaration</code></em></li>
+<li><em><a href="#Template+getIdentifier">.getIdentifier()</a> ⇒ <code>String</code></em></li>
+<li><em><a href="#Template+getMetadata">.getMetadata()</a> ⇒ <a href="#Metadata"><code>Metadata</code></a></em></li>
+<li><em><a href="#Template+getName">.getName()</a> ⇒ <code>String</code></em></li>
+<li><em><a href="#Template+getDisplayName">.getDisplayName()</a> ⇒ <code>string</code></em></li>
+<li><em><a href="#Template+getVersion">.getVersion()</a> ⇒ <code>String</code></em></li>
+<li><em><a href="#Template+getDescription">.getDescription()</a> ⇒ <code>String</code></em></li>
+<li><em><a href="#Template+getHash">.getHash()</a> ⇒ <code>string</code></em></li>
+<li><em><a href="#Template+toArchive">.toArchive([language], [options], logo)</a> ⇒ <code>Promise.&lt;Buffer&gt;</code></em></li>
+<li><em><a href="#Template+getParserManager">.getParserManager()</a> ⇒ <a href="#ParserManager"><code>ParserManager</code></a></em></li>
+<li><em><a href="#Template+getLogicManager">.getLogicManager()</a> ⇒ <code>LogicManager</code></em></li>
+<li><em><a href="#Template+getIntrospector">.getIntrospector()</a> ⇒ <code>Introspector</code></em></li>
+<li><em><a href="#Template+getFactory">.getFactory()</a> ⇒ <code>Factory</code></em></li>
+<li><em><a href="#Template+getSerializer">.getSerializer()</a> ⇒ <code>Serializer</code></em></li>
+<li><em><a href="#Template+getRequestTypes">.getRequestTypes()</a> ⇒ <code>Array</code></em></li>
+<li><em><a href="#Template+getResponseTypes">.getResponseTypes()</a> ⇒ <code>Array</code></em></li>
+<li><em><a href="#Template+getEmitTypes">.getEmitTypes()</a> ⇒ <code>Array</code></em></li>
+<li><em><a href="#Template+getStateTypes">.getStateTypes()</a> ⇒ <code>Array</code></em></li>
+<li><em><a href="#Template+hasLogic">.hasLogic()</a> ⇒ <code>boolean</code></em></li>
+<li><em><a href="#Template+grammarHasErgoExpression">.grammarHasErgoExpression()</a> ⇒ <code>boolean</code></em></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><em><a href="#Template.fromDirectory">.fromDirectory(path, [options])</a> ⇒ <a href="#Template"><code>Promise.&lt;Template&gt;</code></a></em></li>
+<li><em><a href="#Template.fromArchive">.fromArchive(buffer, [options])</a> ⇒ <a href="#Template"><code>Promise.&lt;Template&gt;</code></a></em></li>
+<li><em><a href="#Template.fromUrl">.fromUrl(url, [options])</a> ⇒ <code>Promise</code></em></li>
+<li><em><a href="#Template.instanceOf">.instanceOf(classDeclaration, fqt)</a> ⇒ <code>boolean</code></em></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="new_Template_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-templatepackagejson-readme-samples-request-logo-options"></a><a href="#new-templatepackagejson-readme-samples-request-logo-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>new Template(packageJson, readme, samples, request, logo, options)</em></h3>
+<p>Create the Template.
+Note: Only to be called by framework code. Applications should
+retrieve instances from <a href="#Template.fromArchive">fromArchive</a> or <a href="#Template.fromDirectory">fromDirectory</a>.</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>packageJson</td><td><code>object</code></td><td>the JS object for package.json</td></tr>
+<tr><td>readme</td><td><code>String</code></td><td>the readme in markdown for the template (optional)</td></tr>
+<tr><td>samples</td><td><code>object</code></td><td>the sample text for the template in different locales</td></tr>
+<tr><td>request</td><td><code>object</code></td><td>the JS object for the sample request</td></tr>
+<tr><td>logo</td><td><code>Buffer</code></td><td>the bytes data of logo</td></tr>
+<tr><td>options</td><td><code>Object</code></td><td>e.g., { warnings: true }</td></tr>
+</tbody>
+</table>
+<p><a name="Template+validate"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templatevalidate"></a><a href="#templatevalidate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.validate()</em></h3>
+<p>Verifies that the template is well formed.
+Throws an exception with the details of any validation errors.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<a name="Template+getTemplateModel"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategettemplatemodel-⇒-codeclassdeclarationcode"></a><a href="#templategettemplatemodel-⇒-codeclassdeclarationcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getTemplateModel() ⇒ <code>ClassDeclaration</code></em></h3>
+<p>Returns the template model for the template</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>ClassDeclaration</code> - the template model for the template<br>
+<strong>Throws</strong>:</p>
+<ul>
+<li><code>Error</code> if no template model is found, or multiple template models are found</li>
+</ul>
+<p><a name="Template+getIdentifier"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetidentifier-⇒-codestringcode"></a><a href="#templategetidentifier-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getIdentifier() ⇒ <code>String</code></em></h3>
+<p>Returns the identifier for this template</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>String</code> - the identifier of this template<br>
+<a name="Template+getMetadata"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetmetadata-⇒-codemetadatacodemetadata"></a><a href="#templategetmetadata-⇒-codemetadatacodemetadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getMetadata() ⇒ <a href="#Metadata"><code>Metadata</code></a></em></h3>
+<p>Returns the metadata for this template</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <a href="#Metadata"><code>Metadata</code></a> - the metadata for this template<br>
+<a name="Template+getName"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetname-⇒-codestringcode"></a><a href="#templategetname-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getName() ⇒ <code>String</code></em></h3>
+<p>Returns the name for this template</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>String</code> - the name of this template<br>
+<a name="Template+getDisplayName"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetdisplayname-⇒-codestringcode"></a><a href="#templategetdisplayname-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getDisplayName() ⇒ <code>string</code></em></h3>
+<p>Returns the display name for this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the display name of the template<br>
+<a name="Template+getVersion"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetversion-⇒-codestringcode"></a><a href="#templategetversion-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getVersion() ⇒ <code>String</code></em></h3>
+<p>Returns the version for this template</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>String</code> - the version of this template. Use semver module
+to parse.<br>
+<a name="Template+getDescription"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetdescription-⇒-codestringcode"></a><a href="#templategetdescription-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getDescription() ⇒ <code>String</code></em></h3>
+<p>Returns the description for this template</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>String</code> - the description of this template<br>
+<a name="Template+getHash"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategethash-⇒-codestringcode"></a><a href="#templategethash-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getHash() ⇒ <code>string</code></em></h3>
+<p>Gets a content based SHA-256 hash for this template. Hash
+is based on the metadata for the template plus the contents of
+all the models and all the script files.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the SHA-256 hash in hex format<br>
+<a name="Template+toArchive"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templatetoarchivelanguage-options-logo-⇒-codepromiseltbuffergtcode"></a><a href="#templatetoarchivelanguage-options-logo-⇒-codepromiseltbuffergtcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.toArchive([language], [options], logo) ⇒ <code>Promise.&lt;Buffer&gt;</code></em></h3>
+<p>Persists this template to a Cicero Template Archive (cta) file.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Promise.&lt;Buffer&gt;</code> - the zlib buffer</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>[language]</td><td><code>string</code></td><td>target language for the archive (should be 'ergo')</td></tr>
+<tr><td>[options]</td><td><code>Object</code></td><td>JSZip options</td></tr>
+<tr><td>logo</td><td><code>Buffer</code></td><td>Bytes data of the PNG file</td></tr>
+</tbody>
+</table>
+<p><a name="Template+getParserManager"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetparsermanager-⇒-codeparsermanagercodeparsermanager"></a><a href="#templategetparsermanager-⇒-codeparsermanagercodeparsermanager" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getParserManager() ⇒ <a href="#ParserManager"><code>ParserManager</code></a></em></h3>
+<p>Provides access to the parser manager for this template.
+The parser manager can convert template data to and from
+natural language text.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <a href="#ParserManager"><code>ParserManager</code></a> - the ParserManager for this template<br>
+<a name="Template+getLogicManager"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetlogicmanager-⇒-codelogicmanagercode"></a><a href="#templategetlogicmanager-⇒-codelogicmanagercode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getLogicManager() ⇒ <code>LogicManager</code></em></h3>
+<p>Provides access to the template logic for this template.
+The template logic encapsulate the code necessary to
+execute the clause or contract.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>LogicManager</code> - the LogicManager for this template<br>
+<a name="Template+getIntrospector"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetintrospector-⇒-codeintrospectorcode"></a><a href="#templategetintrospector-⇒-codeintrospectorcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getIntrospector() ⇒ <code>Introspector</code></em></h3>
+<p>Provides access to the Introspector for this template. The Introspector
+is used to reflect on the types defined within this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Introspector</code> - the Introspector for this template<br>
+<a name="Template+getFactory"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetfactory-⇒-codefactorycode"></a><a href="#templategetfactory-⇒-codefactorycode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getFactory() ⇒ <code>Factory</code></em></h3>
+<p>Provides access to the Factory for this template. The Factory
+is used to create the types defined in this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Factory</code> - the Factory for this template<br>
+<a name="Template+getSerializer"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetserializer-⇒-codeserializercode"></a><a href="#templategetserializer-⇒-codeserializercode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getSerializer() ⇒ <code>Serializer</code></em></h3>
+<p>Provides access to the Serializer for this template. The Serializer
+is used to serialize instances of the types defined within this template.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Serializer</code> - the Serializer for this template<br>
+<a name="Template+getRequestTypes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetrequesttypes-⇒-codearraycode"></a><a href="#templategetrequesttypes-⇒-codearraycode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getRequestTypes() ⇒ <code>Array</code></em></h3>
+<p>Provides a list of the input types that are accepted by this Template. Types use the fully-qualified form.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Array</code> - a list of the request types<br>
+<a name="Template+getResponseTypes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetresponsetypes-⇒-codearraycode"></a><a href="#templategetresponsetypes-⇒-codearraycode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getResponseTypes() ⇒ <code>Array</code></em></h3>
+<p>Provides a list of the response types that are returned by this Template. Types use the fully-qualified form.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Array</code> - a list of the response types<br>
+<a name="Template+getEmitTypes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetemittypes-⇒-codearraycode"></a><a href="#templategetemittypes-⇒-codearraycode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getEmitTypes() ⇒ <code>Array</code></em></h3>
+<p>Provides a list of the emit types that are emitted by this Template. Types use the fully-qualified form.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Array</code> - a list of the emit types<br>
+<a name="Template+getStateTypes"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategetstatetypes-⇒-codearraycode"></a><a href="#templategetstatetypes-⇒-codearraycode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.getStateTypes() ⇒ <code>Array</code></em></h3>
+<p>Provides a list of the state types that are expected by this Template. Types use the fully-qualified form.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Array</code> - a list of the state types<br>
+<a name="Template+hasLogic"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templatehaslogic-⇒-codebooleancode"></a><a href="#templatehaslogic-⇒-codebooleancode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.hasLogic() ⇒ <code>boolean</code></em></h3>
+<p>Returns true if the template has logic, i.e. has more than one script file.</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>boolean</code> - true if the template has logic<br>
+<a name="Template+grammarHasErgoExpression"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templategrammarhasergoexpression-⇒-codebooleancode"></a><a href="#templategrammarhasergoexpression-⇒-codebooleancode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>template.grammarHasErgoExpression() ⇒ <code>boolean</code></em></h3>
+<p>Checks whether the template grammar has computer (Ergo) expressions</p>
+<p><strong>Kind</strong>: instance method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>boolean</code> - True if the template grammar has Ergo expressions (<code>{{% ... %}}</code>)<br>
+<a name="Template.fromDirectory"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templatefromdirectorypath-options-⇒-codepromiselttemplategtcodetemplate"></a><a href="#templatefromdirectorypath-options-⇒-codepromiselttemplategtcodetemplate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>Template.fromDirectory(path, [options]) ⇒ <a href="#Template"><code>Promise.&lt;Template&gt;</code></a></em></h3>
+<p>Builds a Template from the contents of a directory.
+The directory must include a package.json in the root (used to specify
+the name, version and description of the template).</p>
+<p><strong>Kind</strong>: static method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <a href="#Template"><code>Promise.&lt;Template&gt;</code></a> - a Promise to the instantiated template</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>path</td><td><code>String</code></td><td></td><td>to a local directory</td></tr>
+<tr><td>[options]</td><td><code>Object</code></td><td><code></code></td><td>an optional set of options to configure the instance.</td></tr>
+</tbody>
+</table>
+<p><a name="Template.fromArchive"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templatefromarchivebuffer-options-⇒-codepromiselttemplategtcodetemplate"></a><a href="#templatefromarchivebuffer-options-⇒-codepromiselttemplategtcodetemplate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>Template.fromArchive(buffer, [options]) ⇒ <a href="#Template"><code>Promise.&lt;Template&gt;</code></a></em></h3>
+<p>Create a template from an archive.</p>
+<p><strong>Kind</strong>: static method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <a href="#Template"><code>Promise.&lt;Template&gt;</code></a> - a Promise to the template</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buffer</td><td><code>Buffer</code></td><td></td><td>the buffer to a Cicero Template Archive (cta) file</td></tr>
+<tr><td>[options]</td><td><code>Object</code></td><td><code></code></td><td>an optional set of options to configure the instance.</td></tr>
+</tbody>
+</table>
+<p><a name="Template.fromUrl"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templatefromurlurl-options-⇒-codepromisecode"></a><a href="#templatefromurlurl-options-⇒-codepromisecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>Template.fromUrl(url, [options]) ⇒ <code>Promise</code></em></h3>
+<p>Create a template from an URL.</p>
+<p><strong>Kind</strong>: static method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>Promise</code> - a Promise to the template</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Default</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td><code>String</code></td><td></td><td>the URL to a Cicero Template Archive (cta) file</td></tr>
+<tr><td>[options]</td><td><code>Object</code></td><td><code></code></td><td>an optional set of options to configure the instance.</td></tr>
+</tbody>
+</table>
+<p><a name="Template.instanceOf"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstanceofclassdeclaration-fqt-⇒-codebooleancode"></a><a href="#templateinstanceofclassdeclaration-fqt-⇒-codebooleancode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>Template.instanceOf(classDeclaration, fqt) ⇒ <code>boolean</code></em></h3>
+<p>Check to see if a ClassDeclaration is an instance of the specified fully qualified
+type name.</p>
+<p><strong>Kind</strong>: static method of <a href="#Template"><code>Template</code></a>  <br>
+<strong>Returns</strong>: <code>boolean</code> - True if classDeclaration an instance of the specified fully
+qualified type name, false otherwise.<br>
+<strong>Internal</strong>:</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>classDeclaration</td><td><code>ClassDeclaration</code></td><td>The class to test</td></tr>
+<tr><td>fqt</td><td><code>String</code></td><td>The fully qualified type name.</td></tr>
+</tbody>
+</table>
+<p><a name="TemplateInstance"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="templateinstance"></a><a href="#templateinstance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>TemplateInstance</em></h2>
+<p>A TemplateInstance is an instance of a Clause or Contract template. It is executable business logic, linked to
+a natural language (legally enforceable) template.
+A TemplateInstance must be constructed with a template and then prior to execution the data for the clause must be set.
+Set the data for the TemplateInstance by either calling the setData method or by
+calling the parse method and passing in natural language text that conforms to the template grammar.</p>
+<p><strong>Kind</strong>: global abstract class<br>
+<strong>Access</strong>: public</p>
+<ul>
+<li><em><a href="#TemplateInstance">TemplateInstance</a></em>
+<ul>
+<li><em><a href="#new_TemplateInstance_new">new TemplateInstance(template)</a></em></li>
+<li><em>instance</em>
+<ul>
+<li><em><a href="#TemplateInstance+setData">.setData(data)</a></em></li>
+<li><em><a href="#TemplateInstance+getData">.getData()</a> ⇒ <code>object</code></em></li>
+<li><em><a href="#TemplateInstance+getEngine">.getEngine()</a> ⇒ <code>object</code></em></li>
+<li><em><a href="#TemplateInstance+getDataAsConcertoObject">.getDataAsConcertoObject()</a> ⇒ <code>object</code></em></li>
+<li><em><a href="#TemplateInstance+parse">.parse(input, [currentTime], [fileName])</a></em></li>
+<li><em><a href="#TemplateInstance+draft">.draft([options], currentTime)</a> ⇒ <code>string</code></em></li>
+<li><em><a href="#TemplateInstance+getIdentifier">.getIdentifier()</a> ⇒ <code>String</code></em></li>
+<li><em><a href="#TemplateInstance+getTemplate">.getTemplate()</a> ⇒ <a href="#Template"><code>Template</code></a></em></li>
+<li><em><a href="#TemplateInstance+getLogicManager">.getLogicManager()</a> ⇒ <code>LogicManager</code></em></li>
+<li><em><a href="#TemplateInstance+toJSON">.toJSON()</a> ⇒ <code>object</code></em></li>
+</ul></li>
+<li><em>static</em>
+<ul>
+<li><em><a href="#TemplateInstance.convertFormattedParsed">.convertFormattedParsed(obj, utcOffset)</a> ⇒ <code>*</code></em></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><a name="new_TemplateInstance_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-templateinstancetemplate"></a><a href="#new-templateinstancetemplate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>new TemplateInstance(template)</em></h3>
+<p>Create the Clause and link it to a Template.</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>template</td><td><a href="#Template"><code>Template</code></a></td><td>the template for the clause</td></tr>
+</tbody>
+</table>
+<p><a name="TemplateInstance+setData"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancesetdatadata"></a><a href="#templateinstancesetdatadata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.setData(data)</em></h3>
+<p>Set the data for the clause</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>data</td><td><code>object</code></td><td>the data for the clause, must be an instance of the template model for the clause's template. This should be a plain JS object and will be deserialized and validated into the Concerto object before assignment.</td></tr>
+</tbody>
+</table>
+<p><a name="TemplateInstance+getData"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancegetdata-⇒-codeobjectcode"></a><a href="#templateinstancegetdata-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.getData() ⇒ <code>object</code></em></h3>
+<p>Get the data for the clause. This is a plain JS object. To retrieve the Concerto
+object call getConcertoData().</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - - the data for the clause, or null if it has not been set<br>
+<a name="TemplateInstance+getEngine"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancegetengine-⇒-codeobjectcode"></a><a href="#templateinstancegetengine-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.getEngine() ⇒ <code>object</code></em></h3>
+<p>Get the current Ergo engine</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - - the data for the clause, or null if it has not been set<br>
+<a name="TemplateInstance+getDataAsConcertoObject"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancegetdataasconcertoobject-⇒-codeobjectcode"></a><a href="#templateinstancegetdataasconcertoobject-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.getDataAsConcertoObject() ⇒ <code>object</code></em></h3>
+<p>Get the data for the clause. This is a Concerto object. To retrieve the
+plain JS object suitable for serialization call toJSON() and retrieve the <code>data</code> property.</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - - the data for the clause, or null if it has not been set<br>
+<a name="TemplateInstance+parse"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstanceparseinput-currenttime-filename"></a><a href="#templateinstanceparseinput-currenttime-filename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.parse(input, [currentTime], [fileName])</em></h3>
+<p>Set the data for the clause by parsing natural language text.</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>input</td><td><code>string</code></td><td>the text for the clause</td></tr>
+<tr><td>[currentTime]</td><td><code>string</code></td><td>the definition of 'now' (optional)</td></tr>
+<tr><td>[fileName]</td><td><code>string</code></td><td>the fileName for the text (optional)</td></tr>
+</tbody>
+</table>
+<p><a name="TemplateInstance+draft"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancedraftoptions-currenttime-⇒-codestringcode"></a><a href="#templateinstancedraftoptions-currenttime-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.draft([options], currentTime) ⇒ <code>string</code></em></h3>
+<p>Generates the natural language text for a contract or clause clause; combining the text from the template
+and the instance data.</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <code>string</code> - the natural language text for the contract or clause; created by combining the structure of
+the template with the JSON data for the clause.</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>[options]</td><td><code>*</code></td><td>text generation options. options.wrapVariables encloses variables and editable sections in '&lt;variable ...' and '/&gt;'</td></tr>
+<tr><td>currentTime</td><td><code>string</code></td><td>the definition of 'now' (optional)</td></tr>
+</tbody>
+</table>
+<p><a name="TemplateInstance+getIdentifier"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancegetidentifier-⇒-codestringcode"></a><a href="#templateinstancegetidentifier-⇒-codestringcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.getIdentifier() ⇒ <code>String</code></em></h3>
+<p>Returns the identifier for this clause. The identifier is the identifier of
+the template plus '-' plus a hash of the data for the clause (if set).</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <code>String</code> - the identifier of this clause<br>
+<a name="TemplateInstance+getTemplate"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancegettemplate-⇒-codetemplatecodetemplate"></a><a href="#templateinstancegettemplate-⇒-codetemplatecodetemplate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.getTemplate() ⇒ <a href="#Template"><code>Template</code></a></em></h3>
+<p>Returns the template for this clause</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <a href="#Template"><code>Template</code></a> - the template for this clause<br>
+<a name="TemplateInstance+getLogicManager"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancegetlogicmanager-⇒-codelogicmanagercode"></a><a href="#templateinstancegetlogicmanager-⇒-codelogicmanagercode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.getLogicManager() ⇒ <code>LogicManager</code></em></h3>
+<p>Returns the template logic for this clause</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <code>LogicManager</code> - the template for this clause<br>
+<a name="TemplateInstance+toJSON"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstancetojson-⇒-codeobjectcode"></a><a href="#templateinstancetojson-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>templateInstance.toJSON() ⇒ <code>object</code></em></h3>
+<p>Returns a JSON representation of the clause</p>
+<p><strong>Kind</strong>: instance method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <code>object</code> - the JS object for serialization<br>
+<a name="TemplateInstance.convertFormattedParsed"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="templateinstanceconvertformattedparsedobj-utcoffset-⇒-codecode"></a><a href="#templateinstanceconvertformattedparsedobj-utcoffset-⇒-codecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>TemplateInstance.convertFormattedParsed(obj, utcOffset) ⇒ <code>*</code></em></h3>
+<p>Recursive function that converts all instances of Formated objects (ParsedDateTime or ParsedMonetaryAmount)
+to a Moment.</p>
+<p><strong>Kind</strong>: static method of <a href="#TemplateInstance"><code>TemplateInstance</code></a>  <br>
+<strong>Returns</strong>: <code>*</code> - the converted object</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>obj</td><td><code>*</code></td><td>the input object</td></tr>
+<tr><td>utcOffset</td><td><code>number</code></td><td>the default utcOffset</td></tr>
+</tbody>
+</table>
+<p><a name="CompositeArchiveLoader"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="compositearchiveloader"></a><a href="#compositearchiveloader" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CompositeArchiveLoader</h2>
+<p>Manages a set of archive loaders, delegating to the first archive
+loader that accepts a URL.</p>
+<p><strong>Kind</strong>: global class</p>
+<ul>
+<li><a href="#CompositeArchiveLoader">CompositeArchiveLoader</a>
+<ul>
+<li><a href="#new_CompositeArchiveLoader_new">new CompositeArchiveLoader()</a></li>
+<li><a href="#CompositeArchiveLoader+addArchiveLoader">.addArchiveLoader(archiveLoader)</a></li>
+<li><a href="#CompositeArchiveLoader+clearArchiveLoaders">.clearArchiveLoaders()</a></li>
+<li><em><a href="#CompositeArchiveLoader+accepts">.accepts(url)</a> ⇒ <code>boolean</code></em></li>
+<li><a href="#CompositeArchiveLoader+load">.load(url, options)</a> ⇒ <code>Promise</code></li>
+</ul></li>
+</ul>
+<p><a name="new_CompositeArchiveLoader_new"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="new-compositearchiveloader"></a><a href="#new-compositearchiveloader" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new CompositeArchiveLoader()</h3>
+<p>Create the CompositeArchiveLoader. Used to delegate to a set of ArchiveLoaders.</p>
+<p><a name="CompositeArchiveLoader+addArchiveLoader"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="compositearchiveloaderaddarchiveloaderarchiveloader"></a><a href="#compositearchiveloaderaddarchiveloaderarchiveloader" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>compositeArchiveLoader.addArchiveLoader(archiveLoader)</h3>
+<p>Adds a ArchiveLoader implemenetation to the ArchiveLoader</p>
+<p><strong>Kind</strong>: instance method of <a href="#CompositeArchiveLoader"><code>CompositeArchiveLoader</code></a></p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>archiveLoader</td><td><code>ArchiveLoader</code></td><td>The archive to add to the CompositeArchiveLoader</td></tr>
+</tbody>
+</table>
+<p><a name="CompositeArchiveLoader+clearArchiveLoaders"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="compositearchiveloadercleararchiveloaders"></a><a href="#compositearchiveloadercleararchiveloaders" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>compositeArchiveLoader.clearArchiveLoaders()</h3>
+<p>Remove all registered ArchiveLoaders</p>
+<p><strong>Kind</strong>: instance method of <a href="#CompositeArchiveLoader"><code>CompositeArchiveLoader</code></a>  <br>
+<a name="CompositeArchiveLoader+accepts"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="compositearchiveloaderacceptsurl-⇒-codebooleancode"></a><a href="#compositearchiveloaderacceptsurl-⇒-codebooleancode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>compositeArchiveLoader.accepts(url) ⇒ <code>boolean</code></em></h3>
+<p>Returns true if this ArchiveLoader can process the URL</p>
+<p><strong>Kind</strong>: instance abstract method of <a href="#CompositeArchiveLoader"><code>CompositeArchiveLoader</code></a>  <br>
+<strong>Returns</strong>: <code>boolean</code> - true if this ArchiveLoader accepts the URL</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td><code>string</code></td><td>the URL</td></tr>
+</tbody>
+</table>
+<p><a name="CompositeArchiveLoader+load"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="compositearchiveloaderloadurl-options-⇒-codepromisecode"></a><a href="#compositearchiveloaderloadurl-options-⇒-codepromisecode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>compositeArchiveLoader.load(url, options) ⇒ <code>Promise</code></h3>
+<p>Load a Archive from a URL and return it</p>
+<p><strong>Kind</strong>: instance method of <a href="#CompositeArchiveLoader"><code>CompositeArchiveLoader</code></a>  <br>
+<strong>Returns</strong>: <code>Promise</code> - a promise to the Archive</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td><code>string</code></td><td>the url to get</td></tr>
+<tr><td>options</td><td><code>object</code></td><td>additional options</td></tr>
+</tbody>
+</table>
+<p><a name="locationOfError"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="locationoferrorerror-⇒-codeobjectcode"></a><a href="#locationoferrorerror-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>locationOfError(error) ⇒ <code>object</code></h2>
+<p>Extract the file location from the parse error</p>
+<p><strong>Kind</strong>: global function<br>
+<strong>Returns</strong>: <code>object</code> - - the file location information</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>error</td><td><code>object</code></td><td>the error object</td></tr>
+</tbody>
+</table>
+<p><a name="isPNG"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="ispngbuffer-⇒-codebooleancode"></a><a href="#ispngbuffer-⇒-codebooleancode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isPNG(buffer) ⇒ <code>Boolean</code></h2>
+<p>Checks whether the file is PNG</p>
+<p><strong>Kind</strong>: global function<br>
+<strong>Returns</strong>: <code>Boolean</code> - whether the file in PNG</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buffer</td><td><code>Buffer</code></td><td>buffer of the file</td></tr>
+</tbody>
+</table>
+<p><a name="getMimeType"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="getmimetypebuffer-⇒-codeobjectcode"></a><a href="#getmimetypebuffer-⇒-codeobjectcode" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getMimeType(buffer) ⇒ <code>Object</code></h2>
+<p>Returns the mime-type of the file</p>
+<p><strong>Kind</strong>: global function<br>
+<strong>Returns</strong>: <code>Object</code> - the mime-type of the file</p>
+<table>
+<thead>
+<tr><th>Param</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>buffer</td><td><code>Buffer</code></td><td>buffer of the file</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ref-cicero-cli.html"><span class="arrow-prev">← </span><span>Command Line</span></a><a class="docs-next button" href="/docs/ref-cicero-testing.html"><span>Template Testing</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#modules">Modules</a></li><li><a href="#classes">Classes</a></li><li><a href="#functions">Functions</a></li><li><a href="#cicero-engine">cicero-engine</a><ul class="toc-headings"><li><a href="#cicero-engineengine">cicero-engine~Engine</a></li></ul></li><li><a href="#cicero-core">cicero-core</a></li><li><a href="#amountformatparser">AmountFormatParser</a><ul class="toc-headings"><li><a href="#amountformatparseraddgrammarsgrammars-field">amountFormatParser.addGrammars(grammars, field)</a></li><li><a href="#amountformatparserbuildformatrulesformatstring-⇒-codeobjectcode">amountFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code></a></li><li><a href="#amountformatparserparseamountformatfieldfield-⇒-codestringcode">AmountFormatParser.parseAmountFormatField(field) ⇒ <code>string</code></a></li><li><a href="#amountformatparseramountformatfieldfield-⇒-codestringcode">AmountFormatParser.amountFormatField(field) ⇒ <code>string</code></a></li></ul></li><li><a href="#clause">Clause</a></li><li><a href="#contract">Contract</a></li><li><a href="#datetimeformatparser">DateTimeFormatParser</a><ul class="toc-headings"><li><a href="#datetimeformatparseraddgrammarsgrammars-field">dateTimeFormatParser.addGrammars(grammars, field)</a></li><li><a href="#datetimeformatparserbuildformatrulesformatstring-⇒-codeobjectcode">dateTimeFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code></a></li><li><a href="#datetimeformatparserparsedatetimeformatfieldfield-⇒-codestringcode">DateTimeFormatParser.parseDateTimeFormatField(field) ⇒ <code>string</code></a></li></ul></li><li><a href="#formatparser">FormatParser</a><ul class="toc-headings"><li><a href="#formatparseraddgrammarsgrammars-field">formatParser.addGrammars(grammars, field)</a></li><li><a href="#formatparserbuildformatrulesformat">FormatParser.buildFormatRules(format)</a></li></ul></li><li><a href="#metadata">Metadata</a><ul class="toc-headings"><li><a href="#new-metadatapackagejson-readme-samples-request-logo">new Metadata(packageJson, readme, samples, request, logo)</a></li><li><a href="#metadatagettemplatetype-⇒-codenumbercode">metadata.getTemplateType() ⇒ <code>number</code></a></li><li><a href="#metadatagetlogo-⇒-codebuffercode">metadata.getLogo() ⇒ <code>Buffer</code></a></li><li><a href="#metadatagetauthor-⇒-codecode">metadata.getAuthor() ⇒ <code>*</code></a></li><li><a href="#metadatagetruntime-⇒-codestringcode">metadata.getRuntime() ⇒ <code>string</code></a></li><li><a href="#metadatagetciceroversion-⇒-codestringcode">metadata.getCiceroVersion() ⇒ <code>string</code></a></li><li><a href="#metadatasatisfiesciceroversionversion-⇒-codestringcode">metadata.satisfiesCiceroVersion(version) ⇒ <code>string</code></a></li><li><a href="#metadatagetsamples-⇒-codeobjectcode">metadata.getSamples() ⇒ <code>object</code></a></li><li><a href="#metadatagetrequest-⇒-codeobjectcode">metadata.getRequest() ⇒ <code>object</code></a></li><li><a href="#metadatagetsamplelocale-⇒-codestringcode">metadata.getSample(locale) ⇒ <code>string</code></a></li><li><a href="#metadatagetreadme-⇒-codestringcode">metadata.getREADME() ⇒ <code>String</code></a></li><li><a href="#metadatagetpackagejson-⇒-codeobjectcode">metadata.getPackageJson() ⇒ <code>object</code></a></li><li><a href="#metadatagetname-⇒-codestringcode">metadata.getName() ⇒ <code>string</code></a></li><li><a href="#metadatagetdisplayname-⇒-codestringcode">metadata.getDisplayName() ⇒ <code>string</code></a></li><li><a href="#metadatagetkeywords-⇒-codearraycode">metadata.getKeywords() ⇒ <code>Array</code></a></li><li><a href="#metadatagetdescription-⇒-codestringcode">metadata.getDescription() ⇒ <code>string</code></a></li><li><a href="#metadatagetversion-⇒-codestringcode">metadata.getVersion() ⇒ <code>string</code></a></li><li><a href="#metadatagetidentifier-⇒-codestringcode">metadata.getIdentifier() ⇒ <code>string</code></a></li><li><a href="#metadatacreatetargetmetadataruntimename-⇒-codeobjectcode">metadata.createTargetMetadata(runtimeName) ⇒ <code>object</code></a></li><li><a href="#metadatatojson-⇒-codeobjectcode">metadata.toJSON() ⇒ <code>object</code></a></li><li><a href="#metadatacheckimagebuffer">Metadata.checkImage(buffer)</a></li><li><a href="#metadatacheckimagedimensionsbuffer-mimetype">Metadata.checkImageDimensions(buffer, mimeType)</a></li></ul></li><li><a href="#monetaryamountformatparser">MonetaryAmountFormatParser</a><ul class="toc-headings"><li><a href="#monetaryamountformatparseraddgrammarsgrammars-field">monetaryAmountFormatParser.addGrammars(grammars, field)</a></li><li><a href="#monetaryamountformatparserbuildformatrulesformatstring-⇒-codeobjectcode">monetaryAmountFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code></a></li><li><a href="#monetaryamountformatparserparsemonetaryamountformatfieldfield-⇒-codestringcode">MonetaryAmountFormatParser.parseMonetaryAmountFormatField(field) ⇒ <code>string</code></a></li></ul></li><li><a href="#parsermanager">ParserManager</a><ul class="toc-headings"><li><a href="#new-parsermanagertemplate">new ParserManager(template)</a></li><li><a href="#parsermanagergetparser-⇒-codeobjectcode">parserManager.getParser() ⇒ <code>object</code></a></li><li><a href="#parsermanagergettemplateast-⇒-codeobjectcode">parserManager.getTemplateAst() ⇒ <code>object</code></a></li><li><a href="#parsermanagersetgrammargrammar">parserManager.setGrammar(grammar)</a></li><li><a href="#parsermanagerbuildgrammartemplatizedgrammar">parserManager.buildGrammar(templatizedGrammar)</a></li><li><a href="#parsermanagerbuildgrammarrulesast-templatemodel-prefix-parts">parserManager.buildGrammarRules(ast, templateModel, prefix, parts)</a></li><li><a href="#parsermanagerhandlebindingtemplatemodel-parts-inputrule-element">parserManager.handleBinding(templateModel, parts, inputRule, element)</a></li><li><a href="#parsermanagercleanchunkinput-⇒-codestringcode">parserManager.cleanChunk(input) ⇒ <code>string</code></a></li><li><a href="#parsermanagerfindfirstbindingpropertyname-elements-⇒-codeintcode">parserManager.findFirstBinding(propertyName, elements) ⇒ <code>int</code></a></li><li><a href="#parsermanagergetgrammar-⇒-codestringcode">parserManager.getGrammar() ⇒ <code>String</code></a></li><li><a href="#parsermanagergettemplatizedgrammar-⇒-codestringcode">parserManager.getTemplatizedGrammar() ⇒ <code>String</code></a></li><li><a href="#parsermanagerroundtripmarkdowntext-⇒-codestringcode">parserManager.roundtripMarkdown(text) ⇒ <code>string</code></a></li><li><a href="#parsermanagerformattexttext-options-format-⇒-codestringcode">parserManager.formatText(text, options, format) ⇒ <code>string</code></a></li><li><a href="#parsermanageradjustlistblockx-separator-⇒-codeobjectcode">ParserManager.adjustListBlock(x, separator) ⇒ <code>object</code></a></li><li><a href="#parsermanagergetpropertytemplatemodel-element-⇒-codecode">ParserManager.getProperty(templateModel, element) ⇒ <code>*</code></a></li><li><a href="#parsermanager_throwtemplateexceptionforelementmessage-element">ParserManager._throwTemplateExceptionForElement(message, element)</a></li><li><a href="#parsermanagercompilegrammarsourcecode-⇒-codeobjectcode">ParserManager.compileGrammar(sourceCode) ⇒ <code>object</code></a></li></ul></li><li><a href="#template"><em>Template</em></a><ul class="toc-headings"><li><a href="#new-templatepackagejson-readme-samples-request-logo-options"><em>new Template(packageJson, readme, samples, request, logo, options)</em></a></li><li><a href="#templatevalidate"><em>template.validate()</em></a></li><li><a href="#templategettemplatemodel-⇒-codeclassdeclarationcode"><em>template.getTemplateModel() ⇒ <code>ClassDeclaration</code></em></a></li><li><a href="#templategetidentifier-⇒-codestringcode"><em>template.getIdentifier() ⇒ <code>String</code></em></a></li><li><a href="#templategetmetadata-⇒-codemetadatacodemetadata"><em>template.getMetadata() ⇒ <a href="#Metadata"><code>Metadata</code></a></em></a></li><li><a href="#templategetname-⇒-codestringcode"><em>template.getName() ⇒ <code>String</code></em></a></li><li><a href="#templategetdisplayname-⇒-codestringcode"><em>template.getDisplayName() ⇒ <code>string</code></em></a></li><li><a href="#templategetversion-⇒-codestringcode"><em>template.getVersion() ⇒ <code>String</code></em></a></li><li><a href="#templategetdescription-⇒-codestringcode"><em>template.getDescription() ⇒ <code>String</code></em></a></li><li><a href="#templategethash-⇒-codestringcode"><em>template.getHash() ⇒ <code>string</code></em></a></li><li><a href="#templatetoarchivelanguage-options-logo-⇒-codepromiseltbuffergtcode"><em>template.toArchive([language], [options], logo) ⇒ <code>Promise.&lt;Buffer&gt;</code></em></a></li><li><a href="#templategetparsermanager-⇒-codeparsermanagercodeparsermanager"><em>template.getParserManager() ⇒ <a href="#ParserManager"><code>ParserManager</code></a></em></a></li><li><a href="#templategetlogicmanager-⇒-codelogicmanagercode"><em>template.getLogicManager() ⇒ <code>LogicManager</code></em></a></li><li><a href="#templategetintrospector-⇒-codeintrospectorcode"><em>template.getIntrospector() ⇒ <code>Introspector</code></em></a></li><li><a href="#templategetfactory-⇒-codefactorycode"><em>template.getFactory() ⇒ <code>Factory</code></em></a></li><li><a href="#templategetserializer-⇒-codeserializercode"><em>template.getSerializer() ⇒ <code>Serializer</code></em></a></li><li><a href="#templategetrequesttypes-⇒-codearraycode"><em>template.getRequestTypes() ⇒ <code>Array</code></em></a></li><li><a href="#templategetresponsetypes-⇒-codearraycode"><em>template.getResponseTypes() ⇒ <code>Array</code></em></a></li><li><a href="#templategetemittypes-⇒-codearraycode"><em>template.getEmitTypes() ⇒ <code>Array</code></em></a></li><li><a href="#templategetstatetypes-⇒-codearraycode"><em>template.getStateTypes() ⇒ <code>Array</code></em></a></li><li><a href="#templatehaslogic-⇒-codebooleancode"><em>template.hasLogic() ⇒ <code>boolean</code></em></a></li><li><a href="#templategrammarhasergoexpression-⇒-codebooleancode"><em>template.grammarHasErgoExpression() ⇒ <code>boolean</code></em></a></li><li><a href="#templatefromdirectorypath-options-⇒-codepromiselttemplategtcodetemplate"><em>Template.fromDirectory(path, [options]) ⇒ <a href="#Template"><code>Promise.&lt;Template&gt;</code></a></em></a></li><li><a href="#templatefromarchivebuffer-options-⇒-codepromiselttemplategtcodetemplate"><em>Template.fromArchive(buffer, [options]) ⇒ <a href="#Template"><code>Promise.&lt;Template&gt;</code></a></em></a></li><li><a href="#templatefromurlurl-options-⇒-codepromisecode"><em>Template.fromUrl(url, [options]) ⇒ <code>Promise</code></em></a></li><li><a href="#templateinstanceofclassdeclaration-fqt-⇒-codebooleancode"><em>Template.instanceOf(classDeclaration, fqt) ⇒ <code>boolean</code></em></a></li></ul></li><li><a href="#templateinstance"><em>TemplateInstance</em></a><ul class="toc-headings"><li><a href="#new-templateinstancetemplate"><em>new TemplateInstance(template)</em></a></li><li><a href="#templateinstancesetdatadata"><em>templateInstance.setData(data)</em></a></li><li><a href="#templateinstancegetdata-⇒-codeobjectcode"><em>templateInstance.getData() ⇒ <code>object</code></em></a></li><li><a href="#templateinstancegetengine-⇒-codeobjectcode"><em>templateInstance.getEngine() ⇒ <code>object</code></em></a></li><li><a href="#templateinstancegetdataasconcertoobject-⇒-codeobjectcode"><em>templateInstance.getDataAsConcertoObject() ⇒ <code>object</code></em></a></li><li><a href="#templateinstanceparseinput-currenttime-filename"><em>templateInstance.parse(input, [currentTime], [fileName])</em></a></li><li><a href="#templateinstancedraftoptions-currenttime-⇒-codestringcode"><em>templateInstance.draft([options], currentTime) ⇒ <code>string</code></em></a></li><li><a href="#templateinstancegetidentifier-⇒-codestringcode"><em>templateInstance.getIdentifier() ⇒ <code>String</code></em></a></li><li><a href="#templateinstancegettemplate-⇒-codetemplatecodetemplate"><em>templateInstance.getTemplate() ⇒ <a href="#Template"><code>Template</code></a></em></a></li><li><a href="#templateinstancegetlogicmanager-⇒-codelogicmanagercode"><em>templateInstance.getLogicManager() ⇒ <code>LogicManager</code></em></a></li><li><a href="#templateinstancetojson-⇒-codeobjectcode"><em>templateInstance.toJSON() ⇒ <code>object</code></em></a></li><li><a href="#templateinstanceconvertformattedparsedobj-utcoffset-⇒-codecode"><em>TemplateInstance.convertFormattedParsed(obj, utcOffset) ⇒ <code>*</code></em></a></li></ul></li><li><a href="#compositearchiveloader">CompositeArchiveLoader</a><ul class="toc-headings"><li><a href="#new-compositearchiveloader">new CompositeArchiveLoader()</a></li><li><a href="#compositearchiveloaderaddarchiveloaderarchiveloader">compositeArchiveLoader.addArchiveLoader(archiveLoader)</a></li><li><a href="#compositearchiveloadercleararchiveloaders">compositeArchiveLoader.clearArchiveLoaders()</a></li><li><a href="#compositearchiveloaderacceptsurl-⇒-codebooleancode"><em>compositeArchiveLoader.accepts(url) ⇒ <code>boolean</code></em></a></li><li><a href="#compositearchiveloaderloadurl-options-⇒-codepromisecode">compositeArchiveLoader.load(url, options) ⇒ <code>Promise</code></a></li></ul></li><li><a href="#locationoferrorerror-⇒-codeobjectcode">locationOfError(error) ⇒ <code>object</code></a></li><li><a href="#ispngbuffer-⇒-codebooleancode">isPNG(buffer) ⇒ <code>Boolean</code></a></li><li><a href="#getmimetypebuffer-⇒-codeobjectcode">getMimeType(buffer) ⇒ <code>Object</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

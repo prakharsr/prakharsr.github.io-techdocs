@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Markdown Transform CLI · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Install the `@accordproject/markdown-cli` npm package to access the Markdown Transform command line interface (CLI). After installation you can use the `markus` command and its sub-commands as described below."/><meta name="docsearch:version" content="0.21"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Markdown Transform CLI · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="Install the `@accordproject/markdown-cli` npm package to access the Markdown Transform command line interface (CLI). After installation you can use the `markus` command and its sub-commands as described below."/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.21</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Markdown Transform CLI</h1></header><article><div><span><p>Install the <code>@accordproject/markdown-cli</code> npm package to access the Markdown Transform command line interface (CLI). After installation you can use the <code>markus</code> command and its sub-commands as described below.</p>
+<p>To install the Markdown CLI:</p>
+<pre><code class="hljs">npm install -g @accordproject/markdown-<span class="hljs-symbol">cli@</span><span class="hljs-number">0.8</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="usage"></a><a href="#usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<p><code>markus</code> is a command line tool to debug and use markdown transformations.</p>
+<pre><code class="hljs css language-md">markus <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">cmd</span>&gt;</span></span> [args]
+
+Commands:
+  markus parse      parse and transform sample markdown
+  markus draft      create markdown text from data
+  markus normalize  normalize markdown in a sample (parse &amp; draft)
+
+Options:
+  --version      Show version number                                   [boolean]
+  --verbose, -v                                                 [default: false]
+  --help         Show help                                             [boolean]
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="markus-parse"></a><a href="#markus-parse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>markus parse</h2>
+<p>The <code>markus parse</code> command lets you parse markdown and create a document object model from it.</p>
+<pre><code class="hljs css language-md"><span class="hljs-section">## markus parse</span>
+
+parse and transform a sample markdown
+
+Options:
+  --version      Show version number                                   [boolean]
+  --verbose, -v  verbose output                       [boolean] [default: false]
+  --help         Show help                                             [boolean]
+  --sample       path to the markdown text                              [string]
+  --output       path to the output file                                [string]
+  --cicero       further transform to CiceroMark      [boolean] [default: false]
+  --slate        further transform to Slate DOM       [boolean] [default: false]
+  --html         further transform to HTML            [boolean] [default: false]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>For example, using the <code>parse</code> command on the <code>README.md</code> file from the <a href="https://github.com/accordproject/cicero-template-library/tree/js-release-0.20/src/helloworld">Hello World</a> template:</p>
+<pre><code class="hljs">markus parse --sample <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">README</span>.</span></span>md
+</code></pre>
+<p>returns:</p>
+<pre><code class="hljs css language-json">info:
+{
+  "$class": "org.accordproject.commonmark.Document",
+  "xmlns": "http://commonmark.org/xml/1.0",
+  "nodes": [
+    {
+      "$class": "org.accordproject.commonmark.Heading",
+      "level": "1",
+      "nodes": [
+        {
+          "$class": "org.accordproject.commonmark.Text",
+          "text": "Hello World"
+        }
+      ]
+    },
+    {
+      "$class": "org.accordproject.commonmark.Paragraph",
+      "nodes": [
+        {
+          "$class": "org.accordproject.commonmark.Text",
+          "text": "This is the Hello World of Accord Project Templates. Executing the clause will simply echo back the text that occurs after the string "
+        },
+        {
+          "$class": "org.accordproject.commonmark.Code",
+          "text": "Hello"
+        },
+        {
+          "$class": "org.accordproject.commonmark.Text",
+          "text": " prepended to text that is passed in the request."
+        }
+      ]
+    }
+  ]
+}
+
+</code></pre>
+<p>Try the command yourself with this <a href="https://github.com/accordproject/markdown-transform/blob/master/packages/markdown-cli/test/data/sample.md">sample.md</a> file.</p>
+<h2><a class="anchor" aria-hidden="true" id="markus-draft"></a><a href="#markus-draft" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>markus draft</h2>
+<p>The <code>markus draft</code> command lets you take a document object model and generate markdown text from it. It is the reverse of <code>markus parse</code>.</p>
+<pre><code class="hljs css language-md"><span class="hljs-section">## markus draft</span>
+
+create markdown text from data
+
+Options:
+  --version      Show version number                                   [boolean]
+  --verbose, -v  verbose output                       [boolean] [default: false]
+  --help         Show help                                             [boolean]
+  --data         path to the data                                       [string]
+  --output       path to the output file                                [string]
+  --cicero       input data is a CiceroMark DOM       [boolean] [default: false]
+  --slate        input data is a Slate DOM            [boolean] [default: false]
+  --noWrap       do not wrap CiceroMark variables as XML tags
+<span class="hljs-code">                                                      [boolean] [default: false]</span>
+  --noIndex      do not index ordered lists           [boolean] [default: false]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>For example, using the <code>draft</code> command for the <a href="https://github.com/accordproject/markdown-transform/blob/master/packages/markdown-cli/test/data/acceptance.json">sample acceptance.json</a> file:</p>
+<pre><code class="hljs css language-md">markus draft --data acceptance.json
+</code></pre>
+<p>returns:</p>
+<pre><code class="hljs css language-md"><span class="hljs-section">Heading
+====</span>
+
+And below is a <span class="hljs-strong">**clause**</span>.
+
+`<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">clause</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"ap://acceptance-of-delivery@0.12.1#721d1aa0999a5d278653e211ae2a64b75fdd8ca6fa1f34255533c942404c5c1f"</span> <span class="hljs-attr">clauseid</span>=<span class="hljs-string">"479adbb4-dc55-4d1a-ab12-b6c5e16900c0"</span>/&gt;</span></span>
+Acceptance of Delivery. <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"shipper"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Party%20A%22"</span>/&gt;</span></span> will be deemed to have completed its delivery obligations if in <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"receiver"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Party%20B%22"</span>/&gt;</span></span>'s opinion, the <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"deliverable"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Widgets%22"</span>/&gt;</span></span> satisfies the Acceptance Criteria, and <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"receiver"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Party%20B%22"</span>/&gt;</span></span> notifies <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"shipper"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Party%20A%22"</span>/&gt;</span></span> in writing that it is accepting the <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"deliverable"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Widgets%22"</span>/&gt;</span></span>.
+
+Inspection and Notice. <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"receiver"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Party%20B%22"</span>/&gt;</span></span> will have <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"businessDays"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"10"</span>/&gt;</span></span> Business Days' to inspect and evaluate the <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"deliverable"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Widgets%22"</span>/&gt;</span></span> on the delivery date before notifying <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"shipper"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Party%20A%22"</span>/&gt;</span></span> that it is either accepting or rejecting the <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"deliverable"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Widgets%22"</span>/&gt;</span></span>.
+
+Acceptance Criteria. The "Acceptance Criteria" are the specifications the <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"deliverable"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Widgets%22"</span>/&gt;</span></span> must meet for the <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"shipper"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Party%20A%22"</span>/&gt;</span></span> to comply with its requirements and obligations under this agreement, detailed in <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"attachment"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"%22Attachment%20X%22"</span>/&gt;</span></span>, attached to this agreement.`
+
+</code></pre>
+<p>If you have tried to parse the <a href="https://github.com/accordproject/markdown-transform/blob/master/packages/markdown-cli/test/data/sample.md">sample.md</a> file, you would see some similarities between <code>sample.md</code> and this code block :)</p>
+<h3><a class="anchor" aria-hidden="true" id="--cicero-flag"></a><a href="#--cicero-flag" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>--cicero</code> flag</h3>
+<p>However, <code>markus draft --data</code> may not work if the <code>.json</code> file contains <code>CiceroMark</code> nodes like Clause or Variables.</p>
+<p>For example, trying to use the <code>draft</code> command for the <a href="https://github.com/accordproject/markdown-transform/blob/master/packages/markdown-cli/test/data/acceptance-cicero.json">acceptance-cicero.md</a> using:</p>
+<pre><code class="hljs css language-md">markus draft --data acceptance-cicero.json
+</code></pre>
+<p>returns the following error:</p>
+<pre><code class="hljs css language-md">14:13:13 - error: Namespace is not defined for type org.accordproject.ciceromark.Clause
+</code></pre>
+<p>In this case, the problem can be solved by using the <code>--cicero</code> flag, to indicate your input has <code>CiceroMark</code> nodes. Therefore, the correct command to use will be:</p>
+<pre><code class="hljs css language-md">markus draft --data acceptance-cicero.json --cicero
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="markus-normalize"></a><a href="#markus-normalize" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>markus normalize</h2>
+<p>The <code>markus normalize</code> command lets you parse markdown and re-draft it from its document object model.</p>
+<pre><code class="hljs css language-md"><span class="hljs-section">## markus normalize</span>
+
+normalize a sample markdown (parse &amp; redraft)
+
+Options:
+  --version      Show version number                                   [boolean]
+  --verbose, -v  verbose output                       [boolean] [default: false]
+  --help         Show help                                             [boolean]
+  --sample       path to the markdown text                              [string]
+  --output       path to the output file                                [string]
+  --cicero       further transform to CiceroMark      [boolean] [default: false]
+  --slate        further transform to Slate DOM       [boolean] [default: false]
+  --noWrap       do not wrap variables as XML tags    [boolean] [default: false]
+  --noIndex      do not index ordered lists           [boolean] [default: false]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
+<p>For example, using the <code>normalize</code> command on the <code>README.md</code> file from the <a href="https://github.com/accordproject/cicero-template-library/tree/js-release-0.20/src/helloworld">Hello World</a> template:</p>
+<pre><code class="hljs css language-md">markus normalize --sample README.md
+</code></pre>
+<p>returns:</p>
+<pre><code class="hljs css language-md">info:
+<span class="hljs-section">Hello World
+====</span>
+
+This is the Hello World of Accord Project Templates. Executing the clause will simply echo back the text that occurs after the string <span class="hljs-code">`Hello`</span> prepended to text that is passed in the request.
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="benefits-of-using-normalize"></a><a href="#benefits-of-using-normalize" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benefits of using <code>normalize</code></h3>
+<p>In the previous example, using the <code>normalize</code> command did not change the <code>README.md</code> file much. This is because the <code>README.md</code> file was already well formatted.</p>
+<p>However, the true benefits of <code>markus normalize</code> can be seen when it is used for a <code>.md</code> file that is not well formatted.</p>
+<p>For example, consider the following markdown text (to try it, please save this as <code>markus-test.md</code> on your computer):</p>
+<pre><code class="hljs css language-md"><span class="hljs-section">## Lists</span>
+<span class="hljs-bullet">
+1. </span>This is number one
+<span class="hljs-bullet">1. </span>This is number one, too.
+<span class="hljs-bullet">1. </span>This is another number one.
+<span class="hljs-bullet">1. </span>This is the fourth number one.
+<span class="hljs-bullet">1. </span>Let's see how this gets normalized.
+
+<span class="hljs-section">## Paragraphs</span>
+
+This is the first paragraph.
+
+
+
+
+
+
+
+
+This is the second paragraph, with many lines in between.
+</code></pre>
+<p>Using <code>markdown normalize</code> on this code:</p>
+<pre><code class="hljs css language-md">markus normalize --sample markus-test.md
+</code></pre>
+<p>returns:</p>
+<pre><code class="hljs css language-md">14:25:50 - info:
+<span class="hljs-section">Lists
+----</span>
+<span class="hljs-bullet">
+1. </span>This is number one
+<span class="hljs-bullet">2. </span>This is number one, too.
+<span class="hljs-bullet">3. </span>This is another number one.
+<span class="hljs-bullet">4. </span>This is the fourth number one.
+<span class="hljs-bullet">5. </span>Let's see how this gets normalized.
+
+<span class="hljs-section">Paragraphs
+----</span>
+
+This is the first paragraph.
+
+This is the second paragraph, with many lines in between.
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#usage">Usage</a></li><li><a href="#markus-parse">markus parse</a><ul class="toc-headings"><li><a href="#example">Example</a></li></ul></li><li><a href="#markus-draft">markus draft</a><ul class="toc-headings"><li><a href="#example-1">Example</a></li><li><a href="#--cicero-flag"><code>--cicero</code> flag</a></li></ul></li><li><a href="#markus-normalize">markus normalize</a><ul class="toc-headings"><li><a href="#example-2">Example</a></li><li><a href="#benefits-of-using-normalize">Benefits of using <code>normalize</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Hello World Template · Accord Project</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Once you have installed Cicero, you can try it on an existing Accord Project template. This explains how to create an instance of that template and how to run the contract logic."/><meta name="docsearch:version" content="0.21"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Hello World Template · Accord Project"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.accordproject.org/index.html"/><meta property="og:description" content="Once you have installed Cicero, you can try it on an existing Accord Project template. This explains how to create an instance of that template and how to run the contract logic."/><meta property="og:image" content="https://docs.accordproject.org/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.accordproject.org/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/ir-black.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg" alt="Accord Project"/><h2 class="headerTitleWithLogo">Accord Project</h2></a><a href="/versions.html"><h3>0.21</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/accordproject.html" target="_self">Documentation</a></li><li class=""><a href="https://studio.accordproject.org" target="_self">Try Online!</a></li><li class=""><a href="https://github.com/accordproject" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Introduction<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/accordproject.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-slc.html">Smart Legal Contracts</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-template.html">Accord Project Templates</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-tour.html">Online Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/accordproject-faq.html">FAQ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/started-installation.html">Install Cicero</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/started-hello.html">Hello World Template</a></li><li class="navListItem"><a class="navItem" href="/docs/started-resources.html">Resources</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Template Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Text</h4><ul><li class="navListItem"><a class="navItem" href="/docs/markup-preliminaries.html">Preliminaries</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-commonmark.html">CommonMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-ciceromark.html">CiceroMark</a></li><li class="navListItem"><a class="navItem" href="/docs/markup-templatemark.html">TemplateMark</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Model</h4><ul><li class="navListItem"><a class="navItem" href="/docs/model-concerto.html">Concerto Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/model-namespaces.html">Namespaces</a></li><li class="navListItem"><a class="navItem" href="/docs/model-classes.html">Classes</a></li><li class="navListItem"><a class="navItem" href="/docs/model-enums.html">Enumerations</a></li><li class="navListItem"><a class="navItem" href="/docs/model-properties.html">Properties</a></li><li class="navListItem"><a class="navItem" href="/docs/model-relationships.html">Relationships</a></li><li class="navListItem"><a class="navItem" href="/docs/model-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/model-api.html">Using the API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Logic</h4><ul><li class="navListItem"><a class="navItem" href="/docs/logic-ergo.html">Ergo Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-expr.html">Simple Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-simple-type.html">Introducing Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-complex-type.html">Complex Values &amp; Types</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-advanced-expr.html">Advanced Expressions</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-stmt.html">Statements</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-decl.html">Declarations</a></li><li class="navListItem"><a class="navItem" href="/docs/logic-module.html">Modules</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorials<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Using Cicero</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-templates.html">Templates Deep Dive</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-library.html">Template Library</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-create.html">Template Generator</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Authoring</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-studio.html">With Template Studio</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-vscode.html">With VS Code</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Execution</h4><ul><li class="navListItem"><a class="navItem" href="/docs/tutorial-nodejs.html">Working with Node.js</a></li><li class="navListItem"><a class="navItem" href="/docs/tutorial-hyperledger.html">With Hyperledger Fabric</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Reference Manual<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">General</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-errors.html">Errors</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Template Migration</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.13-0.20.html">0.13 to 0.20</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-migrate-0.20-0.21.html">0.20 to 0.21</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Cicero Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-cicero-testing.html">Template Testing</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Markdown Transform Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-markus-cli.html">Command Line</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concerto Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-decorators.html">Decorators</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-concerto-api.html">Node.js API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Ergo Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-stdlib.html">Standard Library</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-cli.html">Command Line</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-repl.html">Read-Eval-Print Loop</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-api.html">Node.js API</a></li><li class="navListItem"><a class="navItem" href="/docs/ref-ergo-spec.html">Specification</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Web Components Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ref-web-components-overview.html">Overview</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Hello World Template</h1></header><article><div><span><p>Once you have installed Cicero, you can try it on an existing Accord Project template. This explains how to create an instance of that template and how to run the contract logic.</p>
+<h2><a class="anchor" aria-hidden="true" id="download-a-template"></a><a href="#download-a-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download a Template</h2>
+<p>You can download a single clause or contract template from the <a href="https://templates.accordproject.org">Accord Project Template Library</a> as an archive (<code>.cta</code>) file. Cicero archives are files with a <code>.cta</code> extension, which includes all the different components for the template (text, model and logic).</p>
+<p>If you click on the Template Library link, you should see a Web Page which looks as follows:</p>
+<p><img src="/docs/assets/basic/use1.png" alt="Basic-Use-1"></p>
+<p>Scrolling down that page, you can see the index for the open-source templates along with their version, and whether they are a Clause or Contract template.</p>
+<p>Click on the link to the <code>helloworld</code> template. You should be taken to a page which looks as follows:</p>
+<p><img src="/docs/assets/basic/use2.png" alt="Basic-Use-2"></p>
+<p>Then click on the <code>Download Archive</code> button under the description for the template (highlighted in the red box in the figure). This should download the latest template archive for the <code>helloworld</code> template.</p>
+<h2><a class="anchor" aria-hidden="true" id="parse-extract-deal-data-from-text"></a><a href="#parse-extract-deal-data-from-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parse: Extract Deal Data from Text</h2>
+<p>You can use Cicero to extract deal data from a contract text using the <code>cicero parse</code> command.</p>
+<h3><a class="anchor" aria-hidden="true" id="parse-valid-text"></a><a href="#parse-valid-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parse Valid Text</h3>
+<p>Using your terminal, change into the directory (or <code>cd</code> into the directory) that contains the template archive you just downloaded, then create a sample clause text <code>sample.md</code> which contains the following text:</p>
+<pre><code class="hljs css language-md">Name of the person to greet: "Fred Blogs".
+Thank you!
+</code></pre>
+<p>Then run the <code>cicero parse</code> command in your terminal to load the template and parse your sample clause text. This should be echoing the result of parsing back to your terminal.</p>
+<pre><code class="hljs css language-bash">cicero parse --template helloworld@0.13.0.cta --sample sample.md
+</code></pre>
+
+    <div class="admonition admonition-note">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"/></svg></div> note</h5>
+      </div>
+      <div class="admonition-content">
+    <ul>
+<li>Templates are tied to a specific version of the cicero tool. Make sure that the version number output from <code>cicero --version</code> is compatible with the template. Look for <code>^0.21.0</code> or similar at the top of the template web page.</li>
+<li><code>cicero parse</code> requires network access. Make sure that you are online and that your firewall or proxy allows access to <code>https://models.accordproject.org</code></li>
+</ul>
+</div></div><p>This should extract the data (or &quot;deal points&quot;) from the text and output:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.helloworld.HelloWorldClause"</span>,
+  <span class="hljs-attr">"clauseId"</span>: <span class="hljs-string">"aa3b9db9-f25f-41f4-88a4-64baba728bfe"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Fred Blogs"</span>
+}
+</code></pre>
+<p>You can save the result of <code>cicero parse</code> into a file using the <code>--output</code> option:</p>
+<pre><code class="hljs">cicero parse --template <span class="hljs-symbol">helloworld@</span><span class="hljs-number">0.13</span><span class="hljs-number">.0</span>.cta --sample sample.md --output data.json
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="parse-non-valid-text"></a><a href="#parse-non-valid-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parse Non-Valid Text</h3>
+<p>If you attempt to parse text which is not valid according to the template, this same command should return an error.</p>
+<p>Edit your <code>sample.md</code> file to add text that is not consistent with the template:</p>
+<pre><code class="hljs css language-text">FUBAR Name of the person to greet: "Fred Blogs".
+Thank you!
+</code></pre>
+<p>Then run <code>cicero parse --template helloworld@0.13.0.cta --sample sample.md</code> again. The output should now be:</p>
+<pre><code class="hljs css language-text">2:13:15 AM - error: Parse error at line 1 column 1
+FUBAR Name of the person to greet: "Fred Blogs".
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Expected: 'Name of the person to greet: '
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="draft-create-text-from-deal-data"></a><a href="#draft-create-text-from-deal-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Draft: Create Text from Deal Data</h2>
+<p>You can use Cicero to create new contract text from deal data using the <code>cicero draft</code> command.</p>
+<h3><a class="anchor" aria-hidden="true" id="draft-from-valid-data"></a><a href="#draft-from-valid-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Draft from Valid Data</h3>
+<p>If you have saved the deal data earlier in a <code>data.json</code> file, you can edit it to change the name from <code>Fred Blogs</code> to <code>John Doe</code>, or create a brand new <code>data.json</code> file containing:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.helloworld.HelloWorldClause"</span>,
+  <span class="hljs-attr">"clauseId"</span>: <span class="hljs-string">"aa3b9db9-f25f-41f4-88a4-64baba728bfe"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"John Doe"</span>
+}
+</code></pre>
+<p>Then run the <code>cicero draft</code> command in your terminal:</p>
+<pre><code class="hljs">cicero draft --template <span class="hljs-symbol">helloworld@</span><span class="hljs-number">0.13</span><span class="hljs-number">.0</span>.cta --data data.json
+</code></pre>
+<p>This should create a new contract text and output:</p>
+<pre><code class="hljs"><span class="hljs-attribute">13</span>:<span class="hljs-number">17</span>:<span class="hljs-number">18</span> - <span class="hljs-attribute">info</span>: Name of the person to <span class="hljs-attribute">greet</span>: <span class="hljs-string">"John Doe"</span>.
+Thank you!
+</code></pre>
+<p>You can save the result of <code>cicero draft</code> into a file using the <code>--output</code> option:</p>
+<pre><code class="hljs">cicero draft --template <span class="hljs-symbol">helloworld@</span><span class="hljs-number">0.13</span><span class="hljs-number">.0</span>.cta --data data.json --output new-sample.md
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="draft-from-non-valid-data"></a><a href="#draft-from-non-valid-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Draft from Non-Valid Data</h3>
+<p>If you attempt to draft from data which is not valid according to the template, this same command should return an error.</p>
+<p>Edit your <code>data.json</code> file so that the <code>name</code> variable is missing:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.helloworld.HelloWorldClause"</span>,
+  <span class="hljs-attr">"clauseId"</span>: <span class="hljs-string">"aa3b9db9-f25f-41f4-88a4-64baba728bfe"</span>
+}
+</code></pre>
+<p>Then run <code>cicero draft --template helloworld@0.13.0.cta --data data.json</code> again. The output should now be:</p>
+<pre><code class="hljs">13:38:11 - error:<span class="hljs-built_in"> Instance </span>org.accordproject.helloworld.HelloWorldClause#6f91e060-f837-4108-bead-63891a91ce3a missing required field name
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="trigger-run-the-contract-logic"></a><a href="#trigger-run-the-contract-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trigger: Run the Contract Logic</h2>
+<p>You can use Cicero to run the logic associated to a contract using the <code>cicero trigger</code> command.</p>
+<h3><a class="anchor" aria-hidden="true" id="trigger-with-a-valid-request"></a><a href="#trigger-with-a-valid-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trigger with a Valid Request</h3>
+<p>Use the <code>cicero trigger</code> command to parse a clause text based (your <code>sample.md</code>) <em>then</em> send a request to the clause logic.</p>
+<p>To do so you, first create one additional file <code>request.json</code> which contains:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.helloworld.MyRequest"</span>,
+  <span class="hljs-attr">"input"</span>: <span class="hljs-string">"Accord Project"</span>
+}
+</code></pre>
+<p>This is the request which you will send to trigger the execution of your contract.</p>
+<p>Then run the <code>cicero trigger</code> command in your terminal to load the template, parse your clause text <em>and</em> send the request. This should be echoing the result of execution back to your terminal.</p>
+<pre><code class="hljs css language-bash">cicero trigger --template helloworld@0.13.0.cta --sample sample.md --request request.json
+</code></pre>
+<p>This should print this output:</p>
+<pre><code class="hljs css language-json">13:42:29 - info:
+{
+  "clause": "helloworld@0.13.0-c03393f7e50865012e6005050fcaccb2716481fa7599905f7306673cf15857cf",
+  "request": {
+    "$class": "org.accordproject.helloworld.MyRequest",
+    "input": "Accord Project"
+  },
+  "response": {
+    "$class": "org.accordproject.helloworld.MyResponse",
+    "output": "Hello Fred Blogs Accord Project",
+    "transactionId": "ecc56a61-713c-4113-9842-550efb09ac74",
+    "timestamp": "2019-11-03T18:42:29.984Z"
+  },
+  "state": {
+    "$class": "org.accordproject.cicero.contract.AccordContractState",
+    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+  },
+  "emit": []
+}
+</code></pre>
+<p>The results of execution displayed back on your terminal is in JSON format. It includes the following information:</p>
+<ul>
+<li>Details of the <code>clause</code> being triggered (name, version, SHA256 hash of the template)</li>
+<li>The incoming <code>request</code> object (the same request from your <code>request.json</code> file)</li>
+<li>The output <code>response</code> object</li>
+<li>The output <code>state</code> (unchanged in this example)</li>
+<li>An array of <code>emit</code>ted events (empty in this example)</li>
+</ul>
+<p>That's it! You have successfully parsed and executed your first Accord Project Clause using the <code>helloworld</code> template.</p>
+<h3><a class="anchor" aria-hidden="true" id="trigger-with-a-non-valid-request"></a><a href="#trigger-with-a-non-valid-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trigger with a Non-Valid Request</h3>
+<p>If you attempt to trigger the contract from a request which is not valid according to the template, this same command should return an error.</p>
+<p>Edit your <code>request.json</code> file so that the <code>input</code> variable is missing:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"$class"</span>: <span class="hljs-string">"org.accordproject.helloworld.MyRequest"</span>
+}
+</code></pre>
+<p>Then run <code>cicero trigger --template helloworld@0.13.0.cta --sample sample.md --request request.json</code> again. The output should now be:</p>
+<pre><code class="hljs">13:47:35 - error:<span class="hljs-built_in"> Instance </span>org.accordproject.helloworld.MyRequest#b0b1cbcc-dcae-4758-b9fc-254a43aa10a8 missing required field input
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="what-next"></a><a href="#what-next" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What Next?</h2>
+<h3><a class="anchor" aria-hidden="true" id="try-other-templates"></a><a href="#try-other-templates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Try Other Templates</h3>
+<p>Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the <a href="https://templates.accordproject.org/latedeliveryandpenalty@0.15.0.html">Late Delivery And Penalty</a> clause is in the red box in the following image:</p>
+<p><img src="/docs/assets/basic/use3.png" alt="Basic-Use-3"></p>
+<h3><a class="anchor" aria-hidden="true" id="more-about-cicero"></a><a href="#more-about-cicero" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>More About Cicero</h3>
+<p>You can find more information on how to create or publish Accord Project templates in the <a href="tutorial-templates">Work with Cicero</a> tutorials.</p>
+<h3><a class="anchor" aria-hidden="true" id="run-on-different-platforms"></a><a href="#run-on-different-platforms" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run on Different Platforms</h3>
+<p>Templates may be executed on different platforms, not only from the command line. You can find more information on how to execute Accord Project templates on different platforms (Node.js, Hyperledger Fabric, etc.) in the <a href="tutorial-nodejs">Template Execution</a> tutorials.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/started-installation.html"><span class="arrow-prev">← </span><span>Install Cicero</span></a><a class="docs-next button" href="/docs/started-resources.html"><span>Resources</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#download-a-template">Download a Template</a></li><li><a href="#parse-extract-deal-data-from-text">Parse: Extract Deal Data from Text</a><ul class="toc-headings"><li><a href="#parse-valid-text">Parse Valid Text</a></li><li><a href="#parse-non-valid-text">Parse Non-Valid Text</a></li></ul></li><li><a href="#draft-create-text-from-deal-data">Draft: Create Text from Deal Data</a><ul class="toc-headings"><li><a href="#draft-from-valid-data">Draft from Valid Data</a></li><li><a href="#draft-from-non-valid-data">Draft from Non-Valid Data</a></li></ul></li><li><a href="#trigger-run-the-contract-logic">Trigger: Run the Contract Logic</a><ul class="toc-headings"><li><a href="#trigger-with-a-valid-request">Trigger with a Valid Request</a></li><li><a href="#trigger-with-a-non-valid-request">Trigger with a Non-Valid Request</a></li></ul></li><li><a href="#what-next">What Next?</a><ul class="toc-headings"><li><a href="#try-other-templates">Try Other Templates</a></li><li><a href="#more-about-cicero">More About Cicero</a></li><li><a href="#run-on-different-platforms">Run on Different Platforms</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.accordproject.org/" class="nav-home"><figure class="site-footer-logo"><svg viewBox="0 0 220 35"><g transform="translate(46.830409, 11.323529)"><path d="M64.8,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C64,7.5,64.8,6.1,64.8,4.6zM60.7,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C62.6,5.6,61.8,6.5,60.7,6.5z"></path><path d="M92.4,0.4h-5.5v12.1H89V8.7h3.4c2.3,0,4.1-1.9,4.1-4.1l0,0C96.5,2.3,94.6,0.4,92.4,0.4z M92.4,6.5H89V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C94.3,5.6,93.4,6.5,92.4,6.5z"></path><path d="M18.7,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C21.4,9.9,20.1,10.6,18.7,10.6z"></path><path d="M6.9,0.4H3.8L0.1,12.5h2.2l0.5-1.7h5.1l0.5,1.7h2.2L6.9,0.4z M3.4,8.8l1.9-6.2l1.9,6.2H3.4z"></path><polygon points="172.7,0.4 163.3,0.4 163.3,2.6 166.9,2.6 166.9,12.5 166.9,12.5 169,12.5 169,12.5 169,2.6 172.7,2.6"></polygon><path d="M72.4,0.4h-4l0,0l0,0v12.1l0,0h4c3.3,0,6-2.7,6-6S75.8,0.4,72.4,0.4z M76.3,6.5c0,2.1-1.7,3.8-3.8,3.8h-2V2.7h2C74.6,2.7,76.3,4.3,76.3,6.5L76.3,6.5z"></path><path d="M135.4,0.4L135.4,0.4H128v2.2h5.3v4.9c0,1.7-0.8,3.1-3,3.1c-2,0-3.2-1.6-3.2-1.6l-1.5,1.4c0,0,1.6,2.3,4.6,2.3c3.1,0,5.2-2.1,5.2-5V7.5l0,0l0,0L135.4,0.4L135.4,0.4z"></path><path d="M32.2,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6L37,2.5c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C34.9,9.9,33.7,10.6,32.2,10.6z"></path><path d="M45.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S49.2,0.2,45.8,0.2z M45.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1s3.9,1.9,3.9,4.1S48,10.6,45.8,10.6z"></path><path d="M117.8,0.2c-3.4,0-6.1,2.8-6.1,6.3s2.7,6.3,6.1,6.3s6.1-2.8,6.1-6.3S121.1,0.2,117.8,0.2z M117.8,10.6c-2.2,0-3.9-1.9-3.9-4.1s1.7-4.1,3.9-4.1c2.2,0,3.9,1.9,3.9,4.1S119.9,10.6,117.8,10.6z"></path><path d="M109,4.6c0-2.3-1.9-4.1-4.1-4.1h-5.5v12.1h2.1V8.7h3.2l1.8,3.8h2.4l-2-4.3C108.2,7.5,109,6.1,109,4.6z M104.9,6.5h-3.4V2.7h3.4c1.1,0,1.9,0.8,1.9,1.9C106.8,5.6,105.9,6.5,104.9,6.5z"></path><polygon points="147.6,2.6 147.6,0.4 139.1,0.4 139.1,12.5 147.6,12.5 147.6,10.4 141.2,10.4 141.2,7.6 145.9,7.6 145.9,5.4 141.2,5.4 141.2,2.6 	"></polygon><path d="M156.3,10.6c-2.2,0-3.9-1.8-3.9-4.1s1.7-4.1,3.9-4.1c1.3,0,2.5,0.6,3.2,1.6l1.5-1.4c-1.2-1.5-2.9-2.3-4.7-2.3c-3.4,0-6.1,2.8-6.1,6.3s2.8,6.3,6.1,6.3c2,0,3.9-1,5.1-2.8l-1.6-1.3C159,9.9,157.7,10.6,156.3,10.6z"></path></g><path d="M22.7,35h12.4L23.8,0H11.5l3,9.3h-6L0.1,35h12.4l5-16h0.1L22.7,35z M22.1,2.3l9.8,30.3h-7.5L14.6,2.3H22.1z M16.8,16.6h-4.6l-1.6-5h4.6L16.8,16.6z M10.7,32.7H3.3l5.9-18l1.4,4.3h4.5L10.7,32.7z"></path></svg></figure></a><div><h5>Docs</h5><ul><li><a href="/docs/accordproject.html">Overview</a></li><li><a href="/docs/started-installation.html">Getting Started</a></li><li><a href="/docs/markup-cicero.html">Template Guides</a></li></ul></div><div><h5>Community</h5><ul><li><a href="/users.html">User Showcase </a></li><li><a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a></li><li><a href="https://accord-project-slack-signup.herokuapp.com">Slack</a></li><li><a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a></li></ul></div><div><h5>More</h5><ul><li><a href="https://medium.com/@accordhq">Blog</a></li><li><a href="https://vimeo.com/accordproject">Vimeo</a></li><li><a href="https://github.com/accordproject">GitHub</a></li><li><a class="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a></li></ul></div></section><div class="col-container align-end"><div class="col col-twothird"><div class="linux-foundation-logo"><a href="https://www.linuxfoundation.org/projects/"><img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/></a></div><p class="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p><p class="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p></div><div class="col"><p class="copyright">Copyright © 2018-2020 Accord Project, LLC.</p></div></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '1679802ddfc315329d6b5f4616b30e51',
+                indexName: 'accordproject_api',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://docs.accordproject.org/blog</id>
+    <title>Accord Project Blog</title>
+    <updated>2018-05-18T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://docs.accordproject.org/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Accord Project news and events.</subtitle>
+    <logo>https://docs.accordproject.org/img/A-MARK-ACCORDPROJECT-ONELINE-white.svg</logo>
+    <rights>Copyright © 2018-2020 Accord Project, LLC.</rights>
+    <entry>
+        <title type="html"><![CDATA[Welcome!]]></title>
+        <id>https://docs.accordproject.org/blog/2018/05/18/blog-post.html</id>
+        <link href="https://docs.accordproject.org/blog/2018/05/18/blog-post.html"/>
+        <updated>2018-05-18T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>This is a test.</p>
+]]></summary>
+        <author>
+            <name>Dan Selman</name>
+            <uri>http://twitter.com/danielselman</uri>
+        </author>
+    </entry>
+</feed>
